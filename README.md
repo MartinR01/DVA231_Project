@@ -1,2 +1,2 @@
 # FancyGroupWorkspaceRPG
-# sldjfsdlfjl
+Applying RPG rules to teaching methods in a classroom
