@@ -7,6 +7,6 @@
 
 <body>
     <h1>Hello RPG</h1>
-    <p>This is ftp testing</p>
+    <p>This file is ftp testing</p>
 </body>
 </html>
