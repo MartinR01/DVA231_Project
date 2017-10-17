@@ -47,7 +47,7 @@
                   <h4 class= "proname">
                     Name LastName<br><small>Student</small><br>
                     <button type="button" class="btn btn-default btn-circle btn-lg"><i class="material-icons" style="font-size:20px;">settings</i></button>
-                    <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:15px;">settings</i></button>
+                    <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:20px;">speaker_notes</i></button>
 
                   </h4>
 
@@ -55,13 +55,13 @@
 
 
             </li>
-                <li class="butallign "><button type="button" class="btn shadow"><span>Dashboard</span></button></li>
-                <li class="butallign "><button type="button" class="btn shadow"><span>Journey</span></button></li>
-                <li class="butallign "><button type="button" class="btn shadow"><span>Quests</span></button></li>
-                <li class="butallign "><button type="button" class="btn shadow"><span>Profile</span></button></li>
+                <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
+                <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li>
+                <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
+                <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
                 <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
                 <!--UNCOMMENT TO SEE LOGOUT BUTTON
-                <li class="butallign"><button type="button" class="btn shadow" id="logout-btn"><span>Log out</span></button></li>-->
+                <li class="butallign"><button type="button" class="btn1 shadow" id="logout-btn"><span>Log out</span></button></li>-->
 
               </ul>
             </div><!--/.nav-collapse -->
