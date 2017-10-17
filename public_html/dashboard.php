@@ -20,9 +20,20 @@
 
 <body>
 	<div class="container">
+		<!-- SIDEBAR -->
 		<div class="col-sm-3" style="background-color: green">
+			<!-- UPPER PART - progress -->
 			<div class="row">
+				<!-- XP -->
+				<div class="row">
+				
+				</div>
+				<!-- JOURNEY PROGRESS -->
+				<div class="row">
+				
+				</div>
 			</div>
+			<!-- NAVIGATION -->
 			<div class="row">
 				<div class="navbar navbar-default" style="background-color: pink">
 					
@@ -33,6 +44,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- MAIN SECTION -->
 		<div class="col-sm-9" style="background-color: blue">
 			Main section
 		</div>
