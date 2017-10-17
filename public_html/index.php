@@ -19,14 +19,27 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row centered">
-			<div class="col-sm-4 col-sm-offset-4 text-center" id="login" style="background-color: green">
-				<form action="dashboard.php">
-					<input name="email" type="text"/>
-					<input name="password" type="password"/>
-					<input name="login" type="submit"/>
-				</form>
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4 text-center">
+			<div class="container color" id="login" >
+			<h1>Welcome to Learning RPG!</h1>
+			<form action="dashboard.php">
+				
+				
+				<div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+					<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
+				</div>
+				
+				</br>
+				<div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-lock"></span>
+					<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
+				</div>
+				
+				</br>
+				<input name="login" type="submit"/>
+			</form>
 			</div>
 		</div>
 	</div>
