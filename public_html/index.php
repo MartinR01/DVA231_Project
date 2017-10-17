@@ -9,8 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quest up</title>
-    <!--Fonts -->
-    <link href=“https://fonts.googleapis.com/icon?family=Material+Icons” rel=“stylesheet”>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
@@ -35,6 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+
               </button>
               <span class="visible-xs color navbar-brand">Home Menu</span>
             </div>
@@ -45,11 +45,14 @@
                 <li class="timecolor"><a href="#">
                   <img class="imgprofile" src="img/profileTest.jpg" width="150px" height="150px" alt="">
                   <h4 class= "proname">
-                    Name LastName<br><small>Student</small>
+                    Name LastName<br><small>Student</small><br>
+                    <button type="button" class="btn btn-default btn-circle btn-lg"><i class="material-icons" style="font-size:20px;">settings</i></button>
+                    <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:15px;">settings</i></button>
+
                   </h4>
+
               </a>
-              <i class=“material-icons” style=“font-size:60px;color:red;“>cloud</i>
-            <button type="button" class="btn btn-default btn-circle"></button>
+
 
             </li>
                 <li class="butallign "><button type="button" class="btn shadow"><span>Dashboard</span></button></li>
@@ -66,6 +69,7 @@
 
       <div class="col-sm-9 col-md-9 affix-content">
         <h1> Heyy </h1>
+
 
       </div>
 	 </div>
