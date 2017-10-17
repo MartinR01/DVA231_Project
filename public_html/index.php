@@ -18,7 +18,7 @@
 <body>
     <h1>Lets Start Today </h1>
 
-
+	<h2>HI</h2>
     <!-- JS for Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
