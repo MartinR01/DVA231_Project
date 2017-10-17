@@ -4,7 +4,10 @@
 -->
 <html>
 <head>
-    <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quest up</title>
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
@@ -50,10 +53,11 @@
 
       <div class="col-sm-9 col-md-10 affix-content">
         <h1> Heyy </h1>
+
       </div>
 	 </div>
     <!-- JS for Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>
