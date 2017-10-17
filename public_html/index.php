@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- LOGIN SCREEN
+		if user already logged in, redirect to student/teacher dashboard
+-->
 <html>
 <head>
     <meta charset="utf-8">
@@ -16,7 +19,9 @@
 </head>
 
 <body>
-    <h1>Lets Start Today </h1>
+    <div >
+	
+	</div>
 
 
     <!-- JS for Bootstrap -->
