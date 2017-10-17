@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Fancy RPG</title>
+    <title>Quest up</title>
+
+    <link rel="stylesheet" href="/css/design.css">
 </head>
 
 <body>
