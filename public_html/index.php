@@ -22,7 +22,7 @@
 <body>
 	 <div class="row affix-row">
      <!--/col - left -->
-	    <div class="col-sm-3 col-md-3 affix-sidebar">
+	    <div class="col-sm-4 col-md-3 affix-sidebar">
         <!--/sidebar-nav -->
         <div class="sidebar-nav  ">
           <!--/.nav-normal -->
@@ -41,16 +41,17 @@
               <ul class="nav navbar-nav" id="sidenav01">
 
                 <li class="timecolor"><a href="#">
-                  <img class="imgprofile" src="img/profileTest.jpg" width="150px" height="150px" alt="">
+                  <img class="imgprofile" src="img/profileTest.jpg" width="100px" height="100px" alt="">
                   <h4 class= "proname">
-                    Name Lastname<br><small>Student</small>
+                    Name LastName<br><small>Student</small>
                   </h4>
 
 
               </a></li>
-                <li><a href="index.php"> Dashboard </a></li>
-                <li><a href="#">Journey </span></a></li>
-                <li><a href="#">Quests</a></li>
+                <li class="butallign "><button type="button" class="btn shadow"><span class="butallign">Dashboard</span></button></li>
+                <li class="butallign "><button type="button" class="btn shadow">Journey</button></li>
+                <li class="butallign "><button type="button" class="btn shadow">Quests</button></li>
+                <li class="butallign "><button type="button" class="btn shadow">Profile</button></li>
                 <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
 
               </ul>
@@ -59,7 +60,7 @@
         </div><!--/sidebar-nav -->
 	    </div><!--/col - left -->
 
-      <div class="col-sm-9 col-md-9 affix-content">
+      <div class="col-sm-8 col-md-9 affix-content">
         <h1> Heyy </h1>
 
       </div>
