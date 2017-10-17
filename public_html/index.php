@@ -19,26 +19,28 @@
 </head>
 
 <body>
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4 text-center">
-			<div class="container color" id="login" >
-			<h1>Welcome to Learning RPG!</h1>
-			<form action="dashboard.php">
-				
-				
-				<div class="input-group">
-					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
-					<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-8 text-center">
+				<div class="container color" id="login" >
+				<h1>Welcome to Learning RPG!</h1>
+				<form >
+					
+					
+					<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+						<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
+					</div>
+					
+					</br>
+					<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-lock"></span>
+						<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
+					</div>
+					</br>
+					<input class="btn btn-primary btn-lg btn-block login-button" type="submit" value="Login">
+				</form>
 				</div>
-				
-				</br>
-				<div class="input-group">
-					<span class="input-group-addon glyphicon glyphicon-lock"></span>
-					<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
-				</div>
-				</br>
-				<button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
-			</form>
 			</div>
 		</div>
 	</div>
