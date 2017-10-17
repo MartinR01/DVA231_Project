@@ -20,10 +20,48 @@
 
 <body>
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2" style="background-color: green">
+	</div>
+	<div class="row align-items-center">
+		<div class="col-sm-4 col-sm-offset-4 align-self-center" style="background-color: green">
 			LOGIN
 		</div>
 	</div>
+	
+	<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+</div>
     <!-- JS for Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
