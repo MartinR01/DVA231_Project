@@ -19,8 +19,10 @@
 </head>
 
 <body>
-    <div >
-	
+	<div class="row">
+		<div class="col-sm-8" style="background-color: green">
+			LOGIN
+		</div>
 	</div>
 
 	<h2>HI</h2>
