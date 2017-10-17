@@ -28,8 +28,6 @@
 			</a>
 		</div>
 	</div>
-	
-	
     <!-- JS for Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
