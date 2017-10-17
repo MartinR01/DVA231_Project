@@ -19,49 +19,17 @@
 </head>
 
 <body>
-	<div class="row">
-	</div>
-	<div class="row align-items-center">
-		<div class="col-sm-4 col-sm-offset-4 align-self-center" style="background-color: green">
-			LOGIN
+	<div class="container">
+		<div class="row centered">
+			<a href="dashboard.php">
+				<div class="col-sm-4 col-sm-offset-4 text-center" id="login" style="background-color: green">
+					<h1 class = "align-middle">LOGIN</h1>
+				</div>
+			</a>
 		</div>
 	</div>
 	
-	<div class="container">
-  <div class="row align-items-start">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-  </div>
-  <div class="row align-items-center">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-  </div>
-  <div class="row align-items-end">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-  </div>
-</div>
+	
     <!-- JS for Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
