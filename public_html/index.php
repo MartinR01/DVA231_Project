@@ -9,6 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quest up</title>
+    <!--Fonts -->
+    <link href=“https://fonts.googleapis.com/icon?family=Material+Icons” rel=“stylesheet”>
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
@@ -45,9 +47,11 @@
                   <h4 class= "proname">
                     Name LastName<br><small>Student</small>
                   </h4>
+              </a>
+              <i class=“material-icons” style=“font-size:60px;color:red;“>cloud</i>
+            <button type="button" class="btn btn-default btn-circle"></button>
 
-
-              </a></li>
+            </li>
                 <li class="butallign "><button type="button" class="btn shadow"><span>Dashboard</span></button></li>
                 <li class="butallign "><button type="button" class="btn shadow"><span>Journey</span></button></li>
                 <li class="butallign "><button type="button" class="btn shadow"><span>Quests</span></button></li>
