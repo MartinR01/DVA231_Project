@@ -1,14 +1,24 @@
+/*Left side panel navbar */
   .timecolor{
-    width: 250px;
     background-color: #54d0e0;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
-   
+    padding-bottom: 3%;
   }
   .color{
     background-color: #3498db;
   }
+  .imgprofile{
+    margin-bottom: 10px;
+    border:3px solid white;
+    border-radius: 50%;
+  
+  }
+  .proname{}
+    /*== Progress bar ==*/
+
 /* make sidebar nav vertical */
 @media (min-width: 768px){
+
   .affix-content .container {
     width: 700px;
   }
@@ -23,7 +33,7 @@
 
   .sidebar-nav{
     position:fixed;
-    width:100%;
+    width:50%;
   }
   .affix-sidebar{
     padding-right:0;
