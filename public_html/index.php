@@ -20,7 +20,7 @@
 
 <body>
 	<div class="row">
-		<div class="col-sm-8" style="background-color: green">
+		<div class="col-sm-8 mx-auto" style="background-color: green">
 			LOGIN
 		</div>
 	</div>
