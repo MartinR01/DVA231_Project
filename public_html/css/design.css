@@ -1,4 +1,9 @@
-
+  .timecolor{
+    width: 250px;
+    background-color: #54d0e0;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+   
+  }
   .color{
     background-color: #3498db;
   }
@@ -30,8 +35,7 @@
     height: 100%;
     margin-left: 0;
     margin-right: 0;
-  
-
+    background-color: #ecf0f1;
   }
   .affix-content{
     background-color:white;
@@ -55,6 +59,7 @@
     float: none;
     display: block;
   }
+
   .sidebar-nav .navbar li a {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -110,10 +115,10 @@
   .navbar-collapse{
     padding: 0;
   }
-  .sidebar-nav .navbar li a:hover {
+/*  .sidebar-nav .navbar li a:hover {
     background-color: #428bca;
     color: white;
-  }
+  } */
   .sidebar-nav .navbar li a > .caret {
     margin-top: 8px;
   }

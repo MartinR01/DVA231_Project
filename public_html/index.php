@@ -40,11 +40,15 @@
             <div class="navbar-collapse collapse sidebar-navbar-collapse">
               <ul class="nav navbar-nav" id="sidenav01">
 
-                <li class="active"><a href="#"><h4>Name Lastname<br><small>Student</small></h4></a></li>
-                <li><a href="index.php">  <span class="glyphicon glyphicon-cloud"></span> Dashboard </a></li>
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-inbox"></span> Journey </span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-lock"></span>Quests</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Notification <span class="badge pull-right">42</span></a></li>
+                <li class="timecolor"><a href="#">
+                  <h4>
+                  <img class="imgprofile" src="img/profileTest.jpg" alt="">
+                  Name Lastname<br><small>Student</small></h4></a></li>
+                <li><a href="index.php"> Dashboard </a></li>
+                <li><a href="#">Journey </span></a></li>
+                <li><a href="#">Quests</a></li>
+                <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
+
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.nav-normal -->
