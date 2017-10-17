@@ -36,9 +36,8 @@
 					<span class="input-group-addon glyphicon glyphicon-lock"></span>
 					<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
 				</div>
-				
 				</br>
-				<input name="login" type="submit"/>
+				<button type="button" class="btn btn-primary btn-lg btn-block login-button">Login</button>
 			</form>
 			</div>
 		</div>

@@ -4,9 +4,9 @@ body{
 }
 
 #login{
-	height: 20em;
 	margin-top:20%;
 	border-radius: 30px;
+	padding: 1.5em;
 }
 
 h1{
