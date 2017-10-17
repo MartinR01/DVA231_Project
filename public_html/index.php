@@ -60,8 +60,7 @@
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
                 <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
-                <!--UNCOMMENT TO SEE LOGOUT BUTTON
-                <li class="butallign"><button type="button" class="btn1 shadow" id="logout-btn"><span>Log out</span></button></li>-->
+                <li class="butallign"><button type="button" class="btn shadow" id="logout-btn"><span>Log out</span></button></li>
 
               </ul>
             </div><!--/.nav-collapse -->

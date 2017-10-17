@@ -18,14 +18,12 @@
     background-color: #3498db;
   }
 
-/*  UNCOMMENT TO SEE RED BUTTON WORKING
   #logout-btn
    {
       background: #BE3A31;
       border-color: #BE3A31;
-}*/
+}
 
-/* UNCOMMENT TO SEE THE FONTS! :) 
 body {
   font-family: impact;
 }
@@ -34,7 +32,7 @@ body {
   font-family: impact;
   src: url("fonts/Impact.ttf");
 }
-*/
+
 
   .imgprofile{
     margin-bottom: 10px;
