@@ -1,6 +1,6 @@
 /*Left side panel navbar */
   .timecolor{
-    background-color: #54d0e0;
+    background-color: #4DD0E1;
     padding-bottom: 3%;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
@@ -23,16 +23,21 @@
     border-radius: 50%;
 
   }
-  .proname{}
-    /*== Menu buttons ==*/
+
+  /*Menu buttons*/
 
     .btn{
       border: 3px solid white;
-      width: 40%;
+      width: 50%;
       border-radius: 13px;
-      margin-top: 15px;
+      margin-top: 20px;
       color: white;
-      background: #54D0E0;
+      background: #4DD0E1;
+    }
+    .btn:hover{
+      color:white;
+      font-weight: bold;
+
     }
 
 /* make sidebar nav vertical */
