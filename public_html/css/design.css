@@ -17,6 +17,14 @@
   .color{
     background-color: #3498db;
   }
+
+  /*  UNCOMMENT TO SEE RED BUTTON WORKING
+  #logout-btn
+   {
+      background: #BE3A31;
+      border-color: #BE3A31;
+  }*/
+
   .imgprofile{
     margin-bottom: 10px;
     border:5px solid white;
