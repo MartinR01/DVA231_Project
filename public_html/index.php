@@ -48,7 +48,7 @@
                     Name LastName<br><small>Student</small>
                   </h4>
               </a>
-              
+
             <button type="button" class="btn btn-default btn-circle"><i class="material-icons">&#xE87C;</i></button>
 
             </li>
@@ -57,6 +57,8 @@
                 <li class="butallign "><button type="button" class="btn shadow"><span>Quests</span></button></li>
                 <li class="butallign "><button type="button" class="btn shadow"><span>Profile</span></button></li>
                 <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
+                <!--UNCOMMENT TO SEE LOGOUT BUTTON
+                <li class="butallign"><button type="button" class="btn shadow" id="logout-btn"><span>Log out</span></button></li>-->
 
               </ul>
             </div><!--/.nav-collapse -->
