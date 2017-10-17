@@ -17,7 +17,7 @@
 
 <body>
     <h1>Lets Start Today </h1>
-
+    <p> If you can see this, is because the git develop branch is working! </p>
 
     <!-- JS for Bootstrap -->
   <script src="js/bootstrap.min.js"></script>
