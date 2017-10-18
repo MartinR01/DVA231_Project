@@ -10,6 +10,7 @@ body {
 }
 
 /* LOGIN PAGE */
+
 #login{
 	border-radius: 30px;
 	padding: 1.5em;
@@ -17,9 +18,11 @@ body {
 }
 
 #login h1{
-	border:0 solid #fff; 
-	border-bottom-width:1px;
 	padding-bottom:10px;
+}
+
+#h1border{
+	border-bottom: 1px solid white;
 }
 
 /*Left side panel navbar */
