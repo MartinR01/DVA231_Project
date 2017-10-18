@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+
+body {
+  font-family: impact;
+}
+/*FONTS*/
+@font-face {
+  font-family: impact;
+  src: url("fonts/Impact.ttf");
+}
+
+=======
 body{
   background-color:#ecf0f1;
 }
@@ -14,25 +26,128 @@ h1{
 	border-bottom-width:1px;
 	padding-bottom:10px;
 }
+>>>>>>> anemoneMartin
 
 /*Left side panel navbar */
   .timecolor{
-    background-color: #54d0e0;
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: #4DD0E1;
     padding-bottom: 3%;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .butallign {
     text-align: center;
   }
+
+  .shadow {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+  }
+
   .color{
     background-color: #3498db;
   }
+
+<<<<<<< HEAD
+  #logout-btn
+   {
+      background: #BE3A31;
+      border-color: #BE3A31;
+}
+
+body {
+  font-family: impact;
+}
+
+@font-face {
+  font-family: impact;
+  src: url("fonts/Impact.ttf");
+}
+=======
+
+
+>>>>>>> 96b1edc072827fcc7e312a77728c99abb9d677ff
+
+
   .imgprofile{
     margin-bottom: 10px;
-    border:3px solid white;
+    border:5px solid white;
     border-radius: 50%;
 
   }
-  .proname{}
-    /*== Progress bar ==*/
+
+  /*Menu buttons*/
+
+    .btn1{
+      border: 5px solid white;
+      width: 50%;
+      border-radius: 13px;
+      margin-top: 20px;
+      color: white;
+      background: #4DD0E1;
+
+    }
+    .btn1:hover{
+      color:white;
+      font-weight: bold;
+    }
+    #logout-btn
+     {
+        background: #BE3A31;
+        border-color: #BE3A31;
+        margin-top:50px;
+  }
+
+/* Notification and Settings buttons */
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  background-color: #BDC3C7;
+  float: left;
+
+}
+
+.btn-circle-not {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  background-color: #E74C3C;
+  float: right;
+
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+    border: 0.5px solid white;
+  margin-left: 8px
+
+}
+.btn-circle-not.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+  border: 0.5px solid white;
+  margin-right: 8px
+
+}
 
 /* make sidebar nav vertical */
 @media (min-width: 768px){
