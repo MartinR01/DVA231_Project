@@ -1,3 +1,15 @@
+
+
+body {
+  font-family: impact;
+}
+/*FONTS*/
+@font-face {
+  font-family: impact;
+  src: url("fonts/Impact.ttf");
+}
+
+
 /*Left side panel navbar */
   .timecolor{
     background-color: #4DD0E1;
@@ -18,6 +30,7 @@
     background-color: #3498db;
   }
 
+<<<<<<< HEAD
   #logout-btn
    {
       background: #BE3A31;
@@ -32,6 +45,10 @@ body {
   font-family: impact;
   src: url("fonts/Impact.ttf");
 }
+=======
+
+
+>>>>>>> 96b1edc072827fcc7e312a77728c99abb9d677ff
 
 
   .imgprofile{
@@ -56,6 +73,12 @@ body {
       color:white;
       font-weight: bold;
     }
+    #logout-btn
+     {
+        background: #BE3A31;
+        border-color: #BE3A31;
+        margin-top:50px;
+  }
 
 /* Notification and Settings buttons */
 
