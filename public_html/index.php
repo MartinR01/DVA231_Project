@@ -24,26 +24,32 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 col-md-4 text-center">
-			<h1>Welcome to Learning RPG!</h1>
+			<div class="col-xs-12 col-md-4">
+			
 				<div class="container color" id="login" >
-
-				<form action="dashboard.php">
-
-
-					<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-envelope"></span>
-						<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
-					</div>
-
-					</br>
-					<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-lock"></span>
-						<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
-					</div>
-					</br>
-					<input class="btn btn-primary btn-lg btn-block login-button" type="submit" value="Login">
-				</form>
+				
+					<h1 class="text-center">Welcome to Learning RPG!</h1>
+					<form action="dashboard.php">
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="input-group">
+								<span class="input-group-addon glyphicon glyphicon-envelope"></span>
+								<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
+							</div>
+						</div>
+						
+						</br>
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Your Password</label>
+							<div class="input-group">
+								<span class="input-group-addon glyphicon glyphicon-lock"></span>
+								<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
+							</div>
+						</div>
+						</br>
+						<input class="btn btn-primary btn-lg btn-block login-button" type="submit" value="Login">
+					</form>
 				</div>
 			</div>
 		</div>
