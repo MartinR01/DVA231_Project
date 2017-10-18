@@ -2,16 +2,31 @@
     display: block;
     background-color: #fff;
     height: 120px;
-    width: 320px;
+    width: 300px;
     margin-top: 20px;
     box-shadow: 1px 1px 8px #999;
     cursor: pointer;
+  
+    border-radius: 12px 12px 12px 12px;
+
+}
+
+.media {
+  display: inline-block;
+
+}
+.media-body{
+    border-radius:  0px 12px  0px   0px   ;
 }
 
 /*Image size of the journey card*/
 .card-img {
     height: 120px;
     width: 100px;
+    border: 0;
+    padding: 0;
+    border-radius: 12px  0px   0px  12px ;
+
 }
 
 .media-heading {
@@ -38,8 +53,20 @@
 
  /* un-bold the text*/
  .light {
-   font-weight: lighter;
-   font-size: 10px;
+    font-weight: 100;
+ }
+
+/*Font for journey progress 7/10 */
+.progress-font{
+  font-family: Arial;
+  color: gray;
+  font-size: 15px;
+}
+
+
+ /*Underline the text*/
+ .underline {
+   text-decoration: underline;
  }
 
 /*Centers and style for points inside the circle*/
@@ -53,6 +80,7 @@
 /*Erases padding on the title*/
  .media-left {
    padding: 0;
+   border-top-left-radius: 12px;
  }
 
  /*Erase this after migrate */

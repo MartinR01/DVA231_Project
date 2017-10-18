@@ -72,9 +72,11 @@
 	    </div><!--/col - left -->
 
       <div class="col-sm-9 col-md-9 affix-content">
-        <h1> Heyy </h1>
+        <h1 class="underline"> Journey </h1>
 
-<!--- below this do not touch! -- >
+<!--- above this do not touch! -- >
+
+
 
 <!-- Font Awesome 4.7 -->
 
@@ -84,7 +86,9 @@
 <!-- Design Group 'No Member'  -->
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4">
+
+          <!--1-->
+            <div class="col-sm-4" style="text-align:center">
                 <div class="card-style">
                     <div class="media">
 
@@ -97,20 +101,63 @@
 
                                 <div class="circle shadow"><span class="points-circle">7.5</span></div>
 
-                                <div class="pull-right btn-part">Join Group <br><span class="light">7/10</span></div>
+                                <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                         </div>
-
                     </div>
                 </div>
             </div>
+
+            <!--1-->
+              <div class="col-sm-4" style="text-align:center">
+                  <div class="card-style">
+                      <div class="media">
+
+                          <div class="media-left">
+                              <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                          </div>
+
+                          <div class="media-body">
+                                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+
+                                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
+
+                                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--1-->
+                <div class="col-sm-4" style="text-align:center">
+                    <div class="card-style">
+                        <div class="media">
+
+                            <div class="media-left">
+                                <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                            </div>
+
+                            <div class="media-body">
+                                    <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+
+                                    <div class="circle shadow"><span class="points-circle">7.5</span></div>
+
+                                    <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </div>
       </div>
 
     </div>
 </div>
 
-<!--- above this do not touch! -- >
+<!--- below this do not touch! -- >
       </div>
+
+
 	 </div>
     <!-- JS for Bootstrap -->
       <script src="js/bootstrap.js"></script>
