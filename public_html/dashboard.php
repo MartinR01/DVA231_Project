@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quest up</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->

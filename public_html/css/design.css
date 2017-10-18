@@ -1,7 +1,9 @@
 
 
 body {
-  font-family: impact;
+  font-family: impact, 'Impact', 'Teko';
+    font-weight: 900;
+  
 }
 /*FONTS*/
 @font-face {
@@ -9,6 +11,17 @@ body {
   src: url("fonts/Impact.ttf");
 }
 
+#login{
+	margin-top:50%;
+	border-radius: 30px;
+	padding: 1.5em;
+}
+
+h1{
+	border:0 solid #fff; 
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
 
 /*Left side panel navbar */
   .timecolor{
