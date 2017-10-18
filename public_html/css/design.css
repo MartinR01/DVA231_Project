@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 body {
   font-family: impact;
@@ -10,23 +9,6 @@ body {
   src: url("fonts/Impact.ttf");
 }
 
-=======
-body{
-  background-color:#ecf0f1;
-}
-
-#login{
-	margin-top:50%;
-	border-radius: 30px;
-	padding: 1.5em;
-}
-
-h1{
-	border:0 solid #fff; 
-	border-bottom-width:1px;
-	padding-bottom:10px;
-}
->>>>>>> anemoneMartin
 
 /*Left side panel navbar */
   .timecolor{
@@ -48,25 +30,11 @@ h1{
     background-color: #3498db;
   }
 
-<<<<<<< HEAD
   #logout-btn
    {
       background: #BE3A31;
       border-color: #BE3A31;
 }
-
-body {
-  font-family: impact;
-}
-
-@font-face {
-  font-family: impact;
-  src: url("fonts/Impact.ttf");
-}
-=======
-
-
->>>>>>> 96b1edc072827fcc7e312a77728c99abb9d677ff
 
 
   .imgprofile{
