@@ -1,3 +1,15 @@
+
+
+body {
+  font-family: impact;
+}
+/*FONTS*/
+@font-face {
+  font-family: impact;
+  src: url("fonts/Impact.ttf");
+}
+
+
 /*Left side panel navbar */
   .timecolor{
     background-color: #4DD0E1;
@@ -18,23 +30,9 @@
     background-color: #3498db;
   }
 
-/*  UNCOMMENT TO SEE RED BUTTON WORKING
-  #logout-btn
-   {
-      background: #BE3A31;
-      border-color: #BE3A31;
-}*/
 
-/* UNCOMMENT TO SEE THE FONTS! :) 
-body {
-  font-family: impact;
-}
 
-@font-face {
-  font-family: impact;
-  src: url("fonts/Impact.ttf");
-}
-*/
+
 
   .imgprofile{
     margin-bottom: 10px;
@@ -58,6 +56,12 @@ body {
       color:white;
       font-weight: bold;
     }
+    #logout-btn
+     {
+        background: #BE3A31;
+        border-color: #BE3A31;
+        margin-top:50px;
+  }
 
 /* Notification and Settings buttons */
 
