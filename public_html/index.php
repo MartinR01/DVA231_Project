@@ -29,7 +29,7 @@
 				<div class="container color" id="login" >
 				
 					<h1 class="text-center">Welcome to Learning RPG!</h1>
-					<form action="dashboard.php">
+					<form action="dashboard.php" method="post">
 						
 						<div class="form-group">
 							<label for="email" class="cols-sm-2 control-label">Your Email</label>
