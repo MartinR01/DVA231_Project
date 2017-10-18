@@ -73,28 +73,28 @@
 
       <div class="col-sm-9 col-md-9 affix-content">
 		<div class="row">
-			<div class="col-sm-4"">
+			<div class="col-sm-4">
 				<div class="quest-type" style="background-color:orange;"></div>
 				<div class="quest-availability" style="background-color:green;"></div>
 				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color" >Title</div>
-					<div class="quest-description " >Description</div>
-				</div>
-			</div>
-			<div class="col-sm-4"">
-				<div class="quest-type" style="background-color:orange;"></div>
-				<div class="quest-availability" style="background-color:green;"></div>
-				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color" >Title</div>
-					<div class="quest-description " >Description</div>
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="quest-type" style="background-color:orange;"></div>
 				<div class="quest-availability" style="background-color:green;"></div>
 				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color" >Title</div>
-					<div class="quest-description " >Description</div>
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
 				</div>
 			</div>
 		</div>
