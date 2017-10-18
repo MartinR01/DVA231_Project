@@ -43,12 +43,13 @@
             <div class="navbar-collapse collapse sidebar-navbar-collapse">
               <ul class="nav navbar-nav" id="sidenav01">
                 <!--Profile -->
-                <li class="timecolor"><a href="#">
-                  <img class="imgprofile" src="img/profileTest.jpg" width="150px" height="150px" alt="">
-                  <h4 class= "proname"> Name LastName<br><small>Student</small><br>
-                    <button type="button" class="btn btn-default btn-circle btn-lg"><i class="material-icons" style="font-size:20px;">settings</i></button>
-                    <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:20px;">speaker_notes</i></button>
-                  </h4></a>
+                <li class="timecolor">
+                  <br>
+                  <a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                  <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
+                    <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
+                    <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
+                    <br>
                 </li>
                 <!--Buttons -->
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
@@ -64,9 +65,23 @@
         </div><!--/sidebar-nav -->
 	    </div><!--/col - left -->
 
+      <!-- RIGHT SIDE-->
       <div class="col-sm-9 col-md-9 affix-content">
-        <h1> Heyy </h1>
+        <!-- Top navigation -->
+        <nav class="navbar navbar-default "  style="border:0px " >
+          <div class="container" style="text-align:center">
+            <br>
+            <span class="topnav navbar-btn">Dashboard</span>
+            <span class="topnav">Leadboard</span>
+            <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
+          </div>
+        </nav><!--/end NAVIGATION -->
 
+        <div class="row">
+           <div class="col-">
+
+           </div>
+        </div>
 
       </div>
 	 </div>
