@@ -9,6 +9,18 @@ body {
   src: url("fonts/Impact.ttf");
 }
 
+/* LOGIN PAGE */
+#login{
+	border-radius: 30px;
+	padding: 1.5em;
+	margin-top: 30%;
+}
+
+#login h1{
+	border:0 solid #fff; 
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
 
 /*Left side panel navbar */
   .timecolor{
