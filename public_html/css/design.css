@@ -1,8 +1,28 @@
 
 
 body {
-  font-family: 'Teko', sans-serif;
+  font-family: impact, 'Impact', 'Teko';
+    font-weight: 900;
 
+}
+/*FONTS*/
+@font-face {
+  font-family: impact;
+  src: url("fonts/Impact.ttf");
+}
+
+/* LOGIN PAGE */
+#login{
+	border-radius: 30px;
+	padding: 1.5em;
+	margin-top: 30%;
+}
+
+#login h1{
+	border:0 solid #fff;
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
 
 }
 

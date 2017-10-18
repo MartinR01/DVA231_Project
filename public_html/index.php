@@ -24,12 +24,12 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-4">
+			<div class="container col-xs-12 col-sm-6 col-sm-offset-3">
 
-				<div class="container color" id="login" >
+				<div class="color" id="login" >
 
 					<h1 class="text-center">Welcome to Learning RPG!</h1>
-					<form action="dashboard.php">
+					<form action="dashboard.php" method="post">
 
 						<div class="form-group">
 							<label for="email" class="cols-sm-2 control-label">Your Email</label>
@@ -48,7 +48,7 @@
 							</div>
 						</div>
 						</br>
-						<input class="btn btn-primary btn-lg btn-block login-button" type="submit" value="Login">
+						<input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Login">
 					</form>
 				</div>
 			</div>

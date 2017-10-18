@@ -1,0 +1,89 @@
+.card-style {
+    display: block;
+    background-color: #fff;
+    height: 120px;
+    width: 300px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #999;
+    cursor: pointer;
+  
+    border-radius: 12px 12px 12px 12px;
+
+}
+
+.media {
+  display: inline-block;
+
+}
+.media-body{
+    border-radius:  0px 12px  0px   0px   ;
+}
+
+/*Image size of the journey card*/
+.card-img {
+    height: 120px;
+    width: 100px;
+    border: 0;
+    padding: 0;
+    border-radius: 12px  0px   0px  12px ;
+
+}
+
+.media-heading {
+  padding: 10px;
+  background-color: #ED5454;
+  color: white;
+}
+
+ .btn-part {
+     display: inline-block;
+     margin: 10px;
+     float: right;
+ }
+
+/* Jouneys' circle for points*/
+ .circle {
+   width: 70px;
+   height: 70px;
+   display: inline-block;
+   background: #47E086;
+   border-radius: 50%;
+   text-align: center;
+ }
+
+ /* un-bold the text*/
+ .light {
+    font-weight: 100;
+ }
+
+/*Font for journey progress 7/10 */
+.progress-font{
+  font-family: Arial;
+  color: gray;
+  font-size: 15px;
+}
+
+
+ /*Underline the text*/
+ .underline {
+   text-decoration: underline;
+ }
+
+/*Centers and style for points inside the circle*/
+.points-circle {
+  color: #ED5454;
+  font-size: 30px;
+  position: relative;
+  top: 13px;
+}
+
+/*Erases padding on the title*/
+ .media-left {
+   padding: 0;
+   border-top-left-radius: 12px;
+ }
+
+ /*Erase this after migrate */
+ .shadow {
+   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+ }
