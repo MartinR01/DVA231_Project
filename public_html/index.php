@@ -21,10 +21,10 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-8 text-center">
+			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
 				<div class="container color" id="login" >
 				<h1>Welcome to Learning RPG!</h1>
-				<form >
+				<form action="dashboard.php">
 					
 					
 					<div class="input-group">
