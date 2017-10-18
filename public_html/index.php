@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <title>Quest up</title>
 
-    <!-- CSS Our-->
-    <link rel="stylesheet" href="css/design.css">
+    
     <!-- CSS Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+	<!-- CSS Our-->
+    <link rel="stylesheet" href="css/design.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -21,9 +21,10 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+			<div class="col-md-12 col-md-4 text-center">
+			<h1>Welcome to Learning RPG!</h1>
 				<div class="container color" id="login" >
-				<h1>Welcome to Learning RPG!</h1>
+				
 				<form action="dashboard.php">
 					
 					
@@ -45,7 +46,6 @@
 		</div>
 	</div>
     <!-- JS for Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>
