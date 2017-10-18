@@ -11,13 +11,14 @@ body {
   src: url("fonts/Impact.ttf");
 }
 
+/* LOGIN PAGE */
 #login{
-	margin-top:50%;
 	border-radius: 30px;
 	padding: 1.5em;
+	margin-top: 30%;
 }
 
-h1{
+#login h1{
 	border:0 solid #fff; 
 	border-bottom-width:1px;
 	padding-bottom:10px;
