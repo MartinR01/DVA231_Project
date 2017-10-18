@@ -1,14 +1,15 @@
 
 
 body {
-  font-family: impact;
+  font-family: 'Teko', sans-serif;
+
 }
-/*FONTS*/
+/*FONTS
 @font-face {
   font-family: impact;
   src: url("fonts/Impact.ttf");
 }
-
+*/
 
 /*Left side panel navbar */
   .timecolor{
@@ -57,7 +58,8 @@ body {
     }
     .btn1:hover{
       color:white;
-      font-weight: bold;
+      font-size: 11pt;
+
     }
     #logout-btn
      {
