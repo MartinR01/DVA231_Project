@@ -15,6 +15,7 @@
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design.css">
+
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -49,11 +50,9 @@
                     Name LastName<br><small>Student</small><br>
                     <button type="button" class="btn btn-default btn-circle btn-lg"><i class="material-icons" style="font-size:20px;">settings</i></button>
                     <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:20px;">speaker_notes</i></button>
-
                   </h4>
 
               </a>
-
 
             </li>
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
@@ -73,7 +72,6 @@
 
       <div class="col-sm-9 col-md-9 affix-content">
         <h1> Heyy </h1>
-
 
       </div>
 	 </div>

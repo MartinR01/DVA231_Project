@@ -1,0 +1,61 @@
+.card-style {
+    display: block;
+    background-color: #fff;
+    height: 120px;
+    width: 320px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #999;
+    cursor: pointer;
+}
+
+/*Image size of the journey card*/
+.card-img {
+    height: 120px;
+    width: 100px;
+}
+
+.media-heading {
+  padding: 10px;
+  background-color: #ED5454;
+  color: white;
+}
+
+ .btn-part {
+     display: inline-block;
+     margin: 10px;
+     float: right;
+ }
+
+/* Jouneys' circle for points*/
+ .circle {
+   width: 70px;
+   height: 70px;
+   display: inline-block;
+   background: #47E086;
+   border-radius: 50%;
+   text-align: center;
+ }
+
+ /* un-bold the text*/
+ .light {
+   font-weight: lighter;
+   font-size: 10px;
+ }
+
+/*Centers and style for points inside the circle*/
+.points-circle {
+  color: #ED5454;
+  font-size: 30px;
+  position: relative;
+  top: 13px;
+}
+
+/*Erases padding on the title*/
+ .media-left {
+   padding: 0;
+ }
+
+ /*Erase this after migrate */
+ .shadow {
+   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+ }
