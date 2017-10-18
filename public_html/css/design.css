@@ -1,7 +1,9 @@
 
 
 body {
-  font-family: impact;
+  font-family: impact, 'Impact', 'Teko';
+    font-weight: 900;
+  
 }
 /*FONTS*/
 @font-face {
