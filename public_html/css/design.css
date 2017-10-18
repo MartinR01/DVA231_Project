@@ -27,6 +27,49 @@ body {
 	border-bottom: 1px solid white;
 }
 
+/* QUESTS */
+.quest{
+	border-radius: 100%;
+	border: 5px solid white;
+	width: 150px;
+	height: 150px;
+	text-align:center;
+	margin-top: -60px;
+}
+
+.quest-type{
+	border-radius: 100%;
+	border: 3px solid white;
+	position: relative;
+	top:12px;
+	left:5px;
+	width:30px;
+	height:30px;
+}
+
+.quest-availability{
+	border-radius: 100%;
+	border: 3px solid white;
+	position: relative;
+	top:81px;
+	left:113px;
+	width:30px;
+	height:30px;
+}
+
+.quest-title{
+	border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+	height:75px;
+}
+
+.quest-description{
+	border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+	height:75px;
+}
+
+
 /*Left side panel navbar */
   .timecolor{
     background-color: #4DD0E1;
