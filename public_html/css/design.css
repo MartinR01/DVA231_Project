@@ -30,25 +30,11 @@ body {
     background-color: #3498db;
   }
 
-<<<<<<< HEAD
   #logout-btn
    {
       background: #BE3A31;
       border-color: #BE3A31;
 }
-
-body {
-  font-family: impact;
-}
-
-@font-face {
-  font-family: impact;
-  src: url("fonts/Impact.ttf");
-}
-=======
-
-
->>>>>>> 96b1edc072827fcc7e312a77728c99abb9d677ff
 
 
   .imgprofile{
