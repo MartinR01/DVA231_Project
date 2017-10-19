@@ -9,12 +9,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quest up</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design.css">
+      <link rel="stylesheet" href="css/journey_test.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -42,28 +43,22 @@
             <!--/.nav-collapse -->
             <div class="navbar-collapse collapse sidebar-navbar-collapse">
               <ul class="nav navbar-nav" id="sidenav01">
-
-                <li class="timecolor"><a href="#">
-                  <img class="imgprofile" src="img/profileTest.jpg" width="150px" height="150px" alt="">
-                  <h4 class= "proname">
-                    Name LastName<br><small>Student</small><br>
-                    <button type="button" class="btn btn-default btn-circle btn-lg"><i class="material-icons" style="font-size:20px;">settings</i></button>
-                    <button type="button" class="btn btn-default btn-circle-not btn-lg"><i class="material-icons" style="font-size:20px;">speaker_notes</i></button>
-
-                  </h4>
-
-              </a>
-
-
-            </li>
+                <!--Profile -->
+                <li class="timecolor">
+                  <br>
+                  <a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                  <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
+                    <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
+                    <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
+                    <br>
+                </li>
+                <!--Buttons -->
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li>
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
                 <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
-
-                <li class="butallign"><button type="button" class="btn1 shadow" id="logout-btn"><span>Log out</span></button></li>
-
-                  <li><a href="#"> Notification <span class="badge pull-right">42</span></a></li>
+                <li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li>
+                <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
               </ul>
             </div><!--/.nav-collapse -->
@@ -71,35 +66,108 @@
         </div><!--/sidebar-nav -->
 	    </div><!--/col - left -->
 
+      <!-- RIGHT SIDE-->
       <div class="col-sm-9 col-md-9 affix-content">
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="quest-type" style="background-color:orange;"></div>
-				<div class="quest-availability" style="background-color:green;"></div>
-				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-					<div class="quest-description ">Description</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="quest-type" style="background-color:orange;"></div>
-				<div class="quest-availability" style="background-color:green;"></div>
-				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-					<div class="quest-description ">Description</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="quest-type" style="background-color:orange;"></div>
-				<div class="quest-availability" style="background-color:green;"></div>
-				<div class="quest shadow" style="background-color:green;">
-					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-					<div class="quest-description ">Description</div>
-				</div>
-			</div>
-		</div>
-		
+        <!-- Top navigation -->
+        <nav class="navbar navbar-default "  style="border:0px " >
+          <div class="container" style="text-align:center">
+            <br>
+            <span class="topnav navbar-btn">Dashboard</span>
+            <span class="topnav">Leadboard</span>
+            <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
+          </div>
+        </nav><!--/end NAVIGATION -->
 
+<!--Start of Journey-->
+    <div class="container">
+        <div class="row">
+          <!--Journey 1-->
+            <div class="col-sm-4" style="text-align:center">
+                <div class="card-style">
+                    <div class="media">
+                        <!--Journey picture-->
+                        <div class="media-left">
+                            <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                        </div><!--.Journey pictureend-->
+                        <!--Journey elements-->
+                        <div class="media-body">
+                                <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                        </div><!--Journey elements end-->
+                    </div>
+                </div>
+            </div><!--Journey 1 end-->
+
+          <!--Journey 2-->
+              <div class="col-sm-4" style="text-align:center">
+                  <div class="card-style">
+                      <div class="media">
+                          <!--Journey picture-->
+                          <div class="media-left">
+                              <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                          </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
+                          <div class="media-body">
+                                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                          </div><!--Journey elements end-->
+                      </div>
+                  </div>
+              </div><!--Journey 2 end-->
+
+              <!--Journey 3-->
+                <div class="col-sm-4" style="text-align:center">
+                    <div class="card-style">
+                        <div class="media">
+                            <!--Journey picture-->
+                            <div class="media-left">
+                                <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                            </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
+                            <div class="media-body">
+                                    <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                    <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                    <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                            </div><!--Journey elements end-->
+                        </div>
+                    </div>
+                </div><!--Journey 3 end-->
+        </div>
+      </div><!--END OF A JOURNEY-->
+
+      <br /> <br />   <br />   <br />   <br />   <br />
+
+		<!--QUESTS -->
+      <div class="container">
+       <div class="row"><!--quest row -->
+			<div class="col-sm-4"><!--Quest 1 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 1 end-->
+			<div class="col-sm-4"><!--Quest 2 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 2 end -->
+			<div class="col-sm-4"><!--Quest 3 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 3 end-->
+    </div>
+		</div><!--END OF QUESTS -->
 
       </div>
 	 </div>
