@@ -72,87 +72,71 @@
 	    </div><!--/col - left -->
 
       <div class="col-sm-9 col-md-9 affix-content">
-        <h1 class="underline"> Journey </h1>
 
 <!--- above this do not touch! -- >
 
 
 
-<!-- Font Awesome 4.7 -->
 
-<div class="container-fluid">
-  <div class="row">
-
-<!-- Design Group 'No Member'  -->
+<!--Start of Journey-->
     <div class="container">
         <div class="row">
-
-          <!--1-->
+          <!--Journey 1-->
             <div class="col-sm-4" style="text-align:center">
                 <div class="card-style">
                     <div class="media">
-
+                        <!--Journey picture-->
                         <div class="media-left">
                             <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                        </div>
-
+                        </div><!--.Journey pictureend-->
+                        <!--Journey elements-->
                         <div class="media-body">
                                 <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-
-                                <div class="circle shadow"><span class="points-circle">7.5</span></div>
-
+                                <div class="circle shadow"><span class="points-circle">7.5</span><div>
                                 <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                        </div>
+                        </div><!--Journey elements end-->
                     </div>
                 </div>
-            </div>
+            </div><!--Journey 1 end-->
 
-            <!--1-->
+          <!--Journey 2-->
               <div class="col-sm-4" style="text-align:center">
                   <div class="card-style">
                       <div class="media">
-
+                          <!--Journey picture-->
                           <div class="media-left">
                               <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                          </div>
-
+                          </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
                           <div class="media-body">
                                   <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-
                                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
-
                                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                          </div>
+                          </div><!--Journey elements end-->
                       </div>
                   </div>
-              </div>
+              </div><!--Journey 2 end-->
 
-              <!--1-->
+              <!--Journey 3-->
                 <div class="col-sm-4" style="text-align:center">
                     <div class="card-style">
                         <div class="media">
-
+                            <!--Journey picture-->
                             <div class="media-left">
                                 <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                            </div>
-
+                            </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
                             <div class="media-body">
                                     <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-
                                     <div class="circle shadow"><span class="points-circle">7.5</span></div>
-
                                     <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                            </div>
+                            </div><!--Journey elements end-->
                         </div>
                     </div>
-                </div>
-
-
+                </div><!--Journey 3 end-->
         </div>
-      </div>
+      </div><!--END OF A JOURNEY-->
 
-    </div>
-</div>
 
 <!--- below this do not touch! -- >
       </div>
