@@ -77,7 +77,7 @@
             <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
           </div>
         </nav><!--/end NAVIGATION -->
-        
+
 <!--Start of Journey-->
     <div class="container">
         <div class="row">
@@ -92,7 +92,7 @@
                         <!--Journey elements-->
                         <div class="media-body">
                                 <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                                <div class="circle shadow"><span class="points-circle">7.5</span><div>
+                                <div class="circle shadow"><span class="points-circle">7.5</span></div>
                                 <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                         </div><!--Journey elements end-->
                     </div>
@@ -136,7 +136,11 @@
                 </div><!--Journey 3 end-->
         </div>
       </div><!--END OF A JOURNEY-->
+
+      <br /> <br />   <br />   <br />   <br />   <br />
+
 		<!--QUESTS -->
+      <div class="container">
        <div class="row"><!--quest row -->
 			<div class="col-sm-4"><!--Quest 1 -->
 				<div class="quest-type" style="background-color:orange;"></div>
@@ -162,8 +166,9 @@
 					<div class="quest-description ">Description</div>
 				</div>
 			</div><!--Quest 3 end-->
+    </div>
 		</div><!--END OF QUESTS -->
-		
+
       </div>
 	 </div>
     <!-- JS for Bootstrap -->
