@@ -11,12 +11,11 @@
     <title>Quest up</title>
     <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design.css">
-
+      <link rel="stylesheet" href="css/journey_test.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -79,11 +78,96 @@
           </div>
         </nav><!--/end NAVIGATION -->
 
+<!--Start of Journey-->
+    <div class="container">
         <div class="row">
-           <div class="col-">
+          <!--Journey 1-->
+            <div class="col-sm-4" style="text-align:center">
+                <div class="card-style">
+                    <div class="media">
+                        <!--Journey picture-->
+                        <div class="media-left">
+                            <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                        </div><!--.Journey pictureend-->
+                        <!--Journey elements-->
+                        <div class="media-body">
+                                <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                        </div><!--Journey elements end-->
+                    </div>
+                </div>
+            </div><!--Journey 1 end-->
 
-           </div>
+          <!--Journey 2-->
+              <div class="col-sm-4" style="text-align:center">
+                  <div class="card-style">
+                      <div class="media">
+                          <!--Journey picture-->
+                          <div class="media-left">
+                              <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                          </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
+                          <div class="media-body">
+                                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                          </div><!--Journey elements end-->
+                      </div>
+                  </div>
+              </div><!--Journey 2 end-->
+
+              <!--Journey 3-->
+                <div class="col-sm-4" style="text-align:center">
+                    <div class="card-style">
+                        <div class="media">
+                            <!--Journey picture-->
+                            <div class="media-left">
+                                <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                            </div><!--.Journey pictureend-->
+                            <!--Journey elements-->
+                            <div class="media-body">
+                                    <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                                    <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                                    <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                            </div><!--Journey elements end-->
+                        </div>
+                    </div>
+                </div><!--Journey 3 end-->
         </div>
+      </div><!--END OF A JOURNEY-->
+
+      <br /> <br />   <br />   <br />   <br />   <br />
+
+		<!--QUESTS -->
+      <div class="container">
+       <div class="row"><!--quest row -->
+			<div class="col-sm-4"><!--Quest 1 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 1 end-->
+			<div class="col-sm-4"><!--Quest 2 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 2 end -->
+			<div class="col-sm-4"><!--Quest 3 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<div class="quest shadow" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description ">Description</div>
+				</div>
+			</div><!--Quest 3 end-->
+    </div>
+		</div><!--END OF QUESTS -->
 
       </div>
 	 </div>
