@@ -81,10 +81,10 @@ if user already logged in, redirect to student/teacher dashboard
         </div>
       </nav><!--/end NAVIGATION -->
 
-      <!--Start of Journey-->
+      <!--AVAILABLE JOURNEYS-->
       <div class="container">
         <div class="row">		  
-		  <h3>Available</h3>
+		  <h1>Available</h1>
           <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style">
@@ -144,10 +144,11 @@ if user already logged in, redirect to student/teacher dashboard
       <br>
       <hr />
 	  
+	  <!--UPCOMING JOURNEYS-->
 	  <div class="container">
         <div class="row">
 		  
-		  <h3>Upcoming</h3>
+		  <h1>Upcoming</h1>
           <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style">

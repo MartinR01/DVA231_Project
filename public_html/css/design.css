@@ -186,6 +186,7 @@ body {
   border        : 5px solid white;
   border-radius : 100%;
   text-align    : center;
+  
 }
 
 .quest-type {
@@ -200,6 +201,7 @@ body {
 }
 
 .quest-availability {
+  z-index       : 1;
   position      : relative;
   top           : 79px;
   left          : 56px;
@@ -212,15 +214,18 @@ body {
 .quest-title {
   position                : relative;
   top                     : -20px;
-  height                  : 75px;
-  border-top-left-radius  : 75px;
-  border-top-right-radius : 75px;
+  height                  : 70px;
+  border-top-left-radius  : 70px;
+  border-top-right-radius : 70px;
 }
 
 .quest-description {
-  height                     : 75px;
-  border-bottom-right-radius : 75px;
-  border-bottom-left-radius  : 75px;
+  position					 : relative;
+  top						 : -20px;
+  height                     : 70px;
+  border-bottom-right-radius : 70px;
+  border-bottom-left-radius  : 70px;
+  background-color			 : #BE3A31;
 }
 
 /*STRUCTURE !! DONT EDIT */

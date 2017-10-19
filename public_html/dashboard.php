@@ -151,7 +151,7 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
+            <div class="quest shadow">
               <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
               <div class="quest-description ">Description</div>
             </div>
