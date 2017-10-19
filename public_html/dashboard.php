@@ -54,7 +54,7 @@ if user already logged in, redirect to student/teacher dashboard
               </li>
               <!--Buttons -->
               <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li>
+              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
               <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
               <li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li>
@@ -74,7 +74,7 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="container" style="text-align:center">
           <br>
           <span class="topnav navbar-btn">Dashboard</span>
-          <span class="topnav">Leadboard</span>
+          <span class="topnav">Leaderboard</span>
           <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
 
 
