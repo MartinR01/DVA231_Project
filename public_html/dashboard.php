@@ -53,11 +53,11 @@ if user already logged in, redirect to student/teacher dashboard
                 <br>
               </li>
               <!--Buttons -->
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
+              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
-              <li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li>
+              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
@@ -73,7 +73,7 @@ if user already logged in, redirect to student/teacher dashboard
       <nav class="navbar navbar-default "  style="border:0px " >
         <div class="container" style="text-align:center">
           <br>
-          <span class="topnav navbar-btn">Dashboard</span>
+          <span class="topnav navbar-btn topnav-active">Dashboard</span>
           <span class="topnav">Leaderboard</span>
           <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
 

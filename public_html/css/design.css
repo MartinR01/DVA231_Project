@@ -5,6 +5,22 @@ body {
 
 /* NAVIGATION BAR LEFT */
 
+/* LOGIN PAGE */
+
+#login{
+	border-radius: 30px;
+	padding: 1.5em;
+	margin-top: 30%;
+}
+
+#login h1{
+	padding-bottom:10px;
+}
+
+#h1border{
+	border-bottom: 1px solid white;
+}
+
 /* _ TIMELINE _ */
 
 .timecolor {
@@ -126,6 +142,10 @@ body {
 
 .topnav:hover {
   text-decoration : underline;
+}
+
+.topnav-active {	/*for current page*/
+	text-decoration : underline;
 }
 
 .topnav:active {
