@@ -4,25 +4,7 @@ body {
 }
 
 /* NAVIGATION BAR LEFT */
-body {
-  font-family: 'Teko', sans-serif;
-}
 
-/* LOGIN PAGE */
-
-#login{
-	border-radius: 30px;
-	padding: 1.5em;
-	margin-top: 30%;
-}
-
-#login h1{
-	padding-bottom:10px;
-}
-
-#h1border{
-	border-bottom: 1px solid white;
-}
 /* _ TIMELINE _ */
 
 .timecolor {
@@ -207,10 +189,6 @@ body {
   border-radius : 100%;
 }
 
-
-
-/* STRUCTURE !! DONT EDIT */
-@media (min-width: 768px){
 .quest-title {
   position                : relative;
   top                     : -20px;
