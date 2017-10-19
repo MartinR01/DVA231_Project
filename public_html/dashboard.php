@@ -11,13 +11,11 @@
     <title>Quest up</title>
     <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design.css">
       <link rel="stylesheet" href="css/journey_test.css">
-
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
