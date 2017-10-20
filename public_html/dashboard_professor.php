@@ -87,7 +87,7 @@ if user already logged in, redirect to student/teacher dashboard
 
           <!--Journey 1-->
           <div class="col-sm-4" align="center">
-            <div class="card-style">
+            <div class="card-style not-active">
               <div class="media">
                 <!--Journey picture-->
                 <div class="media-left">
@@ -96,22 +96,18 @@ if user already logged in, redirect to student/teacher dashboard
                 <!--Journey elements-->
                 <div class="media-body">
                   <div>
-                    <a href="#">
                       <h5 class="media-heading shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
                       </h5>
-                    </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
 
-                  <div class=" " style="float:right;">
-                    <span class="points-circle">
-                      <i class="material-icons md-42 icons">info_outline</i>
-                    </span>
+                  <div class="icon-journey">
+                      <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
                   </div>
-                  <!-- <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div> -->
+
                 </div><!--Journey elements end-->
               </div>
             </div>
@@ -119,7 +115,7 @@ if user already logged in, redirect to student/teacher dashboard
 
           <!--Journey 2-->
           <div class="col-sm-4" align="center">
-            <div class="card-style">
+            <div class="card-style not-active">
               <div class="media">
                 <!--Journey picture-->
                 <div class="media-left">
@@ -128,24 +124,27 @@ if user already logged in, redirect to student/teacher dashboard
                 <!--Journey elements-->
                 <div class="media-body">
                   <div>
-                    <a href="#">
                       <h5 class="media-heading shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
                       </h5>
-                    </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
-                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div>
+
+                  <div class="icon-journey">
+                      <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                  </div>
+
                 </div><!--Journey elements end-->
               </div>
             </div>
           </div><!--Journey 2 end-->
 
+
           <!--Journey 3-->
           <div class="col-sm-4" align="center">
-            <div class="card-style">
+            <div class="card-style not-active">
               <div class="media">
                 <!--Journey picture-->
                 <div class="media-left">
@@ -154,20 +153,25 @@ if user already logged in, redirect to student/teacher dashboard
                 <!--Journey elements-->
                 <div class="media-body">
                   <div>
-                    <a href="#">
                       <h5 class="media-heading shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
                       </h5>
-                    </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
-                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div>
+
+                  <div class="icon-journey">
+                      <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                  </div>
+
                 </div><!--Journey elements end-->
               </div>
             </div>
           </div><!--Journey 3 end-->
+
+
+
 
 
 

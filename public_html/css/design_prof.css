@@ -61,7 +61,6 @@ body {
 }
 
 /* un-bold the text */
-
 .light {
   font-weight : 100;
 }
@@ -107,29 +106,29 @@ body {
 
 .pull-right {
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right   : 30px;
+  bottom  : 30px;
 }
 
 /* Box to put the content of points of a journey */
 .total-points-box {
-  border-radius: 10px;
-  position: relative;
-  bottom: 5px;
-  display: inline-block;
+  border-radius   : 10px;
+  position        : relative;
+  bottom          : 5px;
+  display         : inline-block;
   background-color: white;
-  float: right;
-  width: 40px;
-  height: 25px;
-  text-align: center;
+  float           : right;
+  width           : 40px;
+  height          : 25px;
+  text-align      : center;
 }
 
 /* Box to put the points of a journey */
 .total-points-text {
-  position: relative;
-  top: 3.5px;
-  color: gray;
-  font-size: 1.25em;
+  position        : relative;
+  top             : 3.5px;
+  color           : gray;
+  font-size       : 1.25em;
 }
 
 
@@ -198,10 +197,21 @@ body {
   font-size : 18pt;
 }
 
-.points-circle .icons {
+.icon-journey {
+  float: right;
+}
+
+.icon-journey .icons {
   color: gray;
   position  : relative;
-  top    : 19px;
+  top    : 30px;
+  background-color: white;
+}
+
+/* Make not clickable links */
+.not-active {
+   pointer-events: auto;
+   cursor: auto;
 }
 
 
