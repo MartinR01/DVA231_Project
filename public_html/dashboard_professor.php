@@ -15,11 +15,7 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design_prof.css">
-<<<<<<< HEAD
 	  <link rel="stylesheet" href="css/activity_test.css">
-=======
-      <link rel="stylesheet" href="css/journey_test.css">
->>>>>>> bab9f20385b9609bb30e829132085a0e425c26c9
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
