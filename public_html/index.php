@@ -35,6 +35,7 @@
 								<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
 							</div>
 						</div>
+						</br>
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Your Password</label>
 							<div class="input-group">

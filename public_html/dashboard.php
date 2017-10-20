@@ -8,17 +8,17 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quest up</title>
-  <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- CSS Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <!-- CSS Our-->
-  <link rel="stylesheet" href="css/design.css">
-  <link rel="stylesheet" href="css/journey_test.css">
-  <!-- jQuery and theamJQuery comented-->
-  <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>Quest up</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- CSS Bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <!-- CSS Our-->
+      <link rel="stylesheet" href="css/design.css">
+      <link rel="stylesheet" href="css/journey_test.css">
+    <!-- jQuery and theamJQuery comented-->
+    <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 </head>
 
@@ -53,11 +53,11 @@ if user already logged in, redirect to student/teacher dashboard
                 <br>
               </li>
               <!--Buttons -->
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li>
-              <li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li>
-              <li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li>
+              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
@@ -73,9 +73,10 @@ if user already logged in, redirect to student/teacher dashboard
       <nav class="navbar navbar-default "  style="border:0px " >
         <div class="container" style="text-align:center">
           <br>
-          <span class="topnav navbar-btn">Dashboard</span>
-          <span class="topnav">Leadboard</span>
+          <span class="topnav navbar-btn topnav-active">Dashboard</span>
+          <span class="topnav">Leaderboard</span>
           <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
+
 
         </div>
       </nav><!--/end NAVIGATION -->
@@ -150,7 +151,7 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
+            <div class="quest shadow">
               <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
               <div class="quest-description ">Description</div>
             </div>
