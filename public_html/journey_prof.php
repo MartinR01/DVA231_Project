@@ -69,21 +69,19 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/col - left -->
 
     <!-- RIGHT SIDE-->
-    <div class="col-sm-9 col-md-9 affix-content leftpad">
-      <div>
-        <h2 class="title">Web Development </h2>
+    <div class="col-sm-9 col-md-9 affix-content ">
+      <div class="leftpad">
+        <h1 class="title ">Web Development </h1>
       </div>
-      
-      <nav class="navbar navbar-default">
+
+      <nav class=" navbar1 navbar-default" >
         <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
-          </div>
+
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li class="active"><a href="#">Activity</a></li>
+            <li><a href="#" >Quests</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Info.</a></li>
           </ul>
         </div>
       </nav>
@@ -153,7 +151,7 @@ if user already logged in, redirect to student/teacher dashboard
 					</div><!-- COL END-->
     </div>
 
-
+    </div>
     <!-- JS for Bootstrap -->
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.js"></script>
