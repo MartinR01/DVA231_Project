@@ -21,7 +21,6 @@ if user already logged in, redirect to student/teacher dashboard
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 </head>
-
 <body>
   <div class="row affix-row">
     <!--/col - left -->
