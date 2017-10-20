@@ -59,7 +59,7 @@ if user already logged in, redirect to student/teacher dashboard
               <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
-              
+
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -69,6 +69,21 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content">
+      <!--Start of Journey-->
+      <div class="container">
+        <div class="row">
+          <h1>Journey</h1>
+          <!--JOURNEYYY HERREEEEEEEEEE IN COLOMMMMM-->
+        </div>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="row"><!--quest row -->
+          <h1 class="ractiv">Recent Activity</h1>
+        </div>
+      </div>
+
+
 
 
     </div>
