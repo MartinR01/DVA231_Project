@@ -28,3 +28,16 @@
 .navbar1 ul li:first-child{
   border-left: 1px solid #bdc3c7;
 }
+
+/* Dropdowns */
+.dropdown {
+	display: inline-block;
+	margin:20px;
+	position: relative;
+	top:10px;
+	left: 4%;
+}
+
+.btn{
+	font-size: 12pt;
+}
