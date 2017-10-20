@@ -28,3 +28,20 @@
 .navbar1 ul li:first-child{
   border-left: 1px solid #bdc3c7;
 }
+
+/* description INFOO */
+
+.description{
+  margin-top:12px
+}
+
+.textd{
+  font-family: sans-serif;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+.padd{
+  padding-bottom: 20px;
+  padding-right: 10px;
+}

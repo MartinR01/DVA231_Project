@@ -16,6 +16,7 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
+  <link rel="stylesheet" href="css/activity_test.css">
 
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -55,11 +56,11 @@ if user already logged in, redirect to student/teacher dashboard
               </li>
               <!--Buttons -->
 
-                            <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-                            <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-                            <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-                            <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-                            <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
+              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
             </ul>
@@ -78,30 +79,91 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Activity</a></li>
+            <li ><a href="#">Activity</a></li>
             <li><a href="#" >Quests</a></li>
             <li><a href="#">Students</a></li>
-            <li><a href="#">Info.</a></li>
+            <li class="active"><a href="#">Info.</a></li>
           </ul>
         </div>
       </nav>
+      <div class="container">
+        <div  class="row">
+          <div class="col-sm-6 description " >
+            <!--Description -->
+            <div class="shadow leftpad" >
+              <h2>Description</h2>
+              <p class="textd">
+                  Lorem ipsum dolor sit amet,
+                 consectetur adipisicing elit, sed do eiusmod
+                 tempor incididunt ut labore et dolore magna aliqua.
+                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              </p>
+            </div>
+            <!--List of assistnts -->
+            <div class="shadow leftpad padd" >
+              <h2>Assistants</h2>
+              <!--Professor -->
+    						<!-- CARD -->
+    						<div class="activity-card shadow">
+    							<div class="media">
+    								<!--Prof picture-->
+    								<div class="media-left student-pic-container">
+    								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+    								</div>
+    								<!--info about submission-->
+    								<div class="media-body padded">
+    									<a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+    									<h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+    									<!--LOG-->
+    									<p>Uploaded quest 1</p>
+    								</div><!--info sub end-->
+    							</div>
+    						</div><!-- RECENT ACTIVITY CARD END-->
 
-	  <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Action <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-        </ul>
+                <!--Professor -->
+      						<!-- CARD -->
+      						<div class="activity-card shadow">
+      							<div class="media">
+      								<!--Prof picture-->
+      								<div class="media-left student-pic-container">
+      								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+      								</div>
+      								<!--info about submission-->
+      								<div class="media-body padded">
+      									<a href="#"><h4 class="media-heading">Rong gu</h4></a>
+      									<h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+      									<!--LOG-->
+      									<p>Uploaded quest 1</p>
+      								</div><!--info sub end-->
+      							</div>
+      						</div><!-- RECENT ACTIVITY CARD END-->
+            </div>
+          </div>
+          <div class="col-sm-6 description">
+
+            <div class="shadow leftpad" >
+              <h2>Awards</h2>
+              <p class="textd">
+                  Lorem ipsum dolor sit amet,
+                 consectetur adipisicing elit, sed do eiusmod
+                 tempor incididunt ut labore et dolore magna aliqua.
+                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              </p>
+            </div>
+            <!--List of Awards -->
+            <div class="shadow leftpad padd" >
+              <h2>Skils</h2>
+            </div>
+
+          </div><!-- COL END-->
+        </div>
+
+      </div>
     </div>
 
+  </div>
+  <!-- JS for Bootstrap -->
 
-    </div>
-
-    </div>
-    <!-- JS for Bootstrap -->
-
-    <script src="js/bootstrap.js"></script>
-  </body>
-  </html>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
