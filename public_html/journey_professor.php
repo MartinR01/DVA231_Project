@@ -82,7 +82,7 @@ if user already logged in, redirect to student/teacher dashboard
       <!--Start of Journey-->
       <div class="container">
         <div class="row">
-          <h1 class="underline">Journey</h1>
+          <h1 class="underline titles">Journey</h1>
 
 
           <!--Journey 1-->
