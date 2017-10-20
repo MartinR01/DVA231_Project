@@ -14,8 +14,8 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
-      <link rel="stylesheet" href="css/journey_test.css">
+      <link rel="stylesheet" href="css/design_prof.css">
+
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -95,9 +95,12 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="pull-left btn-part">Main Quests: 8 <br>Side Quests: 16 <br>Studens: 21</div>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
+                  <div>
+                    <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT <span class="total-points-box" >hello</span> </h5></a></div>
+
+                  <!--<a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5> <div class="total-points-box shadow">10</div> </a>-->
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
