@@ -1,0 +1,30 @@
+
+.leftpad{
+  padding-left: 5%;
+  padding-top: 1%;
+}
+/* Top Heading */
+.title{
+   text-shadow: 2px 2px 8px #95a5a6;
+}
+/* NAVIGATION*/
+
+.navbar1{
+  padding-left: 4%;
+  width: 100%;
+  border-top: 1px solid #ecf0f1;
+  border-bottom: 1px solid #ecf0f1;
+  background-color: #fbfcfc;
+  font-size: 14pt;
+}
+.navbar1 ul li {
+  border-right: 1px solid #bdc3c7;
+  width: 180px;
+  text-align: center;
+}
+.active {
+  text-shadow: 1px 1px 6px #7f8c8d;
+}
+.navbar1 ul li:first-child{
+  border-left: 1px solid #bdc3c7;
+}

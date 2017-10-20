@@ -55,9 +55,9 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Buttons -->
 
               <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-              <a href="recent_activity"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
+              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
@@ -74,40 +74,92 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="container">
         <div class="row">
           <h1>Journey</h1>
+          <!--Journey 1-->
+          <div class="col-sm-4" align="center">
+            <div class="card-style not-active">
+              <div class="media media1">
+                <!--Journey picture-->
+                <div class="media1-left media-left">
+                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                </div><!--.Journey pictureend-->
+                <!--Journey elements-->
+                <div class="media1-body media-body">
+                  <div>
+                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
+                      <span class="total-points-box" >
+                        <span class= "total-points-text">360</span>
+                      </span>
+                    </h5>
+                  </div>
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
 
-                    <!--Journey 1-->
-                    <div class="col-sm-4" align="center">
-                      <div class="card-style not-active">
-                        <div class="media media1">
-                          <!--Journey picture-->
-                          <div class="media1-left media-left">
-                            <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                          </div><!--.Journey pictureend-->
-                          <!--Journey elements-->
-                          <div class="media1-body media-body">
-                            <div>
-                                <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
-                                  <span class="total-points-box" >
-                                    <span class= "total-points-text">360</span>
-                                  </span>
-                                </h5>
-                            </div>
-                            <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                  <div class="icon-journey">
+                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                  </div>
+                </div><!--Journey elements end-->
+              </div>
+            </div>
+          </div><!--Journey 1 end-->
+          <!--Journey 2-->
+          <div class="col-sm-4" align="center">
+            <div class="card-style not-active">
+              <div class="media media1">
+                <!--Journey picture-->
+                <div class="media1-left media-left">
+                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                </div><!--.Journey pictureend-->
+                <!--Journey elements-->
+                <div class="media1-body media-body">
+                  <div>
+                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
+                      <span class="total-points-box" >
+                        <span class= "total-points-text">360</span>
+                      </span>
+                    </h5>
+                  </div>
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
 
-                            <div class="icon-journey">
-                                <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
-                            </div>
+                  <div class="icon-journey">
+                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                  </div>
+                </div><!--Journey elements end-->
+              </div>
+            </div>
+          </div><!--Journey 2 end-->
 
-                          </div><!--Journey elements end-->
-                        </div>
-                      </div>
-                    </div><!--Journey 1 end-->
+          <!--Journey 3-->
+          <div class="col-sm-4" align="center">
+            <div class="card-style not-active">
+              <div class="media media1">
+                <!--Journey picture-->
+                <div class="media1-left media-left">
+                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                </div><!--.Journey pictureend-->
+                <!--Journey elements-->
+                <div class="media1-body media-body">
+                  <div>
+                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
+                      <span class="total-points-box" >
+                        <span class= "total-points-text">360</span>
+                      </span>
+                    </h5>
+                  </div>
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+
+                  <div class="icon-journey">
+                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                  </div>
+                </div><!--Journey elements end-->
+              </div>
+            </div>
+          </div><!--Journey 3 end-->
+
 
         </div>
       </div>
       <hr />
 
-        <!--RECENT ACTIVITY -->
+      <!--RECENT ACTIVITY -->
       <div class="container">
         <div class="row"><!--RA row -->
           <h1 class="ractiv">Recent Activity</h1>
@@ -125,11 +177,11 @@ if user already logged in, redirect to student/teacher dashboard
 								  <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
 								  <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
                   <!--LOG-->
-								  <p>Uploaded quest 1</p>
-								</div><!--info sub end-->
-							</div>
-						</div><!-- RECENT ACTIVITY CARD END-->
-					</div><!-- COL END-->
+                  <p>Uploaded quest 1</p>
+                </div><!--info sub end-->
+              </div>
+            </div><!-- RECENT ACTIVITY CARD END-->
+          </div><!-- COL END-->
 
           <!--Second Activity -->
 					<div class="col-xs-12 col-sm-4">
@@ -171,13 +223,12 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!-- RECENT ACTIVITY CARD END-->
 					</div><!-- COL END-->
 
-			</div><!--RA row end -->
-		</div><!--RA container end -->
+        </div><!--RA row end -->
+      </div><!--RA container end -->
     </div>
 
 
-  <!-- JS for Bootstrap -->
-  <script src="js/bootstrap.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
-</html>
+    <!-- JS for Bootstrap -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+  </html>
