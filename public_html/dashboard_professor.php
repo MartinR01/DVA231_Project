@@ -8,19 +8,17 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard Professor</title>
-  <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- CSS Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <!-- CSS Our-->
-  <link rel="stylesheet" href="css/design_prof.css">
-  <link rel="stylesheet" href="css/activity_test.css">
-
-
-  <!-- jQuery and theamJQuery comented-->
-  <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title>Dashboard Professor</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- CSS Bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <!-- CSS Our-->
+      <link rel="stylesheet" href="css/design_prof.css">
+	  <link rel="stylesheet" href="css/activity_test.css">
+    <!-- jQuery and theamJQuery comented-->
+    <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 </head>
 
@@ -56,8 +54,8 @@ if user already logged in, redirect to student/teacher dashboard
               </li>
               <!--Buttons -->
 
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="dashboard_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
@@ -128,7 +126,7 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 2 end-->
-        
+
           <!--Journey 3-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
