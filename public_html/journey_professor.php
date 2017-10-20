@@ -88,15 +88,15 @@ if user already logged in, redirect to student/teacher dashboard
           <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -112,19 +112,18 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 1 end-->
-
-          <!--Journey 2-->
+          <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -139,21 +138,19 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--Journey elements end-->
               </div>
             </div>
-          </div><!--Journey 2 end-->
-
-
-          <!--Journey 3-->
+          </div><!--Journey 1 end-->
+          <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -168,20 +165,19 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--Journey elements end-->
               </div>
             </div>
-          </div><!--Journey 3 end-->
-
-          <!--Journey 4-->
+          </div><!--Journey 1 end-->
+          <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -196,20 +192,19 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--Journey elements end-->
               </div>
             </div>
-          </div><!--Journey 4 end-->
-
-          <!--Journey 5-->
+          </div><!--Journey 1 end-->
+          <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -224,21 +219,19 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--Journey elements end-->
               </div>
             </div>
-          </div><!--Journey 5 end-->
-
-
-          <!--Journey 6-->
+          </div><!--Journey 1 end-->
+          <!--Journey 1-->
           <div class="col-sm-4" align="center">
             <div class="card-style not-active">
-              <div class="media">
+              <div class="media1 media">
                 <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                <div class="media1-left media-left">
+                  <img class="media-object1 media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
-                <div class="media-body">
+                <div class="media1-body media-body">
                   <div>
-                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                      <h5 class="media1-heading media-heading  shadow">WEB DEVELOPMENT
                         <span class="total-points-box" >
                           <span class= "total-points-text">360</span>
                         </span>
@@ -253,8 +246,8 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--Journey elements end-->
               </div>
             </div>
-          </div><!--Journey 6 end-->
-
+          </div><!--Journey 1 end-->
+          
         </div>
       </div><!--END OF A JOURNEY-->
       <br>
