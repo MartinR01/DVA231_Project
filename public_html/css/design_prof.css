@@ -17,11 +17,11 @@ body {
   cursor           : pointer;
 }
 
-.media {
+.media1 {
   display : inline-block;
 }
 
-.media-body {
+.media1-body {
   border-radius : 0px 12px 0px 0px;
   text-align: left;
 }
@@ -36,7 +36,7 @@ body {
   border-radius : 12px 0px 0px 12px;
 }
 
-.media-heading {
+.media1-heading {
   padding          : 10px;
   color            : white;
   background-color : #ED5454;
@@ -90,7 +90,7 @@ body {
 
 /* Erases padding on the title */
 
-.media-left {
+.media1-left {
   padding                : 0;
   border-top-left-radius : 12px;
 }
@@ -104,7 +104,7 @@ body {
 
 /* pull right the icon zoom in */
 
-.pull-right {
+.pull-right1 {
   position: absolute;
   right   : 30px;
   bottom  : 30px;

@@ -15,11 +15,8 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design_prof.css">
-<<<<<<< HEAD
 	     <link rel="stylesheet" href="css/activity_test.css">
 
-=======
->>>>>>> journey
 
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -83,15 +80,15 @@ if user already logged in, redirect to student/teacher dashboard
                     <!--Journey 1-->
                     <div class="col-sm-4" align="center">
                       <div class="card-style not-active">
-                        <div class="media">
+                        <div class="media media1">
                           <!--Journey picture-->
-                          <div class="media-left">
-                            <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                          <div class="media1-left media-left">
+                            <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                           </div><!--.Journey pictureend-->
                           <!--Journey elements-->
-                          <div class="media-body">
+                          <div class="media1-body media-body">
                             <div>
-                                <h5 class="media-heading shadow">WEB DEVELOPMENT
+                                <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
                                   <span class="total-points-box" >
                                     <span class= "total-points-text">360</span>
                                   </span>
