@@ -3,6 +3,12 @@ body {
                 sans-serif;
 }
 
+
+.titles {
+    position: relative;
+    left: 10px;
+}
+
 /* Journey_test */
 
 .card-style {
@@ -278,6 +284,26 @@ body {
 }
 .btn-circle-not.btn-lg:hover  {
   background-color:#e43725;
+}
+
+/*Add journey button*/
+.btn-add-journey {
+  margin: 5% 2% 2% ;
+  border: 3px solid gray;
+  border-radius: 50%;
+  background-color: #51F38E;
+  color: gray;
+  width: 60px;
+  height: 60px;
+
+}
+
+/* Add journey icon */
+.btn-add-journey .material-icons {
+  position: relative;
+  top: 4px;
+  font-weight: 300;
+  font-size: 3em;
 }
 
 /* CONTENT RIGHT SIDE */
