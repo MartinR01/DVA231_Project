@@ -96,9 +96,14 @@ if user already logged in, redirect to student/teacher dashboard
                 <!--Journey elements-->
                 <div class="media-body">
                   <div>
-                    <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT <span class="total-points-box" >hello</span> </h5></a></div>
-
-                  <!--<a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5> <div class="total-points-box shadow">10</div> </a>-->
+                    <a href="#">
+                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                        <span class="total-points-box" >
+                          <span class= "total-points-text">360</span>
+                        </span>
+                      </h5>
+                    </a>
+                  </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
                   <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
                 </div><!--Journey elements end-->
@@ -116,9 +121,17 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                  <div>
+                    <a href="#">
+                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                        <span class="total-points-box" >
+                          <span class= "total-points-text">360</span>
+                        </span>
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
@@ -134,13 +147,24 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
+                  <div>
+                    <a href="#">
+                      <h5 class="media-heading shadow">WEB DEVELOPMENT
+                        <span class="total-points-box" >
+                          <span class= "total-points-text">360</span>
+                        </span>
+                      </h5>
+                    </a>
+                  </div>
+                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
           </div><!--Journey 3 end-->
+
+
+
             <a href="#" class="link"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
