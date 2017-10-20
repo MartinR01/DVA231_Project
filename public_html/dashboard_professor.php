@@ -14,7 +14,7 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
+      <link rel="stylesheet" href="css/design_prof.css">
       <link rel="stylesheet" href="css/journey_test.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -46,19 +46,20 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
-                <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
+
               <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href=""><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
-              <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
+              
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -69,7 +70,7 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content">
 
-      
+
     </div>
 
 

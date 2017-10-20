@@ -11,12 +11,17 @@ body {
 .timecolor {
   margin-bottom    : 30px;
   padding-bottom   : 1.5%;
-  background-color : #5faee3;
+  background-color : #bdc3c7;
   box-shadow       : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
                      0 6px 25px 0 rgba(0, 0, 0, 0.19);
-  text-align       : center;
-}
 
+}
+.textName{
+  margin: 0 auto;
+  position: relative;
+  left:29%;
+
+}
 .shadow {
   box-shadow : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
                0 6px 25px 0 rgba(0, 0, 0, 0.19);
@@ -29,7 +34,6 @@ body {
 .imgprofile {
   margin-bottom : 10px;
   border        : 5px solid white;
-  border-radius : 50%;
 }
 
 
@@ -43,14 +47,19 @@ body {
   width         : 50%;
   margin-top    : 20px;
   color         : white;
-  border        : 5px solid white;
-  border-radius : 13px;
+  border        : 3px solid white;
+  border-radius : 4px;
   background    : #48a2de;
 }
 
 .btn1:hover {
   color     : white;
   font-size : 11pt;
+}
+.badge{
+  background-color: red;
+  color: white;
+  padding-top: 5px;
 }
 
 #logout-btn {
@@ -103,6 +112,9 @@ body {
   font-size     : 18px;
   line-height   : 1.33;
 }
+.btn-circle.btn-lg:hover{
+  background-color: #afb6bb;
+}
 
 .btn-circle-not.btn-lg {
   width         : 50px;
@@ -113,6 +125,9 @@ body {
   border-radius : 25px;
   font-size     : 18px;
   line-height   : 1.33;
+}
+.btn-circle-not.btn-lg:hover  {
+  background-color:#e43725;
 }
 
 /* CONTENT RIGHT SIDE */
