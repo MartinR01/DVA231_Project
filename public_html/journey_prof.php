@@ -87,8 +87,70 @@ if user already logged in, redirect to student/teacher dashboard
           </ul>
         </div>
       </nav>
+	  
+	  <!-- ACTIVITIES -->
+		<!-- SORTS, FILTERS -->
+		<div class="row">
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" data-target="#">Dropdown Example
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+				</ul>
+			</div>
+			
+			<div class="dropdown">
+            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
+                Dropdown <span class="caret"></span>
+            </a>
+    		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+              <li><a href="#">Some action</a></li>
+              <li><a href="#">Some other action</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#">Hover me for more options</a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" href="#">Second level</a></li>
+                  <li class="dropdown-submenu">
+                    <a href="#">Even More..</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">3rd level</a></li>
+                    	<li><a href="#">3rd level</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Second level</a></li>
+                  <li><a href="#">Second level</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
 
-
+		</div>
+		
+		<!-- ACTIVITY -->
+	  
+			<!--First Activity -->
+					<div class="col-xs-12 col-sm-4">
+						<!-- RECENT ACTIVITY CARD -->
+						<div class="activity-card">
+							<div class="media">
+								<!--student picture-->
+								<div class="media-left student-pic-container">
+								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+								</div>
+								<!--info about submission-->
+								<div class="media-body padded">
+								  <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+								  <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                  <!--LOG-->
+								  <p>Uploaded quest 1</p>
+								</div><!--info sub end-->
+							</div>
+						</div><!-- RECENT ACTIVITY CARD END-->
+					</div><!-- COL END-->
     </div>
 
 
