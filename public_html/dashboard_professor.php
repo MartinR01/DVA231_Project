@@ -15,7 +15,9 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design_prof.css">
-      <link rel="stylesheet" href="css/journey_test.css">
+	     <link rel="stylesheet" href="css/activity_test.css">
+
+
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -69,43 +71,84 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content">
+
       <!--Start of Journey-->
       <div class="container">
         <div class="row">
           <h1>Journey</h1>
+
           <!--JOURNEYYY HERREEEEEEEEEE IN COLOMMMMM-->
+          
         </div>
       </div>
       <hr />
+
+        <!--RECENT ACTIVITY -->
       <div class="container">
-        <div class="row"><!--quest row -->
+        <div class="row"><!--RA row -->
           <h1 class="ractiv">Recent Activity</h1>
           <!--First Activity -->
-          <div class="col-xs-12 col-sm-4">
-            <!-- RECENT ACTIVITY CARD -->
-            <div class="activity-card">
-              <div class="media">
-                <!--student picture-->
-                <div class="media-left student-pic-container">
-                  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div>
-                <!--info about submission-->
-                <div class="media-body padded">
+					<div class="col-xs-12 col-sm-4">
+						<!-- RECENT ACTIVITY CARD -->
+						<div class="activity-card">
+							<div class="media">
+								<!--student picture-->
+								<div class="media-left student-pic-container">
+								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+								</div>
+								<!--info about submission-->
+								<div class="media-body padded">
+								  <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+								  <a href="#"><h5 class="media-heading">STUDENT_NAME <br /><small class=""><i>X mins ago</i></small></h5></a>
+                  <!--LOG-->
+								  <p>Uploaded quest 1</p>
+								</div><!--info sub end-->
+							</div>
+						</div><!-- RECENT ACTIVITY CARD END-->
+					</div><!-- COL END-->
+
+          <!--Second Activity -->
+					<div class="col-xs-12 col-sm-4">
+						<!-- RECENT ACTIVITY CARD -->
+						<div class="activity-card">
+							<div class="media">
+								<!--student picture-->
+								<div class="media-left student-pic-container">
+								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+								</div>
+								<!--info about submission-->
+								<div class="media-body padded">
                   <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-                  <a href="#"><h5 class="media-heading">STUDENT_NAME<small class="pull-right"><i>X mins ago</i></small></h5></a>
+                 <a href="#"><h5 class="media-heading">STUDENT_NAME <br /><small class=""><i>X mins ago</i></small></h5></a>
+                 <!--LOG-->
+								  <p>Uploaded quest 1</p>
+								</div><!--info sub end-->
+							</div>
+						</div><!-- RECENT ACTIVITY CARD END-->
+					</div><!-- COL END-->
 
+          <!--Third Activity -->
+					<div class="col-xs-12 col-sm-4">
+						<!-- RECENT ACTIVITY CARD -->
+						<div class="activity-card">
+							<div class="media">
+								<!--student picture-->
+								<div class="media-left student-pic-container">
+								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+								</div>
+								<!--info about submission-->
+								<div class="media-body padded">
+                  <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                 <a href="#"><h5 class="media-heading">STUDENT_NAME <br /><small class=""><i>X mins ago</i></small></h5></a>
+                 <!--LOG-->
                   <p>Uploaded quest 1</p>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-<!-- RECENT ACTIVITY CARD END-->
-</div>
-        </div>
-      </div>
+								</div><!--info sub end-->
+							</div>
+						</div><!-- RECENT ACTIVITY CARD END-->
+					</div><!-- COL END-->
 
-
-
-
+			</div><!--RA row end -->
+		</div><!--RA container end -->
     </div>
 
 
