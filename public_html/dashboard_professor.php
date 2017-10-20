@@ -8,15 +8,18 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quest up</title>
+    <title>Dashboard Professor</title>
     <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design_prof.css">
+<<<<<<< HEAD
 	     <link rel="stylesheet" href="css/activity_test.css">
 
+=======
+>>>>>>> journey
 
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -77,8 +80,34 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="row">
           <h1>Journey</h1>
 
-          <!--JOURNEYYY HERREEEEEEEEEE IN COLOMMMMM-->
-          
+                    <!--Journey 1-->
+                    <div class="col-sm-4" align="center">
+                      <div class="card-style not-active">
+                        <div class="media">
+                          <!--Journey picture-->
+                          <div class="media-left">
+                            <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                          </div><!--.Journey pictureend-->
+                          <!--Journey elements-->
+                          <div class="media-body">
+                            <div>
+                                <h5 class="media-heading shadow">WEB DEVELOPMENT
+                                  <span class="total-points-box" >
+                                    <span class= "total-points-text">360</span>
+                                  </span>
+                                </h5>
+                            </div>
+                            <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+
+                            <div class="icon-journey">
+                                <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                            </div>
+
+                          </div><!--Journey elements end-->
+                        </div>
+                      </div>
+                    </div><!--Journey 1 end-->
+
         </div>
       </div>
       <hr />
@@ -150,8 +179,6 @@ if user already logged in, redirect to student/teacher dashboard
 			</div><!--RA row end -->
 		</div><!--RA container end -->
     </div>
-
-
 
 
   <!-- JS for Bootstrap -->
