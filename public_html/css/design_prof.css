@@ -133,8 +133,6 @@ body {
 }
 
 
-
-
 /* NAVIGATION BAR LEFT */
 
 /* _ TIMELINE _ */
@@ -203,14 +201,12 @@ body {
 .points-circle .icons {
   color: gray;
   position  : relative;
-  right     : 0px;
-  bottom    : 10px;
-  font-size: 24px;
+  top    : 19px;
 }
 
 
-.material-icons.md-18 {
-  font-size: 30px;
+.material-icons.md-42 {
+  font-size: 42px;
 }
 
 .btn-circle {

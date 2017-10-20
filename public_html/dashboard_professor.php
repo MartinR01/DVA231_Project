@@ -105,7 +105,13 @@ if user already logged in, redirect to student/teacher dashboard
                     </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
-                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
+
+                  <div class=" " style="float:right;">
+                    <span class="points-circle">
+                      <i class="material-icons md-42 icons">info_outline</i>
+                    </span>
+                  </div>
+                  <!-- <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div> -->
                 </div><!--Journey elements end-->
               </div>
             </div>
@@ -131,7 +137,7 @@ if user already logged in, redirect to student/teacher dashboard
                     </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
-                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
+                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
@@ -157,7 +163,7 @@ if user already logged in, redirect to student/teacher dashboard
                     </a>
                   </div>
                   <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
-                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">zoom_in</i></span></div>
+                  <div class="circle shadow pull-right"><span class="points-circle"><i class="material-icons md-18 icons">info_outline</i></span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
