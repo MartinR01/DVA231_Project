@@ -85,13 +85,23 @@ if user already logged in, redirect to student/teacher dashboard
           </ul>
         </div>
       </nav>
+	  
+	  <div class="btn-group">
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
 
 
     </div>
 
     </div>
     <!-- JS for Bootstrap -->
-    <script src="js/bootstrap.js"></script>
+    
     <script src="js/bootstrap.js"></script>
   </body>
   </html>

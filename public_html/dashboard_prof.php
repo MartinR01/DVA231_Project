@@ -230,6 +230,5 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- JS for Bootstrap -->
     <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.js"></script>
   </body>
   </html>
