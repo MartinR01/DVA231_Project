@@ -13,7 +13,7 @@
     <!-- CSS Bootstrap -->
       <link rel="stylesheet" href="css/bootstrap.css">
       <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design_prof.css">
+      <link rel="stylesheet" href="css/design.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -27,7 +27,7 @@
 				<h1 class="text-center">Welcome to Learning RPG!</h1>
 				<div class="color" id="login" >
 					</br>
-					<form action="dashboard_professor.php" method="post">
+					<form action="dashboard_prof.php" method="post">
 						<div class="form-group">
 							<label for="email" class="cols-sm-2 control-label">Your Email</label>
 							<div class="input-group">

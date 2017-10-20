@@ -3,12 +3,6 @@ body {
                 sans-serif;
 }
 
-
-.titles {
-    position: relative;
-    left: 10px;
-}
-
 /* Journey_test */
 
 .card-style {
@@ -23,11 +17,11 @@ body {
   cursor           : pointer;
 }
 
-.media {
+.media1 {
   display : inline-block;
 }
 
-.media-body {
+.media1-body {
   border-radius : 0px 12px 0px 0px;
   text-align: left;
 }
@@ -42,7 +36,7 @@ body {
   border-radius : 12px 0px 0px 12px;
 }
 
-.media-heading {
+.media1-heading {
   padding          : 10px;
   color            : white;
   background-color : #ED5454;
@@ -96,7 +90,7 @@ body {
 
 /* Erases padding on the title */
 
-.media-left {
+.media1-left {
   padding                : 0;
   border-top-left-radius : 12px;
 }
@@ -110,7 +104,7 @@ body {
 
 /* pull right the icon zoom in */
 
-.pull-right {
+.pull-right1 {
   position: absolute;
   right   : 30px;
   bottom  : 30px;
@@ -145,12 +139,17 @@ body {
 .timecolor {
   margin-bottom    : 30px;
   padding-bottom   : 1.5%;
-  background-color : #5faee3;
+  background-color : #bdc3c7;
   box-shadow       : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
                      0 6px 25px 0 rgba(0, 0, 0, 0.19);
-  text-align       : center;
-}
 
+}
+.textName{
+  margin: 0 auto;
+  position: relative;
+  left:29%;
+
+}
 .shadow {
   box-shadow : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
                0 6px 25px 0 rgba(0, 0, 0, 0.19);
@@ -163,7 +162,6 @@ body {
 .imgprofile {
   margin-bottom : 10px;
   border        : 5px solid white;
-  border-radius : 50%;
 }
 
 
@@ -177,14 +175,19 @@ body {
   width         : 50%;
   margin-top    : 20px;
   color         : white;
-  border        : 5px solid white;
-  border-radius : 13px;
+  border        : 3px solid white;
+  border-radius : 4px;
   background    : #48a2de;
 }
 
 .btn1:hover {
   color     : white;
   font-size : 11pt;
+}
+.badge{
+  background-color: red;
+  color: white;
+  padding-top: 5px;
 }
 
 #logout-btn {
@@ -259,6 +262,9 @@ body {
   font-size     : 18px;
   line-height   : 1.33;
 }
+.btn-circle.btn-lg:hover{
+  background-color: #afb6bb;
+}
 
 .btn-circle-not.btn-lg {
   width         : 50px;
@@ -270,31 +276,20 @@ body {
   font-size     : 18px;
   line-height   : 1.33;
 }
-
-/*Add journey button*/
-.btn-add-journey {
-  margin: 5% 2% 2% ;
-  border: 3px solid gray;
-  border-radius: 50%;
-  background-color: #51F38E;
-  color: gray;
-  width: 60px;
-  height: 60px;
-
-}
-
-/* Add journey icon */
-.btn-add-journey .material-icons {
-  position: relative;
-  top: 4px;
-  font-weight: 300;
-  font-size: 3em;
+.btn-circle-not.btn-lg:hover  {
+  background-color:#e43725;
 }
 
 /* CONTENT RIGHT SIDE */
 
+/* Recent Activity */
 
+.ractiv{
+  font-family:sans-serif;
+  font-weight: lighter;
+  font-size: 20pt;
 
+}
 
 /*STRUCTURE !! DONT EDIT */
 
