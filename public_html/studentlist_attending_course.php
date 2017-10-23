@@ -15,8 +15,8 @@ if user already logged in, redirect to student/teacher dashboard
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
-  	  <link rel="stylesheet" href="css/activity_test.css">
   <link rel="stylesheet" href="css/journey_prof.css">
+  <link rel="stylesheet" href="css/activity_test.css">
 
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -86,15 +86,11 @@ if user already logged in, redirect to student/teacher dashboard
           </ul>
         </div>
       </nav>
-	  </br>
 
-	<div class="col-sm-9 col-md-9 affix-content">
-
-
-    <div class="container">
+<div class="container">
         <div class="row"><!--Studentlist row -->	
 	<!--Student 1-->
-					<div class=" col-sm-6">
+					<div class="col-xs-12 col-sm-4">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -112,7 +108,7 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
 	<!--Student 2-->
-					<div class=" col-sm-6">
+					<div class="col-xs-12 col-sm-4">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -130,11 +126,32 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
 					
+					<!--Student 3-->
+					<div class="col-xs-12 col-sm-4">
+						<!-- Student CARD -->
+						<div class="activity-card">
+							<div class="media">
+								<!--student picture-->
+								<div class="media-left student-pic-container">
+								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+								</div>
+								<!--info about student-->
+								<div class="media-body padded">
+								  <a href="#"><h4 class="media-heading">John Doe</h4></a>
+								  <h5 class="">Student<br/>
+								  <p>Score: 109pt.</p>
+								</div><!--info end-->
+							</div>
+						</div><!-- Student CARD END-->
+					</div><!-- COL END-->
 					
 	
 		
 			</div><!--RA row end -->
 		</div><!--RA container end -->
+
+    </div>
+
     </div>
     <!-- JS for Bootstrap -->
 
