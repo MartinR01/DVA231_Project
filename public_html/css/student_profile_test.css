@@ -1,3 +1,28 @@
+.award{
+	width         : 100px;
+	height        : 100px;
+	margin: 10pt;
+	display: inline-block;
+	border        : 5px solid #3498db; /* rarity ??? */
+	border-radius : 100%;
+}
+
+.locked img{
+	-webkit-filter: brightness(100%); /* Safari 6.0 - 9.0 */
+    filter: brightness(0);
+	
+}
+
+.award img {
+  width         : 90px;
+  height        : 90px;
+  border-radius : 100%;
+  /*background	: white;*/
+
+}
+
+
+/* PROGRESS BAR - do not touch */
 .progress{
     width: 170px;
     height: 170px;
@@ -39,8 +64,8 @@
 }
 .progress .progress-left .progress-bar{
     left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
     border-left: 0;
     -webkit-transform-origin: center left;
     transform-origin: center left;
@@ -50,13 +75,13 @@
 }
 .progress .progress-right .progress-bar{
     left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
     border-right: 0;
     -webkit-transform-origin: center right;
     transform-origin: center right;
     -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+      transform: rotate(180deg);
 }
 .progress .progress-value{
     width: 90%;
@@ -79,7 +104,7 @@
     -webkit-transform: rotate(126deg);
     transform: rotate(126deg);
 }
-
 @media only screen and (max-width: 990px){
     .progress{ margin-bottom: 20px; }
 }
+/* PROGRESS BAR END */
