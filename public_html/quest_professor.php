@@ -88,6 +88,21 @@ if user already logged in, redirect to student/teacher dashboard
         </div>
       </nav>
       <br>
+
+      <div class="container">
+        <div class="row">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Main Quests
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Side Quests</a></li>
+              <li><a href="#">Main Quests</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="container">
         <div class="row"><!--quest row -->
           <div class="col-sm-4 quest-container" align="center"><!--Quest 1 -->
