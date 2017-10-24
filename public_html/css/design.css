@@ -3,11 +3,20 @@ body {
                 sans-serif;
 }
 /* LOGIN PAGE */
+.box{
+  position:absolute;
+  bottom: 20000px;
+}
 
+.option{
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay:2s;
+  -vendor-animation-delay: 2s;
+  -webkit-vendor-animation-delay: 2s;
+}
 #login{
 	border-radius: 30px;
-	padding: 1.5em;
-	margin-top: 30%;
+  padding: 1.3em;
 }
 
 #login h1{
