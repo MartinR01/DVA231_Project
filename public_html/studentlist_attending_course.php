@@ -16,7 +16,7 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
-   <link rel="stylesheet" href="css/activity_test.css">
+  <link rel="stylesheet" href="css/activity_test.css">
 
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
@@ -79,18 +79,19 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Activity</a></li>
+            <li ><a href="#">Activity</a></li>
             <li><a href="#" >Quests</a></li>
-            <li><a href="#">Students</a></li>
+            <li class="active"><a href="#">Students</a></li>
             <li><a href="#">Info.</a></li>
           </ul>
         </div>
       </nav>
+	  </br>
 
 <div class="container">
-        <div class="row"><!--Studentlist row -->
+        <div class="row"><!--Studentlist row -->	
 	<!--Student 1-->
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -108,7 +109,7 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
 	<!--Student 2-->
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -125,9 +126,9 @@ if user already logged in, redirect to student/teacher dashboard
 							</div>
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
-
-					<!--Student 1-->
-					<div class="col-xs-12 col-sm-4">
+					
+					<!--Student 3-->
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -144,9 +145,9 @@ if user already logged in, redirect to student/teacher dashboard
 							</div>
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
-
-
-
+					
+	
+		
 			</div><!--RA row end -->
 		</div><!--RA container end -->
 
