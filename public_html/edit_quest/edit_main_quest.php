@@ -100,7 +100,7 @@ if user already logged in, redirect to student/teacher dashboard
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name of the quest">
+                <input class="form-control" id="exampleFormControlSelect1"  placeholder="Enter name of the quest">
               </div>
 
               <div class="form-group">

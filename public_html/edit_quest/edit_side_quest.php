@@ -110,6 +110,14 @@ if user already logged in, redirect to student/teacher dashboard
                   <option>Side Quest</option>
                 </select>
               </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Parent Main Quest</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Quest #1</option>
+                  <option>Make a quesadilla quest</option>
+                </select>
+              </div>
             </form>
           </div>
         </div>
