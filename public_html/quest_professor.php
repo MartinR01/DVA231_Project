@@ -121,7 +121,23 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-title color"><h3>Title</h3></div>
               <div class="quest-description ">Description</div>
             </div>
-          </div><!--Quest 3 end-->
+          </div><!--Quest 4 end-->
+          <div class="col-sm-4 quest-container" align="center"><!--Quest 1 -->
+            <div class="quest-type"></div>
+            <div class="quest-availability"></div>
+            <div class="quest shadow">
+              <div class="quest-title color"><h3>Title</h3></div>
+              <div class="quest-description ">Description</div>
+            </div>
+          </div><!--Quest 5 end-->
+          <div class="col-sm-4 quest-container" align="center"><!--Quest 1 -->
+            <div class="quest-type"></div>
+            <div class="quest-availability"></div>
+            <div class="quest shadow">
+              <div class="quest-title color"><h3>Title</h3></div>
+              <div class="quest-description ">Description</div>
+            </div>
+          </div><!--Quest 6 end-->
         </div>
       </div><!--END OF QUESTS -->
 

@@ -507,4 +507,9 @@ body {
     font-size: 3em;
   }
 
+  .btn-add-journey .material-icons:hover {
+    font-weight: bold;
+  }
+
+
  /*WE FINISH IN HERE*/
