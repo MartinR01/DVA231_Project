@@ -86,11 +86,12 @@ if user already logged in, redirect to student/teacher dashboard
           </ul>
         </div>
       </nav>
+	  </br>
 
 <div class="container">
         <div class="row"><!--Studentlist row -->	
 	<!--Student 1-->
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -108,7 +109,7 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!-- Student CARD END-->
 					</div><!-- COL END-->
 	<!--Student 2-->
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
@@ -127,7 +128,7 @@ if user already logged in, redirect to student/teacher dashboard
 					</div><!-- COL END-->
 					
 					<!--Student 3-->
-					<div class="col-xs-12 col-sm-4">
+					<div class="col-xs-12 col-sm-6">
 						<!-- Student CARD -->
 						<div class="activity-card">
 							<div class="media">
