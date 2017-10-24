@@ -8,19 +8,19 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quest up</title>
-    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- CSS Bootstrap -->
-      <link rel="stylesheet" href="css/bootstrap.css">
-      <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
-      <link rel="stylesheet" href="css/journey_test.css">
-      <!-- CSS animations-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <!-- jQuery and theamJQuery comented-->
-    <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <title>Quest up</title>
+  <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- CSS Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- CSS Our-->
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="stylesheet" href="css/journey_test.css">
+  <!-- CSS animations-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- jQuery and theamJQuery comented-->
+  <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 </head>
 
@@ -140,7 +140,7 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 3 end-->
-            <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
       <br>
@@ -182,7 +182,7 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 3 end-->
-              <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF QUESTS -->
 
