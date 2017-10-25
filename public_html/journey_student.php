@@ -97,17 +97,69 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- MID SECTION-->
     <div class="col-sm-6 col-md-6 affix-content">
-		<div class="container">
+	
+		<!-- Title of journey -->
+		<div class="row">
+			<h1>WEB DEVELOPMENT</h1>
+			<h4	class="name_teacher">Name of teacher</h4>
+		</div>
+		<hr/>
+		<!--Quest Map-->
+		<div class="row">
+			<h3>Quest Map</h3>
+		</div>
+      
+	    
+		<div class="row"><!-- begin row 1 -->
+		    <div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Main Quest 1 -->
+				<div class="quest-type" style="background-color:orange;"></div>
+				<div class="quest-availability" style="background-color:green;"></div>
+				<a href="#">
+					<div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+						<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+						<div class="quest-description" >Description</div>
+					</div>
+				</a>
+			</div><!--Mainquest 1 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description">Description</div>
+					</div>
+				</a>
+			</div><!--Sidequest 2 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description">Description</div>
+					</div>
+				</a>
+			</div><!--Sidequest 2 end-->
+			
+		</div><!-- row 1 end -->
 		
+		<!-- Main Quest 2 -->
+		<div class="row"><!-- begin row 2 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Main Quest 2 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#">
+				<div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
+				</div>
+			</a>
+			</div><!--Quest 2 end-->
+		</div><!-- row 2 end -->
 		
-
-		
-		
-		
-		
-		
-		
-      </div>
     </div>
 	
 	 <!-- RIGHT SECTION-->
@@ -118,7 +170,7 @@ if user already logged in, redirect to student/teacher dashboard
         <div class=" navbar navbar-default" role="navigation">
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-collapse">
-            <ul class="nav navbar-nav" id="sidenav01">
+            <ul class="nav navbar-nav skillbar-right" id="sidenav01">
 				
 				<!-- AWARDS -->
 				<div class="row">
@@ -161,6 +213,11 @@ if user already logged in, redirect to student/teacher dashboard
   <script>
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
 		});
 	</script>
  
