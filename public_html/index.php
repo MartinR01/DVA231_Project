@@ -72,11 +72,13 @@
         </svg>
       </h1>
 
-				<div id="login" class="option animated  bounceInUp" style="background-color:white;" >
+				<div id="login" class="option animated  bounceInUp" style="background-color:white; text-align:center" >
 
+          <h2> Log in </h2>
+          <br>
           <form action="dashboard_prof.php"  method="post">
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+
 							<div class="input-group">
 								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">email</i></span>
 								<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
@@ -84,15 +86,16 @@
 						</div>
 						</br>
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Your Password</label>
+						
 							<div class="input-group">
 								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">lock</i></span>
 								<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
 							</div>
 						</div>
 						</br>
-						<input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Login">
-					</form>
+						<input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Login" />
+					</form><br>
+          <a href="dashboard.php"> Student</a>
 				</div>
 
 
