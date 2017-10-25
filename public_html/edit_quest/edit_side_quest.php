@@ -99,45 +99,77 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="row">
             <form>
               <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name of the quest">
+                <label>Name</label>
+                <input class="form-control" placeholder="Enter name of the quest">
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label for="exampleFormControlSelect1">Type</label>
+                <select class="form-control">
                   <option>Main Quest</option>
                   <option>Side Quest</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Parent Main Quest</label>
+                <label for="exampleFormControlSelect1">Parent</label>
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>Quest #1</option>
                   <option>Make a quesadilla quest</option>
                 </select>
               </div>
+
+              <div class="form-group">
+               <label for="exampleFormControlTextarea1">Description</label>
+               <textarea class="form-control" rows="5" placeholder="Enter description of the Quest"></textarea>
+             </div>
+
+             <div class="form-group">
+              <label for="exampleFormControlFile1">Upload File</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
             </form>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-6 affix-content "> <!-- column 2 -->
+          <br>
           <form>
-            <div class="form-group">
-             <label for="exampleFormControlTextarea1">Example textarea</label>
-             <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-           </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Writing</label>
+              <div class="col-sm-10">
+                <input class="form-control"placeholder="Add number of points">
+              </div>
+            </div>
 
-           <div class="form-group">
-            <label for="exampleFormControlFile1">Upload File</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Reading</label>
+              <div class="col-sm-10">
+                <input class="form-control"placeholder="Add number of points">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Dancing</label>
+              <div class="col-sm-10">
+                <input class="form-control"placeholder="Add number of points">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Cooking</label>
+              <div class="col-sm-10">
+                <input class="form-control"placeholder="Add number of points">
+              </div>
+            </div>
           </form>
+
+          <div class="row" align="center">
+            <button type="button" name="button" class="btn1 quest-edit-btn shadow">Accept</button>
+            <button type="button" name="button" class="btn1 quest-edit-btn shadow">Cancel</button>
+          </div>
         </div>
-
-
-        <i class="material-icons arrow">forward</i>
 
 
 

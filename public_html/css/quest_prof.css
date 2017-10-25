@@ -511,10 +511,26 @@ body {
     font-weight: bold;
   }
 
+  .quest-edit-btn {
+    padding: 0.5em 1.5em;
+    margin: 4em 0.5em;
+    width: 40%;
+  }
+
+  .form-text{
+    font-weight: lighter;
+  }
+
+/*
   .arrow {
     color: #DE3486;
     font-size: 6em;
     float: right;
+    transform: scaleX(1);
+  }
+
+  .arrow:hover {
+    font-size: 6.1em;
   }
 
   .to-left {
@@ -522,5 +538,10 @@ body {
     transform: scaleX(-1);
     float: left;
   }
+
+  #clear-icon {
+    float: right;
+    margin-right: 1em;
+  } */
 
  /*WE FINISH IN HERE*/

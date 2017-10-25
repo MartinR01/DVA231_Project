@@ -49,7 +49,7 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="../img/profileTest.jpg" width="150px" height="150px" alt=""></a>
                 <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
@@ -93,6 +93,7 @@ if user already logged in, redirect to student/teacher dashboard
 
         <div class="row" align="center">
           <h2 class="edit_quest_title">EDIT QUEST</h2>
+            <i class="material-icons" id="clear-icon">clear</i>
         </div>
 
         <div class="col-sm-6 col-md-6 affix-content "> <!-- column 1 -->
@@ -128,10 +129,10 @@ if user already logged in, redirect to student/teacher dashboard
           </form>
         </div>
 
-
-        <i class="material-icons arrow">forward</i>
-
-
+        <!-- Arrow to go to add points! -->
+        <a href="edit_add_points.php">
+          <i class="material-icons arrow">forward</i>
+        </a>
 
       </div><!--END OF EDITING QUEST -->
 
@@ -140,7 +141,6 @@ if user already logged in, redirect to student/teacher dashboard
   </div><!--RA container end -->
 
   <!-- JS for Bootstrap -->
-
   <script src="../js/bootstrap.js"></script>
 </body>
 </html>
