@@ -17,10 +17,6 @@ if user already logged in, redirect to student/teacher dashboard
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
   <link rel="stylesheet" href="css/activity_test.css">
-
-  <link rel="stylesheet" href="css/activity_test.css">
-
-
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -52,14 +48,14 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
                 <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
-                <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
+                <h3 class="textName"> Name LastName<br><small>Professor of Dark Arts</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
 
-              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
@@ -82,15 +78,18 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Activity</a></li>
-            <li><a href="#" >Quests</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Info.</a></li>
+            <li class="active" id="act" onclick="activity()"><a >Activity</a></li>
+            <li id="act1" class=""><a >Quests</a></li>
+            <li id="act2" class=""><a >Students</a></li>
+            <li id="act3" class="" onclick="info()"><a >Info.</a></li>
           </ul>
         </div>
       </nav>
 
 	<!-- Activities -->
+  <div class="container" id="contain">
+    <br>
+
 	<div class="row">
 		<!-- Dropdowns for sorting -->
 		<div class="dropdown">
@@ -178,10 +177,44 @@ if user already logged in, redirect to student/teacher dashboard
 					</div><!-- COL END-->
 
 	</div>
-
+  </div>
     </div>
 
     </div>
+    <script type="text/javascript">
+    function info(){
+
+      document.getElementById("act").classList.remove('active');
+      document.getElementById("act1").classList.remove('active');
+      document.getElementById("act2").classList.remove('active');
+      document.getElementById("act3").classList.add('active');
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("contain").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "profactivity/infoa.php", true);
+    xhttp.send();
+  }
+  function activity(){
+    document.getElementById("act").classList.add('active');
+    document.getElementById("act1").classList.remove('active');
+    document.getElementById("act2").classList.remove('active');
+    document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "profactivity/activity.php", true);
+  xhttp.send();
+}
+    </script>
     <!-- JS for Bootstrap -->
 
     <script src="js/bootstrap.js"></script>
