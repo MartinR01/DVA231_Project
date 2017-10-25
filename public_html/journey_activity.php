@@ -16,7 +16,8 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
-    <link rel="stylesheet" href="css/activity_test.css">
+  <link rel="stylesheet" href="css/activity_test.css">
+  <link rel="stylesheet" href="css/quest_prof.css">
     <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -55,7 +56,7 @@ if user already logged in, redirect to student/teacher dashboard
               </li>
               <!--Buttons -->
 
-              <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
@@ -78,10 +79,10 @@ if user already logged in, redirect to student/teacher dashboard
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-            <li class="active" id="act" onclick="activity()"><a >Activity</a></li>
-            <li id="act1" class=""><a >Quests</a></li>
-            <li id="act2" class=""><a >Students</a></li>
-            <li id="act3" class="" onclick="info()"><a >Info.</a></li>
+            <li class="active" id="act" onclick="activity()"><a href="#activity" >Activity</a></li>
+            <li id="act1" class="" onclick="quest()"><a href="#quests">Quests</a></li>
+            <li id="act2" class="" onclick="students()"><a href="#students">Students</a></li>
+            <li id="act3" class="" onclick="info()"><a href="#information" >Info.</a></li>
           </ul>
         </div>
       </nav>
@@ -196,7 +197,7 @@ function info(){
       this.responseText;
     }
   };
-  xhttp.open("GET", "profactivity/infoa.php", true);
+  xhttp.open("GET", "ajaxprof/infoa.php", true);
   xhttp.send();
 }
 function activity(){
@@ -211,7 +212,38 @@ function activity(){
       this.responseText;
     }
   };
-  xhttp.open("GET", "profactivity/activity.php", true);
+  xhttp.open("GET", "ajaxprof/activity.php", true);
+  xhttp.send();
+}
+
+function students(){
+  document.getElementById("act").classList.remove('active');
+  document.getElementById("act1").classList.remove('active');
+  document.getElementById("act2").classList.add('active');
+  document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajaxprof/students.php", true);
+  xhttp.send();
+}
+function quest(){
+  document.getElementById("act").classList.remove('active');
+  document.getElementById("act1").classList.add('active');
+  document.getElementById("act2").classList.remove('active');
+  document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajaxprof/quest.php", true);
   xhttp.send();
 }
 </script>
