@@ -19,6 +19,7 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/design.css">
       <link rel="stylesheet" href="css/journey_test.css">
 	  <link rel="stylesheet" href="css/student_profile_test.css">
+	  <link rel="stylesheet" href="css/journey_student_test.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
 	
@@ -42,6 +43,14 @@ if user already logged in, redirect to student/teacher dashboard
               <span class="icon-bar"></span>
 
             </button>
+			
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+
+            </button>
             <span class="visible-xs color navbar-brand">Home Menu</span>
           </div>
           <!--/.nav-collapse -->
@@ -51,15 +60,15 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
 				<!-- progress bar -->
-				<div class="progress green">
+				<div class="progress progress-profile green">
 					<span class="progress-left">
-						<span class="progress-bar"></span>
+						<span class="progress-bar progress-bar-profile"></span>
 					</span>
 					<span class="progress-right">
-						<span class="progress-bar"></span>
+						<span class="progress-bar progress-bar-profile"></span>
 					</span>
 					
-					<div class="progress-value"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
 				</div>
 				
 				
@@ -86,84 +95,64 @@ if user already logged in, redirect to student/teacher dashboard
       </div><!--/sidebar-nav -->
     </div><!--/col - left -->
 
-    <!-- RIGHT SIDE-->
-    <div class="col-sm-9 col-md-9 affix-content">
+    <!-- MID SECTION-->
+    <div class="col-sm-6 col-md-6 affix-content">
 		<div class="container">
-	  
-		<!-- AWARDS -->
-			<div class="row">
-				<h1>Awards</h1>
-			</div>
-			<div class="row">
-					<div class="award" >
-						<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
+		
+		
+
+		
+		
+		
+		
+		
+		
+      </div>
+    </div>
+	
+	 <!-- RIGHT SECTION-->
+    <div class="col-sm-3 col-md-3 ">
+		<!--/sidebar-nav -->
+      <div class="sidebar-nav affix-sidebar">
+        <!--/.nav-normal -->
+        <div class=" navbar navbar-default" role="navigation">
+          <!--/.nav-collapse -->
+          <div class="navbar-collapse collapse sidebar-collapse">
+            <ul class="nav navbar-nav" id="sidenav01">
+				
+				<!-- AWARDS -->
+				<div class="row">
+					<h1>Awards</h1>
+						<div class="award" >
+							<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
+						</div>
+						<div class="award locked" >
+							<img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
+						</div>
+				</div>
+				<hr/>
+			  
+			  <!--STATS -->
+				<div class="row">
+					<h1>Skills</h1>
+					
+					<h4>Programming: Cody mcCodyson</h4>
+					<div class="progress progress-stats" data-toggle="tooltip" title="Next Level: 70/100: Cracker" data-placement="bottom">
+						<div class="progress-bar progress-bar-success progress-bar-done" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+							50/100
+						</div>
+						 <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+						  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+						  +20
+						  </div>
 					</div>
-					<div class="award locked" >
-						<img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-					</div>
-			</div>
-			<hr/>
-		<!--JOURNEYS-->
-      
-			<div class="row">
-			  <h1>Journey</h1>
-			  <!--Journey 1-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
 				</div>
-			  </div><!--Journey 1 end-->
-
-			  <!--Journey 2-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
-				</div>
-			  </div><!--Journey 2 end-->
-
-			  <!--Journey 3-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
-				</div>
-			  </div><!--Journey 3 end-->
-			</div>
-      </div><!--END OF A JOURNEY-->
-      <br>
-
+				
+				
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.nav-normal -->
+      </div><!--/sidebar-nav -->
     </div>
   </div>
   <!-- JS for Bootstrap -->

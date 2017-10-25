@@ -51,15 +51,15 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
 				<!-- progress bar -->
-				<div class="progress green">
+				<div class="progress progress-profile green">
 					<span class="progress-left">
-						<span class="progress-bar"></span>
+						<span class="progress-bar progress-bar-profile"></span>
 					</span>
 					<span class="progress-right">
-						<span class="progress-bar"></span>
+						<span class="progress-bar progress-bar-profile"></span>
 					</span>
 					
-					<div class="progress-value"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
 				</div>
 				
 				
@@ -93,7 +93,6 @@ if user already logged in, redirect to student/teacher dashboard
 		<!-- AWARDS -->
 			<div class="row">
 				<h1>Awards</h1>
-			</div>
 			<div class="row">
 					<div class="award" >
 						<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
