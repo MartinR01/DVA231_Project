@@ -19,7 +19,7 @@ if user already logged in, redirect to student/teacher dashboard
   <link rel="stylesheet" href="css/activity_test.css">
   <link rel="stylesheet" href="css/quest_prof.css">
 
-  
+
     <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -246,6 +246,21 @@ function quest(){
     }
   };
   xhttp.open("GET", "ajaxprof/quest.php", true);
+  xhttp.send();
+}
+function editquest(){
+  document.getElementById("act").classList.remove('active');
+  document.getElementById("act1").classList.add('active');
+  document.getElementById("act2").classList.remove('active');
+  document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "edit_quest/edit_main_quest.php", true);
   xhttp.send();
 }
 </script>

@@ -67,6 +67,6 @@
 
       <div class="container" align="center">
       <div class="row">
-        <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
+        <button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
       </div>
     </div>

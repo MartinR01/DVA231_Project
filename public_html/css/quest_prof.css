@@ -521,28 +521,3 @@ body {
   .form-text{
     font-weight: lighter;
   }
-
-/*
-  .arrow {
-    color: #DE3486;
-    font-size: 6em;
-    float: right;
-    transform: scaleX(1);
-  }
-
-  .arrow:hover {
-    font-size: 6.1em;
-  }
-
-  .to-left {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    float: left;
-  }
-
-  #clear-icon {
-    float: right;
-    margin-right: 1em;
-  } */
-
- /*WE FINISH IN HERE*/
