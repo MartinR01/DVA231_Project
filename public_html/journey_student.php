@@ -19,6 +19,7 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/design.css">
       <link rel="stylesheet" href="css/journey_test.css">
 	  <link rel="stylesheet" href="css/student_profile_test.css">
+	  <link rel="stylesheet" href="css/journey_student_test.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
 	
@@ -90,82 +91,73 @@ if user already logged in, redirect to student/teacher dashboard
     <div class="col-sm-9 col-md-9 affix-content">
 		<div class="container">
 	  
-		<!-- AWARDS -->
+		<!-- Title of journey -->
 			<div class="row">
-				<h1>Awards</h1>
-			</div>
-			<div class="row">
-					<div class="award" >
-						<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-					</div>
-					<div class="award locked" >
-						<img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-					</div>
+				<h1>WEB DEVELOPMENT</h1>
+				<h4	class="name_teacher">Name of teacher</h4>
 			</div>
 			<hr/>
-		<!--JOURNEYS-->
+		<!--Quest Map-->
+		<div class="row">
+			<h3>Quest Map</h3>
+		</div>
       
-			<div class="row">
-			  <h1>Journey</h1>
-			  <!--Journey 1-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
+	    
+		<div class="row"><!-- begin row 1 -->
+		    <div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Main Quest 1 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#">
+				<div class=" mainquest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
 				</div>
-			  </div><!--Journey 1 end-->
-
-			  <!--Journey 2-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
+			</a>
+			</div><!--Mainquest 1 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 1 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#"> 
+				<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
 				</div>
-			  </div><!--Journey 2 end-->
-
-			  <!--Journey 3-->
-			  <div class="col-sm-4" align="center">
-				<div class="card-style">
-				  <div class="media">
-					<!--Journey picture-->
-					<div class="media-left">
-					  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-					</div><!--.Journey pictureend-->
-					<!--Journey elements-->
-					<div class="media-body">
-					  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-					  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-					  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-					</div><!--Journey elements end-->
-				  </div>
+			</a>
+			</div><!--Sidequest 1 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
+			<div class="sidequest-type" style="background-color:orange;"></div>
+			<div class="sidequest-availability" style="background-color:green;"></div>
+			<a href="#"> 
+				<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+					<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+					<div class="sidequest-description">Description</div>
 				</div>
-			  </div><!--Journey 3 end-->
-			</div>
-      </div><!--END OF A JOURNEY-->
+			</a>
+			</div><!--Sidequest 2 end-->
+			
+		</div><!-- row 1 end -->
+		<br>
+			
+		<!-- Main Quest 2 -->
+		<div class="row"><!-- begin row 2 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Main Quest 2 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#">
+				<div class=" mainquest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
+				</div>
+			</a>
+			</div><!--Quest 2 end-->
+		</div><!-- row 2 end -->
+			
+      </div><!-- end of container -->
       <br>
 
-    </div>
-  </div>
+    </div><!-- end of col -->
   <!-- JS for Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- Install tooltips -->
@@ -174,6 +166,11 @@ if user already logged in, redirect to student/teacher dashboard
 			$('[data-toggle="tooltip"]').tooltip();   
 		});
 	</script>
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
  
 </body>
 </html>
