@@ -49,7 +49,7 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="../img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
                 <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
@@ -93,54 +93,137 @@ if user already logged in, redirect to student/teacher dashboard
 
         <div class="row" align="center">
           <h2 class="edit_quest_title">EDIT QUEST</h2>
-            <i class="material-icons" id="clear-icon">clear</i>
         </div>
 
+        <!-- Forms start -->
         <div class="col-sm-6 col-md-6 affix-content "> <!-- column 1 -->
           <div class="row">
             <form>
               <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input class="form-control" id="exampleFormControlSelect1"  placeholder="Enter name of the quest">
+                <label>Name</label>
+                <input class="form-control" placeholder="Enter name of the quest">
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label for="exampleFormControlSelect1">Type</label>
+                <select class="form-control">
                   <option>Main Quest</option>
                   <option>Side Quest</option>
                 </select>
               </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Parent</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Quest #1</option>
+                  <option>Make a quesadilla quest</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+               <label for="exampleFormControlTextarea1">Description</label>
+               <textarea class="form-control" rows="5" placeholder="Enter description of the Quest"></textarea>
+             </div>
+
+             <div class="form-group">
+              <label for="exampleFormControlFile1">Upload File</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
             </form>
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 affix-content "> <!-- column 2 -->
+        <div class="col-sm-6 col-md-6 affix-content "> <!-- column 2: Points -->
+          <br>
           <form>
-            <div class="form-group">
-             <label for="exampleFormControlTextarea1">Example textarea</label>
-             <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-           </div>
 
-           <div class="form-group">
-            <label for="exampleFormControlFile1">Upload File</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
+            <!-- skill 1 -->
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Writing</label>
+              <div class="col-sm-8">
+                <select class="form-control">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>911</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- skill 2 -->
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Cooking</label>
+              <div class="col-sm-8">
+                <select class="form-control">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>911</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- skill 3 -->
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Reading</label>
+              <div class="col-sm-8">
+                <select class="form-control">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>911</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- skill 4 -->
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Critical Thinking</label>
+              <div class="col-sm-8">
+                <select class="form-control">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>911</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- skill 5 -->
+            <div class="form-group row">
+              <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Taking pills on ibiza</label>
+              <div class="col-sm-8">
+                <select class="form-control">
+                  <option>10</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>25</option>
+                  <option>911</option>
+                </select>
+              </div>
+            </div>
+
           </form>
+
+          <!-- Buttons row -->
+          <div class="row" align="center">
+            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" href="../quest_prof.php">Accept</button>
+            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Cancel</button>
+          </div>
         </div>
 
-        <!-- Arrow to go to add points! -->
-        <a href="edit_add_points.php">
-          <i class="material-icons arrow">forward</i>
-        </a>
-
       </div><!--END OF EDITING QUEST -->
-
 
     </div><!--RA row end -->
   </div><!--RA container end -->
 
   <!-- JS for Bootstrap -->
+
   <script src="../js/bootstrap.js"></script>
 </body>
 </html>

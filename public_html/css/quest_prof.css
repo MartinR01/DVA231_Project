@@ -511,10 +511,11 @@ body {
     font-weight: bold;
   }
 
-  .quest-edit-btn {
-    padding: 0.5em 1.5em;
+  #quest-edit-btn {
+    padding: 0.6em 1em;
     margin: 4em 0.5em;
     width: 40%;
+    font-size: 1em;
   }
 
   .form-text{
