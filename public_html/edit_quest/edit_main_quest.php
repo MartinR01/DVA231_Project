@@ -49,7 +49,7 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="../img/profileTest.jpg" width="150px" height="150px" alt=""></a>
                 <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
