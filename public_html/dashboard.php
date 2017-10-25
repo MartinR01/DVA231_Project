@@ -140,7 +140,7 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 3 end-->
-          <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
       <br>
@@ -182,7 +182,7 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 3 end-->
-          <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF QUESTS -->
 

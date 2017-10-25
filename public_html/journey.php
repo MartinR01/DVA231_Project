@@ -17,6 +17,8 @@ if user already logged in, redirect to student/teacher dashboard
       <link rel="stylesheet" href="css/design.css">
       <link rel="stylesheet" href="css/journey_test.css">
     <!-- jQuery and theamJQuery comented-->
+    <!-- CSS animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -46,13 +48,13 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#"><img class="imgprofile shadow animated bounceIn" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
                 <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
-			  
+
 			<!--Buttons -->
               <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
@@ -83,10 +85,10 @@ if user already logged in, redirect to student/teacher dashboard
 
       <!--AVAILABLE JOURNEYS-->
       <div class="container">
-        <div class="row">		  
-		  <h1>Available</h1>
+        <div class="row">
+		  <h1 class="animated slideInLeft" >Available</h1>
           <!--Journey 1-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -104,7 +106,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 1 end-->
 
           <!--Journey 2-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -122,7 +124,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 2 end-->
 
           <!--Journey 3-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -138,19 +140,19 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 3 end-->
-            <a href="#" class="link"><span > Show more ...</span></a><br>
+            <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
       <br>
       <hr />
-	  
+
 	  <!--UPCOMING JOURNEYS-->
 	  <div class="container">
         <div class="row">
-		  
-		  <h1>Upcoming</h1>
+
+		  <h1 class="animated slideInLeft">Upcoming</h1>
           <!--Journey 1-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -168,7 +170,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 1 end-->
 
           <!--Journey 2-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -186,7 +188,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 2 end-->
 
           <!--Journey 3-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -202,11 +204,11 @@ if user already logged in, redirect to student/teacher dashboard
               </div>
             </div>
           </div><!--Journey 3 end-->
-            <a href="#" class="link"><span > Show more ...</span></a><br>
+            <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
 
-     
+
 
     </div>
   </div>
