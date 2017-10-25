@@ -16,8 +16,8 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
-  <link rel="stylesheet" href="css/activity_test.css">
-  <!-- jQuery and theamJQuery comented-->
+    <link rel="stylesheet" href="css/activity_test.css">
+    <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -86,124 +86,124 @@ if user already logged in, redirect to student/teacher dashboard
         </div>
       </nav>
 
-	<!-- Activities -->
-  <div class="container" id="contain">
-    <br>
+      <!-- Activities -->
+      <div class="container" id="contain">
+        <br>
 
-	<div class="row">
-		<!-- Dropdowns for sorting -->
-		<div class="dropdown">
-			<button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Time
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu">
-				<li><a href="#">Name</a></li>
-				<li><a href="#">Quest</a></li>
-				<li><a href="#">Time</a></li>
-			</ul>
-		</div>
+        <div class="row">
+          <!-- Dropdowns for sorting -->
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Time
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Name</a></li>
+              <li><a href="#">Quest</a></li>
+              <li><a href="#">Time</a></li>
+            </ul>
+          </div>
 
-		<div class="dropdown">
-			<button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu">
-				<li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending</a></li>
-				<li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_downward</i> Descending</a></li>
-			</ul>
-		</div>
-	</div>
-	<hr/>
-	<div class="row">
-		  </br>
-          <!--First Activity -->
-					<div class="col-xs-12 col-sm-4">
-						<!-- RECENT ACTIVITY CARD -->
-						<div class="activity-card">
-							<div class="media">
-								<!--student picture-->
-								<div class="media-left student-pic-container">
-								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-								</div>
-								<!--info about submission-->
-								<div class="media-body padded">
-								  <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-								  <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-                  <!--LOG-->
-								  <p>Uploaded quest 1</p>
-								</div><!--info sub end-->
-							</div>
-						</div><!-- RECENT ACTIVITY CARD END-->
-					</div><!-- COL END-->
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending</a></li>
+              <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_downward</i> Descending</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
+        <div class="row">
+        </br>
+        <!--First Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
 
-          <!--Second Activity -->
-					<div class="col-xs-12 col-sm-4">
-						<!-- RECENT ACTIVITY CARD -->
-						<div class="activity-card">
-							<div class="media">
-								<!--student picture-->
-								<div class="media-left student-pic-container">
-								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-								</div>
-								<!--info about submission-->
-								<div class="media-body padded">
-									<a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-									<h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-									<!--LOG-->
-									<p>Uploaded quest 1</p>
-								</div><!--info sub end-->
-							</div>
-						</div><!-- RECENT ACTIVITY CARD END-->
-					</div><!-- COL END-->
+        <!--Second Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
 
-          <!--Third Activity -->
-					<div class="col-xs-12 col-sm-4">
-						<!-- RECENT ACTIVITY CARD -->
-						<div class="activity-card">
-							<div class="media">
-								<!--student picture-->
-								<div class="media-left student-pic-container">
-								  <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-								</div>
-								<!--info about submission-->
-								<div class="media-body padded">
-									<a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-									<h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-									<!--LOG-->
-									<p>Uploaded quest 1</p>
-								</div><!--info sub end-->
-							</div>
-						</div><!-- RECENT ACTIVITY CARD END-->
-					</div><!-- COL END-->
+        <!--Third Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
 
-	</div>
-  </div>
-    </div>
+      </div><!--RowEnds-->
+    </div><!--Container Ends-->
+  </div><!--Right Side End-->
 
-    </div>
-    <script type="text/javascript">
-    function info(){
+</div><!--Everything ends-->
+<script type="text/javascript">
+function info(){
 
-      document.getElementById("act").classList.remove('active');
-      document.getElementById("act1").classList.remove('active');
-      document.getElementById("act2").classList.remove('active');
-      document.getElementById("act3").classList.add('active');
+  document.getElementById("act").classList.remove('active');
+  document.getElementById("act1").classList.remove('active');
+  document.getElementById("act2").classList.remove('active');
+  document.getElementById("act3").classList.add('active');
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("contain").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "profactivity/infoa.php", true);
-    xhttp.send();
-  }
-  function activity(){
-    document.getElementById("act").classList.add('active');
-    document.getElementById("act1").classList.remove('active');
-    document.getElementById("act2").classList.remove('active');
-    document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "profactivity/infoa.php", true);
+  xhttp.send();
+}
+function activity(){
+  document.getElementById("act").classList.add('active');
+  document.getElementById("act1").classList.remove('active');
+  document.getElementById("act2").classList.remove('active');
+  document.getElementById("act3").classList.remove('active');
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -214,9 +214,9 @@ if user already logged in, redirect to student/teacher dashboard
   xhttp.open("GET", "profactivity/activity.php", true);
   xhttp.send();
 }
-    </script>
-    <!-- JS for Bootstrap -->
+</script>
+<!-- JS for Bootstrap -->
 
-    <script src="js/bootstrap.js"></script>
-  </body>
-  </html>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
