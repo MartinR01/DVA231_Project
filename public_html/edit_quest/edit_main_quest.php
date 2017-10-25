@@ -212,8 +212,8 @@ if user already logged in, redirect to student/teacher dashboard
 
           <!-- Buttons row -->
           <div class="row" align="center">
-            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" href="../quest_prof.php">Accept</button>
-            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Cancel</button>
+            <a href="../quest_professor.php"><button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Accept</button></a>
+            <a href="../quest_professor.php"><button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Cancel</button></a>
           </div>
         </div>
 

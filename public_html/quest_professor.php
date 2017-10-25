@@ -158,7 +158,7 @@ if user already logged in, redirect to student/teacher dashboard
 
       <div class="container" align="center">
       <div class="row">
-        <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
+        <a href="edit_quest/edit_main_quest.php"><button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button></a>
       </div>
     </div>
 
