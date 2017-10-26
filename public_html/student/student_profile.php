@@ -14,11 +14,11 @@ if user already logged in, redirect to student/teacher dashboard
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- CSS Bootstrap -->
-      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="../css/bootstrap.css">
       <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
-      <link rel="stylesheet" href="css/journey_test.css">
-    <link rel="stylesheet" href="css/student_profile_test.css">
+      <link rel="stylesheet" href="../css/design.css">
+      <link rel="stylesheet" href="../css/journey_test.css">
+    <link rel="stylesheet" href="../css/student_profile_test.css">
 
     <!-- CSS animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -62,7 +62,7 @@ if user already logged in, redirect to student/teacher dashboard
 						<span class="progress-bar progress-bar-profile animated flash"></span>
 					</span>
 
-					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="../img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
 				</div>
 
 
@@ -76,11 +76,11 @@ if user already logged in, redirect to student/teacher dashboard
 
 
 			  <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-              <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="../dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="../journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="../quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <a href="../student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="../index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
@@ -170,7 +170,7 @@ if user already logged in, redirect to student/teacher dashboard
     </div>
   </div>
   <!-- JS for Bootstrap -->
-  <script src="js/bootstrap.js"></script>
+  <script src="../js/bootstrap.js"></script>
   <!-- Install tooltips -->
   <script>
 		$(document).ready(function(){
