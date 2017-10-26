@@ -122,16 +122,16 @@ if user already logged in, redirect to student/teacher dashboard
 				</a>
 			</div><!--Mainquest 1 end-->
 			
-			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 1 -->
 				<div class="sidequest-type" style="background-color:orange;"></div>
 				<div class="sidequest-availability" style="background-color:green;"></div>
 				<a href="#"> 
 					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
 						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-						<div class="sidequest-description">Description</div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
 					</div>
 				</a>
-			</div><!--Sidequest 2 end-->
+			</div><!--Sidequest 1 end-->
 			
 			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
 				<div class="sidequest-type" style="background-color:orange;"></div>
@@ -139,7 +139,7 @@ if user already logged in, redirect to student/teacher dashboard
 				<a href="#"> 
 					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
 						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-						<div class="sidequest-description">Description</div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
 					</div>
 				</a>
 			</div><!--Sidequest 2 end-->
@@ -148,7 +148,7 @@ if user already logged in, redirect to student/teacher dashboard
 		
 		<!-- Main Quest 2 -->
 		<div class="row"><!-- begin row 2 -->
-			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Main Quest 2 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Mainquest 2 -->
 			<div class="quest-type" style="background-color:orange;"></div>
 			<div class="quest-availability" style="background-color:green;"></div>
 			<a href="#">
@@ -157,8 +157,105 @@ if user already logged in, redirect to student/teacher dashboard
 					<div class="quest-description" >Description</div>
 				</div>
 			</a>
-			</div><!--Quest 2 end-->
+			</div><!--Mainquest 2 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 3 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 3 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 4 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 4 end-->
+			
 		</div><!-- row 2 end -->
+		
+		<!-- Main Quest 3 -->
+		<div class="row"><!-- begin row 3 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Mainquest 3 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#">
+				<div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
+				</div>
+			</a>
+			</div><!--Mainquest 3 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 5 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 5 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 6 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 6 end-->
+			
+		</div><!-- row 3 end -->
+		
+		<!-- Main Quest 4 -->
+		<div class="row"><!-- begin row 4 -->
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Mainquest 4 -->
+			<div class="quest-type" style="background-color:orange;"></div>
+			<div class="quest-availability" style="background-color:green;"></div>
+			<a href="#">
+				<div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
+					<div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
+					<div class="quest-description" >Description</div>
+				</div>
+			</a>
+			</div><!--Mainquest 4 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 7 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 7 end-->
+			
+			<div class="col-sm-4" align="center" style="margin-bottom:10px;"><!-- Side Quest 8 -->
+				<div class="sidequest-type" style="background-color:orange;"></div>
+				<div class="sidequest-availability" style="background-color:green;"></div>
+				<a href="#"> 
+					<div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;">
+						<div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
+						<div class="sidequest-description"><h5 class="sidequest-description-text">Description</h5></div>
+					</div>
+				</a>
+			</div><!--Sidequest 8 end-->
+			
+		</div><!-- row 4 end -->
 		
     </div>
 	
