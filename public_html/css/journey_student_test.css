@@ -15,7 +15,7 @@
 }
 
 
-	
+
 .name_teacher{
 	color: gray;
 }
@@ -62,7 +62,7 @@ div.tooltip-inner {
 
 .tooltip_place_desc{
 	position: relative;
-	top: -50px;	
+	top: -50px;
 }
 
 .sidequest {
@@ -100,14 +100,14 @@ div.tooltip-inner {
 .sidequest-title {
   position                : relative;
   top                     : -20px;
-  height                  : 45px;  
+  height                  : 45px;
   border-top-left-radius  : 70px;
   border-top-right-radius : 70px;
 }
 
 .sidequest-description {
   position					 : relative;
-  top						 : -30px;
+  top						 : -19px;
   height                     : 45px;
   border-bottom-right-radius : 70px;
   border-bottom-left-radius  : 70px;
