@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- LOGIN SCREEN
-		if user already logged in, redirect to student/teacher dashboard
--->
+<?php
+include ('login.php');
+ ?>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -76,17 +76,17 @@
 
           <h2> Log in </h2>
           <br>
-          <form action="dashboard_prof.php"  method="post">
+          <form  method="post">
 						<div class="form-group">
 
 							<div class="input-group">
 								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">email</i></span>
-								<input placeholder="Enter your Email address" class="form-control" name="email" type="text"/>
+								<input placeholder="Enter your Email address" class="form-control" name="username" type="text"/>
 							</div>
 						</div>
 						</br>
 						<div class="form-group">
-						
+
 							<div class="input-group">
 								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">lock</i></span>
 								<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
