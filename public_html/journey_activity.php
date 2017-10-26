@@ -74,7 +74,15 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content ">
       <div class="leftpad">
-        <h1 class="title ">Web Development </h1>
+        <div class="row">
+          <div class="col-sm-4">
+          <h1 class="title ">Web Development </h1>
+          </div>
+          <div class="col-sm-8" align="left">
+            <a href="edit_journey.php"><button type="button" name="button" class="btn btn-primary btn-md shadow"><i class="material-icons">mode_edit</i></button></a>
+          </div>
+        </div>
+
       </div>
 
       <nav class=" navbar1 navbar-default" >
@@ -184,86 +192,9 @@ if user already logged in, redirect to student/teacher dashboard
   </div><!--Right Side End-->
 
 </div><!--Everything ends-->
-<script type="text/javascript">
-function info(){
 
-  document.getElementById("act").classList.remove('active');
-  document.getElementById("act1").classList.remove('active');
-  document.getElementById("act2").classList.remove('active');
-  document.getElementById("act3").classList.add('active');
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("contain").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajaxprof/infoa.php", true);
-  xhttp.send();
-}
-function activity(){
-  document.getElementById("act").classList.add('active');
-  document.getElementById("act1").classList.remove('active');
-  document.getElementById("act2").classList.remove('active');
-  document.getElementById("act3").classList.remove('active');
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("contain").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajaxprof/activity.php", true);
-  xhttp.send();
-}
-
-function students(){
-  document.getElementById("act").classList.remove('active');
-  document.getElementById("act1").classList.remove('active');
-  document.getElementById("act2").classList.add('active');
-  document.getElementById("act3").classList.remove('active');
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("contain").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajaxprof/students.php", true);
-  xhttp.send();
-}
-function quest(){
-  document.getElementById("act").classList.remove('active');
-  document.getElementById("act1").classList.add('active');
-  document.getElementById("act2").classList.remove('active');
-  document.getElementById("act3").classList.remove('active');
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("contain").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajaxprof/quest.php", true);
-  xhttp.send();
-}
-function editquest(){
-  document.getElementById("act").classList.remove('active');
-  document.getElementById("act1").classList.add('active');
-  document.getElementById("act2").classList.remove('active');
-  document.getElementById("act3").classList.remove('active');
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("contain").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "edit_quest/edit_main_quest.php", true);
-  xhttp.send();
-}
-</script>
+<!-- JS for AJx -->
+<script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
 
 <script src="js/bootstrap.js"></script>
