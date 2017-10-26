@@ -95,7 +95,6 @@ if user already logged in, redirect to student/teacher dashboard
 		<!-- AWARDS -->
 			<div class="row animated slideInLeft">
 				<h1>Awards</h1>
-			</div>
 			<div class="row">
 					<div class="award animated zoomIn" >
 						<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
