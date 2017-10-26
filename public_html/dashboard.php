@@ -55,10 +55,10 @@ if user already logged in, redirect to student/teacher dashboard
                 <br>
               </li>
               <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="#dashboard"><li class="butallign "><button type="button" class="btn btn1 shadow" onclick="dashboard()"><span>Dashboard</span></button></li></a>
+              <a href="#journey"><li class="butallign " ><button type="button" class="btn btn1 shadow"  onclick="journey()" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
@@ -69,7 +69,7 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/col - left -->
 
     <!-- RIGHT SIDE-->
-    <div class="col-sm-9 col-md-9 affix-content">
+    <div class="col-sm-9 col-md-9 affix-content" id="stud">
 
       <!-- Top navigation -->
       <nav class="navbar navbar-default "  style="border:0px " >
@@ -97,7 +97,7 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
@@ -115,7 +115,7 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
@@ -133,7 +133,7 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
@@ -189,6 +189,7 @@ if user already logged in, redirect to student/teacher dashboard
     </div>
   </div>
   <!-- JS for Bootstrap -->
+  <script src="js/ajaxstudent.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>

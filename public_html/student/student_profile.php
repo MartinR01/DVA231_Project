@@ -18,7 +18,7 @@ if user already logged in, redirect to student/teacher dashboard
       <!-- CSS Our-->
       <link rel="stylesheet" href="css/design.css">
       <link rel="stylesheet" href="css/journey_test.css">
-	  <link rel="stylesheet" href="css/student_profile_test.css">
+    <link rel="stylesheet" href="css/student_profile_test.css">
 
     <!-- CSS animations-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -54,14 +54,15 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
 				<!-- progress bar -->
-				<div class="progress green animated bounceIn">
-					<span class="progress-left animated flash ">
-						<span class="progress-bar "></span>
+        <div class="progress progress-profile green animated bounceIn">
+					<span class="progress-left">
+						<span class="progress-bar progress-bar-profile animated flash "></span>
 					</span>
-					<span class="progress-right animated flash">
-						<span class="progress-bar"></span>
+					<span class="progress-right">
+						<span class="progress-bar progress-bar-profile animated flash"></span>
 					</span>
-					<div class="progress-value"><a href="#"><img class="imgprofile shadow " src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+
+					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
 				</div>
 
 
@@ -78,7 +79,7 @@ if user already logged in, redirect to student/teacher dashboard
               <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
@@ -103,10 +104,11 @@ if user already logged in, redirect to student/teacher dashboard
 						<img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
 					</div>
 			</div>
+    </div>
 			<hr/>
 		<!--JOURNEYS-->
 
-			<div class="row">
+			<div class="row animated slideInLeft">
 			  <h1 class="animated slideInLeft">Journey</h1>
 			  <!--Journey 1-->
 			  <div class="col-sm-4 animated zoomIn" align="center">
