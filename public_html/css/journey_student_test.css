@@ -27,11 +27,17 @@
 .sidequest-title-text{
 	color: black;
 	position: relative;
-	top: 30px;
+	top: 25px;
 }
 
 .quest-description{
 	color: black;
+}
+
+.sidequest-description-text{
+	color: black;
+	position: relative;
+	top: 1px;
 }
 
 a:link {
@@ -60,8 +66,8 @@ div.tooltip-inner {
 }
 
 .sidequest {
-  width         : 110px;
-  height        : 110px;
+  width         : 100px;
+  height        : 100px;
   margin-top    : -60px;
   border        : 5px solid white;
   border-radius : 100%;
@@ -72,10 +78,10 @@ div.tooltip-inner {
 .sidequest-type {
   z-index       : 1;
   position      : relative;
-  top           : 10px;
-  right         : 53px;
-  width         : 30px;
-  height        : 30px;
+  top           : -2px;
+  right         : 35px;
+  width         : 26px;
+  height        : 26px;
   border        : 3px solid white;
   border-radius : 100%;
 }
@@ -83,10 +89,10 @@ div.tooltip-inner {
 .sidequest-availability {
   z-index       : 1;
   position      : relative;
-  top           : 79px;
-  left          : 56px;
-  width         : 30px;
-  height        : 30px;
+  top           : 42px;
+  left          : 30px;
+  width         : 26px;
+  height        : 26px;
   border        : 3px solid white;
   border-radius : 100%;
 }
@@ -94,15 +100,15 @@ div.tooltip-inner {
 .sidequest-title {
   position                : relative;
   top                     : -20px;
-  height                  : 50px;
+  height                  : 45px;  
   border-top-left-radius  : 70px;
   border-top-right-radius : 70px;
 }
 
 .sidequest-description {
   position					 : relative;
-  top						 : -20px;
-  height                     : 50px;
+  top						 : -30px;
+  height                     : 45px;
   border-bottom-right-radius : 70px;
   border-bottom-left-radius  : 70px;
   background-color			 : #BE3A31;
