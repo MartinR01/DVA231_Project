@@ -4,6 +4,10 @@ if user already logged in, redirect to student/teacher dashboard
 -->
 <?php
 	session_start();
+	require_once('protected/config.php');
+	$sqls ="Select name, lastname, email, profilepath from professor where idprof ='".$_SESSION['idprof']."'";
+	$result = mysqli_query($connection,$sqls);
+	$row = mysqli_fetch_assoc($result);
 ?>
  
 <html>
@@ -48,28 +52,17 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
 
-              <span><?php
-					require_once('protected/config.php');
-					$sqls ="Select name, lastname, email, profilepath from professor where idprof ='".$_SESSION['idprof']."'";
-					$result = mysqli_query($connection,$sqls);
-					if (mysqli_num_rows($result) > 0) {
-						echo mysqli_fetch_array($result)["lastname"];
-					}
-					else{
-						echo "doesnt work";
-					}
-
-              echo $_SESSION['idprof']; ?></span>
-
               <!--Profile -->
               <li class="timecolor">
                 <br>
                 <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
 				<h3 class="textName">
 					<?php
-						echo($_SESSION['id']);
+						echo "".$row['name']." ".$row['lastname']."";
 					?>
-                Name LastName<br><small>Professor of Dark Arts</small> </h3>
+				<br><small><?php
+						echo $row['email'];
+					?></small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
