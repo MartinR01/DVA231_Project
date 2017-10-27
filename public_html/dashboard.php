@@ -62,7 +62,7 @@ if user already logged in, redirect to student/teacher dashboard
 					?>" width="150px" height="150px" alt=""></a>
                 <h3 class= "proname">
 				<?php
-						echo var_dump($_SESSION);
+						//echo var_dump($_SESSION);
 						echo $row['name']." ".$row['lastname'];
 					?>
 					<br><small><?php
@@ -77,7 +77,7 @@ if user already logged in, redirect to student/teacher dashboard
               <a href="#journey"><li class="butallign " ><button type="button" class="btn btn1 shadow"  onclick="journey()" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
               <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
