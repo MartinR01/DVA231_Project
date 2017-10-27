@@ -1,0 +1,523 @@
+body {
+  font-family : 'Teko',
+                sans-serif;
+}
+
+/* Journey_test */
+
+.card-style {
+  display          : block;
+  width            : 300px;
+  height           : 120px;
+  margin-top       : 20px;
+  margin-bottom    : 20px;
+  border-radius    : 12px 12px 12px 12px;
+  background-color : #fff;
+  box-shadow       : 1px 1px 8px #999;
+  cursor           : pointer;
+}
+
+.media1 {
+  display : inline-block;
+}
+
+.media1-body {
+  border-radius : 0px 12px 0px 0px;
+  text-align: left;
+}
+
+/* Image size of the journey card */
+
+.card-img {
+  width         : 100px;
+  height        : 120px;
+  padding       : 0;
+  border        : 0;
+  border-radius : 12px 0px 0px 12px;
+}
+
+.media1-heading {
+  padding          : 10px;
+  color            : white;
+  background-color : #ED5454;
+}
+
+.btn-part {
+  display : inline-block;
+  float   : right;
+  margin  : 10px;
+}
+
+/* Jouneys' circle for points */
+
+.circle {
+  display       : inline-block;
+  width         : 40px;
+  height        : 40px;
+  border-radius : 50%;
+  background    : white;
+  text-align    : center;
+  border: 3px solid gray;
+}
+
+/* un-bold the text */
+.light {
+  font-weight : 100;
+}
+
+/* Font for journey progress 7/10 */
+
+.progress-font {
+  color       : gray;
+  font-family : Arial;
+  font-size   : 15px;
+}
+
+/* Underline the text */
+
+.underline {
+  text-decoration : underline;
+}
+
+/* Centers and style for points inside the circle */
+
+.points-circle {
+  position  : relative;
+  top       : 13px;
+  color     : #ED5454;
+  font-size : 30px;
+}
+
+/* Erases padding on the title */
+
+.media1-left {
+  padding                : 0;
+  border-top-left-radius : 12px;
+}
+
+/* Erase this after migrate */
+
+.shadow {
+  box-shadow : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
+               0 6px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* pull right the icon zoom in */
+
+.pull-right1 {
+  position: absolute;
+  right   : 30px;
+  bottom  : 30px;
+}
+
+/* Box to put the content of points of a journey */
+.total-points-box {
+  border-radius   : 10px;
+  position        : relative;
+  bottom          : 5px;
+  display         : inline-block;
+  background-color: white;
+  float           : right;
+  width           : 40px;
+  height          : 25px;
+  text-align      : center;
+}
+
+/* Box to put the points of a journey */
+.total-points-text {
+  position        : relative;
+  top             : 3.5px;
+  color           : gray;
+  font-size       : 1.25em;
+}
+
+
+/* NAVIGATION BAR LEFT */
+
+/* _ TIMELINE _ */
+
+.timecolor {
+  margin-bottom    : 30px;
+  padding-bottom   : 1.5%;
+  background-color : #bdc3c7;
+  box-shadow       : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
+                     0 6px 25px 0 rgba(0, 0, 0, 0.19);
+
+}
+.textName{
+  margin: 0 auto;
+  position: relative;
+  left:29%;
+
+}
+.shadow {
+  box-shadow : 0 1px 8px 0 rgba(0, 0, 0, 0.2),
+               0 6px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.color {
+  background-color : #3498db;
+}
+
+.imgprofile {
+  margin-bottom : 10px;
+  border        : 5px solid white;
+}
+
+
+/* _MENU BUTTONS_ */
+
+.butallign {
+  text-align : center;
+}
+
+.btn1 {
+  width         : 50%;
+  margin-top    : 20px;
+  color         : white;
+  border        : 3px solid white;
+  border-radius : 4px;
+  background    : #48a2de;
+}
+
+.btn1:hover {
+  color     : white;
+  font-size : 11pt;
+}
+.badge{
+  background-color: red;
+  color: white;
+  padding-top: 5px;
+}
+
+#logout-btn {
+  margin-top   : 50px;
+  border-color : #BE3A31;
+  background   : #BE3A31;
+}
+
+/* _NOTIF AND SETT BUTTONS_ */
+
+.icons {
+  position  : relative;
+  right     : 5px;
+  bottom    : 1px;
+  color     : white;
+  font-size : 18pt;
+}
+
+.icon-journey {
+  float: right;
+}
+
+.icon-journey .icons {
+  color: gray;
+  position  : relative;
+  top    : 30px;
+  background-color: white;
+}
+
+/* Make not clickable links */
+.not-active {
+   pointer-events: auto;
+   cursor: auto;
+}
+
+
+.material-icons.md-42 {
+  font-size: 42px;
+}
+
+.btn-circle {
+  width            : 30px;
+  height           : 30px;
+  float            : left;
+  padding          : 6px 0;
+  border-radius    : 15px;
+  background-color : #BDC3C7;
+  text-align       : center;
+  font-size        : 12px;
+  line-height      : 1.428571429;
+}
+
+.btn-circle-not {
+  width            : 30px;
+  height           : 30px;
+  float            : right;
+  padding          : 6px 0;
+  border-radius    : 15px;
+  background-color : #E74C3C;
+  text-align       : center;
+  font-size        : 12px;
+  line-height      : 1.428571429;
+}
+
+.btn-circle.btn-lg {
+  width         : 50px;
+  height        : 50px;
+  margin-left   : 25px;
+  padding       : 10px 16px;
+  border        : 2.5px solid white;
+  border-radius : 25px;
+  font-size     : 18px;
+  line-height   : 1.33;
+}
+.btn-circle.btn-lg:hover{
+  background-color: #afb6bb;
+}
+
+.btn-circle-not.btn-lg {
+  width         : 50px;
+  height        : 50px;
+  margin-right  : 25px;
+  padding       : 10px 16px;
+  border        : 2.5px solid white;
+  border-radius : 25px;
+  font-size     : 18px;
+  line-height   : 1.33;
+}
+.btn-circle-not.btn-lg:hover  {
+  background-color:#e43725;
+}
+
+/* CONTENT RIGHT SIDE */
+
+/* Recent Activity */
+
+.ractiv{
+  font-family:sans-serif;
+  font-weight: lighter;
+  font-size: 20pt;
+
+}
+
+/*STRUCTURE !! DONT EDIT */
+
+@media (min-width: 768px) {
+  .affix-content .container {
+    width : 700px;
+  }
+
+  body,
+  html {
+    height           : 100%;
+    overflow         : hidden;
+    background-color : #f8f8f8;
+  }
+
+  .affix-content .container .page-header {
+    margin-top : 0;
+  }
+
+  .sidebar-nav {
+    position : fixed;
+    width    : 25%;
+  }
+
+  .affix-sidebar {
+    padding-right : 0;
+    padding-left  : 0;
+    font-size     : small;
+  }
+
+  .affix-container,
+  .affix-content,
+  .affix-row {
+    height           : 100%;
+    margin-right     : 0;
+    margin-left      : 0;
+    background-color : #ecf0f1;
+  }
+
+  .affix-content {
+    background-color :#fcfeff;
+  }
+
+  .sidebar-nav .navbar .navbar-collapse {
+    max-height : none;
+    padding    : 0;
+  }
+
+  .sidebar-nav .navbar {
+    margin-bottom : 0;
+    border        : 0;
+    border-radius : 0;
+  }
+
+  .sidebar-nav .navbar ul {
+    display : block;
+    float   : none;
+  }
+
+  .sidebar-nav .navbar li {
+    display : block;
+    float   : none;
+  }
+
+  .sidebar-nav .navbar li a {
+    padding-top    : 5px;
+    padding-bottom : 0px;
+  }
+}
+
+@media (min-width: 769px) {
+  .affix-content .container {
+    width : 600px;
+  }
+
+  .affix-content .container .page-header {
+    margin-top : 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .affix-content .container {
+    width : 900px;
+  }
+
+  .affix-content .container .page-header {
+    margin-top : 0;
+  }
+}
+
+@media (min-width: 1220px) {
+  .affix-row {
+    overflow : hidden;
+  }
+
+  .affix-content {
+    overflow : auto;
+  }
+
+  .affix-content .container {
+    width : 1000px;
+  }
+
+  .affix-content .container .page-header {
+    margin-top : 0;
+  }
+
+  .affix-content {
+    padding-right : 30px;
+    padding-left  : 30px;
+  }
+
+  .affix-title {
+    padding-bottom : 10px;
+    border-bottom  : 1px solid #ecf0f1;
+  }
+
+  .navbar-nav {
+    margin : 0;
+  }
+
+  .navbar-collapse {
+    padding : 0;
+  }
+  /* .sidebar-nav .navbar li a:hover { background-color: #428bca; color: white; } */
+
+  .sidebar-nav .navbar li a > .caret {
+    margin-top : 8px;
+  }
+}
+
+/* WE STARTED HERE! */
+
+/* QUESTS */
+
+.quest {
+  width         : 150px;
+  height        : 150px;
+  margin-top    : -60px;
+  border        : 5px solid white;
+  border-radius : 100%;
+  text-align    : center;
+
+}
+
+.quest-type {
+  z-index       : 1;
+  position      : relative;
+  top           : 10px;
+  right         : 53px;
+  width         : 30px;
+  height        : 30px;
+  border        : 3px solid white;
+  border-radius : 100%;
+  background-color:orange;
+}
+
+.quest-availability {
+  z-index       : 1;
+  position      : relative;
+  top           : 79px;
+  left          : 56px;
+  width         : 30px;
+  height        : 30px;
+  border        : 3px solid white;
+  background-color:green;
+  border-radius : 100%;
+}
+
+.quest-title {
+  position                : relative;
+  top                     : -20px;
+  height                  : 70px;
+  border-top-left-radius  : 70px;
+  border-top-right-radius : 70px;
+  background-color : #3498db;
+}
+
+.quest-title h3 {
+  position: relative;
+  top:50px;
+}
+
+.quest-description {
+  position					 : relative;
+  top						 : -20px;
+  height                     : 70px;
+  border-bottom-right-radius : 70px;
+  border-bottom-left-radius  : 70px;
+  background-color			 : #BE3A31;
+}
+
+.quest-container {
+  margin-bottom : 20px;
+  margin-top: 20px;
+}
+
+.btn-add-journey {
+    /*margin-top: 30px;*/
+    margin: 2%;
+    border: 3px solid gray;
+    border-radius: 50%;
+    background-color: #51F38E;
+    color: gray;
+    width: 60px;
+    height: 60px;
+
+  }
+
+  /* Add journey icon */
+  .btn-add-journey .material-icons {
+    position: relative;
+    top: 4px;
+    font-weight: 300;
+    font-size: 3em;
+  }
+
+  .btn-add-journey .material-icons:hover {
+    font-weight: bold;
+  }
+
+  #quest-edit-btn {
+    padding: 0.6em 1em;
+    margin: 4em 0.5em;
+    width: 40%;
+    font-size: 1em;
+  }
+
+  .form-text{
+    font-weight: lighter;
+  }

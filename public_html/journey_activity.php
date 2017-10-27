@@ -16,8 +16,11 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design_prof.css">
   <link rel="stylesheet" href="css/journey_prof.css">
+  <link rel="stylesheet" href="css/activity_test.css">
+  <link rel="stylesheet" href="css/quest_prof.css">
 
-  <!-- jQuery and theamJQuery comented-->
+
+    <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -48,18 +51,18 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
                 <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
-                <h3 class="textName"> Name LastName<br><small>Professor</small> </h3>
+                <h3 class="textName"> Name LastName<br><small>Professor of Dark Arts</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
 
-                            <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-                            <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-                            <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-                            <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-                            <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
+              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
             </ul>
@@ -71,37 +74,129 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content ">
       <div class="leftpad">
-        <h1 class="title ">Web Development </h1>
+        <div class="row">
+          <div class="col-sm-4">
+          <h1 class="title ">Web Development </h1>
+          </div>
+          <div class="col-sm-8" align="left">
+            <a href="edit_journey.php"><button type="button" name="button" class="btn btn-primary btn-md shadow"><i class="material-icons">mode_edit</i></button></a>
+          </div>
+        </div>
+
       </div>
 
       <nav class=" navbar1 navbar-default" >
         <div class="container-fluid">
 
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Activity</a></li>
-            <li><a href="#" >Quests</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Info.</a></li>
+            <li class="active" id="act" onclick="activity()"><a href="#activity" >Activity</a></li>
+            <li id="act1" class="" onclick="quest()"><a href="#quests">Quests</a></li>
+            <li id="act2" class="" onclick="students()"><a href="#students">Students</a></li>
+            <li id="act3" class="" onclick="info()"><a href="#information" >Info.</a></li>
           </ul>
         </div>
       </nav>
 
-	  <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Action <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-        </ul>
-    </div>
+      <!-- Activities -->
+      <div class="container" id="contain">
+        <br>
 
+        <div class="row">
+          <!-- Dropdowns for sorting -->
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Time
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Name</a></li>
+              <li><a href="#">Quest</a></li>
+              <li><a href="#">Time</a></li>
+            </ul>
+          </div>
 
-    </div>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending</a></li>
+              <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_downward</i> Descending</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
+        <div class="row">
+        </br>
+        <!--First Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
 
-    </div>
-    <!-- JS for Bootstrap -->
+        <!--Second Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
 
-    <script src="js/bootstrap.js"></script>
-  </body>
-  </html>
+        <!--Third Activity -->
+        <div class="col-xs-12 col-sm-4">
+          <!-- RECENT ACTIVITY CARD -->
+          <div class="activity-card">
+            <div class="media">
+              <!--student picture-->
+              <div class="media-left student-pic-container">
+                <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+              </div>
+              <!--info about submission-->
+              <div class="media-body padded">
+                <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
+                <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
+                <!--LOG-->
+                <p>Uploaded quest 1</p>
+              </div><!--info sub end-->
+            </div>
+          </div><!-- RECENT ACTIVITY CARD END-->
+        </div><!-- COL END-->
+
+      </div><!--RowEnds-->
+    </div><!--Container Ends-->
+  </div><!--Right Side End-->
+
+</div><!--Everything ends-->
+
+<!-- JS for AJx -->
+<script src="js/journeybrif.js"></script>
+<!-- JS for Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
