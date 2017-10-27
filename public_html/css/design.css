@@ -379,3 +379,14 @@ body {
   -vendor-animation-delay: 1s;
   -webkit-vendor-animation-delay: 1s;
 }
+
+/* Kevin Start working here */
+#submit-button {
+    background-color: #6443b6;
+    color: white;
+}
+
+#submit-button:hover {
+    background-color: #5433a6;
+    color: white;
+}

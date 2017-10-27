@@ -74,7 +74,7 @@ include ('php/login.php');
 
 				<div id="login" class="option animated  bounceInUp" style="background-color:white; text-align:center" >
 
-          <h2> Log in </h2>
+          <h2> Log In </h2>
           <br>
           <form  method="post">
 						<div class="form-group">
@@ -86,24 +86,19 @@ include ('php/login.php');
 						</div>
 						</br>
 						<div class="form-group">
-
 							<div class="input-group">
 								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">lock</i></span>
 								<input placeholder="Enter your Password" class="form-control" name="password" type="password"/>
 							</div>
 						</div>
 						</br>
-						<input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Login" />
+						<!-- <input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Submit" /> -->
+            <input class="btn btn-lg btn-block shadow login-button" id="submit-button" type="submit" value="Submit" />
 					</form><br>
-          <a href="dashboard.php"> Student</a>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
-
-
       <script type="text/javascript">
         var lineDrawing = anime({
           targets: '#lineDrawing .lines path',
@@ -114,8 +109,6 @@ include ('php/login.php');
           direction: 'alternate',
           loop: false
         });
-
-
       </script>
 
     <!-- JS for Bootstrap -->

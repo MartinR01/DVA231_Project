@@ -47,11 +47,26 @@ session_start();
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
+
               <!--Profile -->
               <li class="timecolor">
+			  <?php
+        require_once('protected/config.php');
+				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+				$result = mysqli_query($connection,$sqls);
+				$row = mysqli_fetch_assoc($result);
+			  ?>
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
-                <h3 class="textName"> Name LastName<br><small>Professor of Dark Arts</small> </h3>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
+						echo $row['profilepath'];
+					?>" width="150px" height="150px" alt=""></a>
+				<h3 class="textName">
+					<?php
+						echo $row['name']." ".$row['lastname'];
+					?>
+				<br><small><?php
+						echo $row['email'];
+					?></small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
@@ -62,7 +77,7 @@ session_start();
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
             </ul>
