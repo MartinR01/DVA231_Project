@@ -99,6 +99,7 @@ if user already logged in, redirect to student/teacher dashboard
 
       <!-- Activities -->
       <div class="container" id="contain">
+        <!-- AJAX WILL CHANGE THIS -->
         <br>
                <div  class="row">
                  <div class="col-sm-6 description " >
@@ -148,7 +149,7 @@ if user already logged in, redirect to student/teacher dashboard
 
                  </div><!-- COL END-->
                </div>
-
+                 <!-- AJAX WILL CHANGE THIS -->
              </div>
 
 

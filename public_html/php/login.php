@@ -19,23 +19,22 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
   $connection =mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
-  $sqls ="Select username, pass, role from verify where username like '$username' and pass like '$pass'";
+  $sqls ="Select idu,username, pass, role from verify where username like '$username' and pass like '$pass'";
   $result = mysqli_query($connection,$sqls);
   if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
       session_start();
-      $_SESSION['user']=$row['username'];
-      $_SESSION['pass']=$row['pass'];
-
       if ($row['role'] == 'prof'){
-        header("location:dashboard_prof.php");  
+        $_SESSION['idprof']=$row['idu'];
+        header("location:dashboard_prof.php");
       }else {
+          $_SESSION['idstud']=$row['idu'];
         header("location:dashboard.php");
       }
 
     }
   } else {
-    $error = "Wrong Username or password".$pass;
+    $error = "Wrong Username or password";
 
   }
 
