@@ -5,7 +5,7 @@ if user already logged in, redirect to student/teacher dashboard
 <?php
 session_start();
  ?>
- 
+
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -47,12 +47,6 @@ session_start();
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
-
-              <span><?php
-
-
-              echo $_SESSION['idprof']; ?></span>
-
               <!--Profile -->
               <li class="timecolor">
                 <br>
@@ -84,85 +78,63 @@ session_start();
       <div class="container">
         <div class="row">
           <h1>Journey</h1>
-          <!--Journey 1-->
-          <div class="col-sm-4" align="center">
-            <div class="card-style not-active">
-              <div class="media media1">
-                <!--Journey picture-->
-                <div class="media1-left media-left">
-                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media1-body media-body">
-                  <div>
-                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
-                      <span class="total-points-box" >
-                        <span class= "total-points-text">360</span>
-                      </span>
-                    </h5>
-                  </div>
-                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+            <?php
+            $idp = $_SESSION['idprof'];
+            require_once('protected/config.php');
+            $sql="select DISTINCT j.title, COUNT(DISTINCT sj.idstudent) as num,".
+            " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
+            " sum(DISTINCT case when q.quests ='side' then 1 else 0 end) as side".
+            " from Journey j, sjourney sj, quest q, Student s".
+            " where j.idprof = $idp and sj.idjourn = j.idjourn AND sj.idstudent =s.idstudent and  q.idjourn = j.idjourn".
+            " GROUP by j.title ";
+             $main = 0;
+             $side = 0;
+             $title ='';
+             $result = mysqli_query($connection,$sql);
+             if (mysqli_num_rows($result) > 0) {
+               while($row = mysqli_fetch_assoc($result)) {
+                 ?>
+                 <!--Journey 1-->
+                 <div class="col-sm-4" align="center">
+                   <div class="card-style not-active">
+                     <div class="media media1">
+                       <!--Journey picture-->
+                       <div class="media1-left media-left">
+                         <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                       </div><!--.Journey pictureend-->
+                       <!--Journey elements-->
+                       <div class="media1-body media-body">
+                         <div>
+                           <h5 class="media1-heading media-heading shadow"><?php echo $row['title']?>
+                             <span class="total-points-box" >
+                               <span class= "total-points-text">360</span>
+                             </span>
+                           </h5>
+                         </div>
+                   <div class="pull-left btn-part"> <?php echo "Student: ".$row['num']; ?> </br>
+                     <?php
+                     echo "Main Quests: ".$row['main']."<br />Side Quests:".$row['side'];
+                      ?>
 
-                  <div class="icon-journey">
-                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
-                  </div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 1 end-->
-          <!--Journey 2-->
-          <div class="col-sm-4" align="center">
-            <div class="card-style not-active">
-              <div class="media media1">
-                <!--Journey picture-->
-                <div class="media1-left media-left">
-                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media1-body media-body">
-                  <div>
-                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
-                      <span class="total-points-box" >
-                        <span class= "total-points-text">360</span>
-                      </span>
-                    </h5>
-                  </div>
-                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                    </div>
 
-                  <div class="icon-journey">
-                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
-                  </div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 2 end-->
+                   <div class="icon-journey">
+                     <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                   </div>
+                 </div><!--Journey elements end-->
+               </div>
+             </div>
+           </div><!--Journey 1 end-->
 
-          <!--Journey 3-->
-          <div class="col-sm-4" align="center">
-            <div class="card-style not-active">
-              <div class="media media1">
-                <!--Journey picture-->
-                <div class="media1-left media-left">
-                  <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media1-body media-body">
-                  <div>
-                    <h5 class="media1-heading media-heading shadow">WEB DEVELOPMENT
-                      <span class="total-points-box" >
-                        <span class= "total-points-text">360</span>
-                      </span>
-                    </h5>
-                  </div>
-                  <div class="pull-left btn-part"> Studens: 21 </br> Main Quests: 8 <br>Side Quests: 16</div>
+                   <?php
 
-                  <div class="icon-journey">
-                    <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
-                  </div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 3 end-->
+                 }
+             } else {
+               $error = "DB ERROR";
+
+             }
+
+             ?>
 
 
         </div>

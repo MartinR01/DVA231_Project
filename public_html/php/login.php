@@ -17,7 +17,6 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
   require_once('protected/config.php');
 
-  $connection =mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
   $sqls ="Select idu,username, pass, role from verify where username like '$username' and pass like '$pass'";
   $result = mysqli_query($connection,$sqls);
