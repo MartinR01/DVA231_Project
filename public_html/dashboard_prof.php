@@ -94,7 +94,7 @@ session_start();
         <div class="row">
           <h1>Journey</h1>
             <?php
-            $idp = $_SESSION['idprof'];
+            $idp = $_SESSION['id'];
             require_once('protected/config.php');
             $sql="select DISTINCT j.title, COUNT(DISTINCT sj.idstudent) as num,".
             " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
