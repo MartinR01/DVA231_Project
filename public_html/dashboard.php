@@ -8,17 +8,19 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quest up</title>
-    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- CSS Bootstrap -->
-      <link rel="stylesheet" href="css/bootstrap.css">
-      <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
-      <link rel="stylesheet" href="css/journey_test.css">
-    <!-- jQuery and theamJQuery comented-->
-    <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <title>Quest up</title>
+  <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- CSS Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- CSS Our-->
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="stylesheet" href="css/journey_test.css">
+  <!-- CSS animations-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- jQuery and theamJQuery comented-->
+  <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 </head>
 
@@ -46,17 +48,17 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#"><img class="imgprofile shadow animated bounceIn" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
                 <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
-                <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
+                <button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button>
+                <button type="button" class="btn btn-default btn-circle-not btn-lg shadow animated rotateIn"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="#dashboard"><li class="butallign "><button type="button" class="btn btn1 shadow" onclick="dashboard()"><span>Dashboard</span></button></li></a>
+              <a href="#journey"><li class="butallign " ><button type="button" class="btn btn1 shadow"  onclick="journey()" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
@@ -67,7 +69,7 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/col - left -->
 
     <!-- RIGHT SIDE-->
-    <div class="col-sm-9 col-md-9 affix-content">
+    <div class="col-sm-9 col-md-9 affix-content" id="stud">
 
       <!-- Top navigation -->
       <nav class="navbar navbar-default "  style="border:0px " >
@@ -84,9 +86,9 @@ if user already logged in, redirect to student/teacher dashboard
       <!--Start of Journey-->
       <div class="container">
         <div class="row">
-          <h1>Journey</h1>
+          <h1 class="animated slideInLeft">Journey</h1>
           <!--Journey 1-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -95,7 +97,7 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
@@ -104,7 +106,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 1 end-->
 
           <!--Journey 2-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -113,7 +115,7 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
@@ -122,7 +124,7 @@ if user already logged in, redirect to student/teacher dashboard
           </div><!--Journey 2 end-->
 
           <!--Journey 3-->
-          <div class="col-sm-4" align="center">
+          <div class="col-sm-4 animated zoomIn" align="center">
             <div class="card-style">
               <div class="media">
                 <!--Journey picture-->
@@ -131,14 +133,14 @@ if user already logged in, redirect to student/teacher dashboard
                 </div><!--.Journey pictureend-->
                 <!--Journey elements-->
                 <div class="media-body">
-                  <a href="#"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
+                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
                   <div class="circle shadow"><span class="points-circle">7.5</span></div>
                   <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
                 </div><!--Journey elements end-->
               </div>
             </div>
           </div><!--Journey 3 end-->
-            <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF A JOURNEY-->
       <br>
@@ -147,8 +149,8 @@ if user already logged in, redirect to student/teacher dashboard
       <!--QUESTS -->
       <div class="container">
         <div class="row"><!--quest row -->
-          <h1>Quests</h1>
-          <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
+          <h1 class="animated slideInLeft">Quests</h1>
+          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
             <div class="quest shadow">
@@ -156,7 +158,7 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 1 end-->
-          <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 2 -->
+          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 2 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
             <div class="quest shadow" style="background-color:green;">
@@ -164,7 +166,7 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 2 end -->
-          <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
+          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
             <div class="quest shadow" style="background-color:green;">
@@ -172,7 +174,7 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 3 end-->
-          <div class="col-sm-3" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
+          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
             <div class="quest-type" style="background-color:orange;"></div>
             <div class="quest-availability" style="background-color:green;"></div>
             <div class="quest shadow" style="background-color:green;">
@@ -180,13 +182,14 @@ if user already logged in, redirect to student/teacher dashboard
               <div class="quest-description ">Description</div>
             </div>
           </div><!--Quest 3 end-->
-              <a href="#" class="link"><span > Show more ...</span></a><br>
+          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
         </div>
       </div><!--END OF QUESTS -->
 
     </div>
   </div>
   <!-- JS for Bootstrap -->
+  <script src="js/ajaxstudent.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>

@@ -3,11 +3,14 @@ body {
                 sans-serif;
 }
 /* LOGIN PAGE */
+.box{
+  position:absolute;
+  bottom: 20000px;
+}
 
 #login{
 	border-radius: 30px;
-	padding: 1.5em;
-	margin-top: 30%;
+  padding: 1.3em;
 }
 
 #login h1{
@@ -355,4 +358,24 @@ body {
   .sidebar-nav .navbar li a > .caret {
     margin-top : 8px;
   }
+}
+/*Animation*/
+
+.option{
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay:2s;
+  -vendor-animation-delay: 2s;
+  -webkit-vendor-animation-delay: 2s;
+}
+.nodelay{
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay:0s;
+  -vendor-animation-delay: 0s;
+  -webkit-vendor-animation-delay: 0s;
+}
+.delay {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay:1s;
+  -vendor-animation-delay: 1s;
+  -webkit-vendor-animation-delay: 1s;
 }

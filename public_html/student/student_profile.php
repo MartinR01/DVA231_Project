@@ -14,15 +14,18 @@ if user already logged in, redirect to student/teacher dashboard
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- CSS Bootstrap -->
-      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="../css/bootstrap.css">
       <!-- CSS Our-->
-      <link rel="stylesheet" href="css/design.css">
-      <link rel="stylesheet" href="css/journey_test.css">
-	  <link rel="stylesheet" href="css/student_profile_test.css">
+      <link rel="stylesheet" href="../css/design.css">
+      <link rel="stylesheet" href="../css/journey_test.css">
+    <link rel="stylesheet" href="../css/student_profile_test.css">
+
+    <!-- CSS animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- jQuery and theamJQuery comented-->
     <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-	
-    
+
+
 
 </head>
 
@@ -51,33 +54,33 @@ if user already logged in, redirect to student/teacher dashboard
               <li class="timecolor">
                 <br>
 				<!-- progress bar -->
-				<div class="progress progress-profile green">
+        <div class="progress progress-profile green animated bounceIn">
 					<span class="progress-left">
-						<span class="progress-bar progress-bar-profile"></span>
+						<span class="progress-bar progress-bar-profile animated flash "></span>
 					</span>
 					<span class="progress-right">
-						<span class="progress-bar progress-bar-profile"></span>
+						<span class="progress-bar progress-bar-profile animated flash"></span>
 					</span>
-					
-					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+
+					<div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="../img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
 				</div>
-				
-				
-                
+
+
+
                 <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">arrow_back</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Stats -->
-             
-			 
+
+
 			  <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
-              <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="../dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="../journey_student.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="../quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <a href="../student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <a href="../index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
@@ -89,25 +92,26 @@ if user already logged in, redirect to student/teacher dashboard
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content">
 		<div class="container">
-	  
+
 		<!-- AWARDS -->
-			<div class="row">
+			<div class="row animated slideInLeft">
 				<h1>Awards</h1>
 			<div class="row">
-					<div class="award" >
+					<div class="award animated zoomIn" >
 						<img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
 					</div>
-					<div class="award locked" >
+					<div class="award locked animated zoomIn" >
 						<img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="right" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
 					</div>
 			</div>
+    </div>
 			<hr/>
 		<!--JOURNEYS-->
-      
-			<div class="row">
-			  <h1>Journey</h1>
+
+			<div class="row animated slideInLeft">
+			  <h1 class="animated slideInLeft">Journey</h1>
 			  <!--Journey 1-->
-			  <div class="col-sm-4" align="center">
+			  <div class="col-sm-4 animated zoomIn" align="center">
 				<div class="card-style">
 				  <div class="media">
 					<!--Journey picture-->
@@ -125,7 +129,7 @@ if user already logged in, redirect to student/teacher dashboard
 			  </div><!--Journey 1 end-->
 
 			  <!--Journey 2-->
-			  <div class="col-sm-4" align="center">
+			  <div class="col-sm-4 animated zoomIn" align="center">
 				<div class="card-style">
 				  <div class="media">
 					<!--Journey picture-->
@@ -143,7 +147,7 @@ if user already logged in, redirect to student/teacher dashboard
 			  </div><!--Journey 2 end-->
 
 			  <!--Journey 3-->
-			  <div class="col-sm-4" align="center">
+			  <div class="col-sm-4 animated zoomIn" align="center">
 				<div class="card-style">
 				  <div class="media">
 					<!--Journey picture-->
@@ -166,13 +170,13 @@ if user already logged in, redirect to student/teacher dashboard
     </div>
   </div>
   <!-- JS for Bootstrap -->
-  <script src="js/bootstrap.js"></script>
+  <script src="../js/bootstrap.js"></script>
   <!-- Install tooltips -->
   <script>
 		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip();   
+			$('[data-toggle="tooltip"]').tooltip();
 		});
 	</script>
- 
+
 </body>
 </html>
