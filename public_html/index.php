@@ -95,15 +95,10 @@ include ('php/login.php');
 						</br>
 						<input class="btn btn-primary btn-lg btn-block shadow login-button" type="submit" value="Login" />
 					</form><br>
-          <a href="dashboard.php"> Student</a>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
-
-
       <script type="text/javascript">
         var lineDrawing = anime({
           targets: '#lineDrawing .lines path',
@@ -114,8 +109,6 @@ include ('php/login.php');
           direction: 'alternate',
           loop: false
         });
-
-
       </script>
 
     <!-- JS for Bootstrap -->

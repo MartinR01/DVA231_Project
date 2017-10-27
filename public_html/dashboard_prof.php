@@ -6,7 +6,7 @@ if user already logged in, redirect to student/teacher dashboard
 	session_start();
 	require_once('protected/config.php');
 ?>
- 
+
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
