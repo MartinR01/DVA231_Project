@@ -2,6 +2,10 @@
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
+<?php
+session_start();
+ ?>
+ 
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -43,6 +47,12 @@ if user already logged in, redirect to student/teacher dashboard
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
+
+              <span><?php
+
+
+              echo $_SESSION['idprof']; ?></span>
+
               <!--Profile -->
               <li class="timecolor">
                 <br>
