@@ -55,10 +55,12 @@ if user already logged in, redirect to student/teacher dashboard
               <!--Profile -->
               <li class="timecolor">
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
+						echo $row['profilepath'];
+					?>" width="150px" height="150px" alt=""></a>
 				<h3 class="textName">
 					<?php
-						echo "".$row['name']." ".$row['lastname']."";
+						echo $row['name']." ".$row['lastname'];
 					?>
 				<br><small><?php
 						echo $row['email'];
