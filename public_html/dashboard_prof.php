@@ -5,9 +5,6 @@ if user already logged in, redirect to student/teacher dashboard
 <?php
 	session_start();
 	require_once('protected/config.php');
-	$sqls ="Select name, lastname, email, profilepath from professor where idprof ='".$_SESSION['idprof']."'";
-	$result = mysqli_query($connection,$sqls);
-	$row = mysqli_fetch_assoc($result);
 ?>
  
 <html>
@@ -54,6 +51,11 @@ if user already logged in, redirect to student/teacher dashboard
 
               <!--Profile -->
               <li class="timecolor">
+			  <?php
+				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+				$result = mysqli_query($connection,$sqls);
+				$row = mysqli_fetch_assoc($result);
+			  ?>
                 <br>
                 <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
 						echo $row['profilepath'];
@@ -75,7 +77,7 @@ if user already logged in, redirect to student/teacher dashboard
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
             </ul>
