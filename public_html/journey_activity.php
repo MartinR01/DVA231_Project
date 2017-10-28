@@ -2,6 +2,9 @@
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
+<?php
+session_start();
+ ?>
 
 <html>
 <head>
@@ -74,11 +77,24 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/col - left -->
 
     <!-- RIGHT SIDE-->
+    <?php
+      $journey = $_GET['journey'];
+      require_once('protected/config.php');
+      $sqls = "select title from journey where idjourn=$journey";
+      $result = mysqli_query($connection,$sqls);
+      if (mysqli_num_rows($result) > 0) {
+      $row = mysqli_fetch_assoc($result)
+     ?>
     <div class="col-sm-9 col-md-9 affix-content ">
       <div class="leftpad">
         <div class="row">
           <div class="col-sm-4">
-          <h1 class="title ">Web Development </h1>
+
+          <h1 class="title ">  <?php echo $row['title']; ?> </h1>
+        <?php
+      }
+
+         ?>
           </div>
           <div class="col-sm-8" align="left">
             <a href="edit_journey.php"><button type="button" name="button" class="btn btn-primary btn-md shadow"><i class="material-icons">mode_edit</i></button></a>
@@ -92,9 +108,9 @@ if user already logged in, redirect to student/teacher dashboard
 
           <ul class="nav navbar-nav">
             <li class="active" id="act" onclick="activity()"><a href="#activity" >Activity</a></li>
-            <li id="act1" class="" onclick="quest()"><a href="#quests">Quests</a></li>
-            <li id="act2" class="" onclick="students()"><a href="#students">Students</a></li>
-            <li id="act3" class="" onclick="info()"><a href="#information" >Info.</a></li>
+            <li id="act1" class="" onclick=<?php echo "quest(".$journey.")"; ?>><a  href="#quest" >Quests</a></li>
+            <li id="act2" class="" onclick=<?php echo "students(".$journey.")"; ?>><a href="#students">Students</a></li>
+            <li id="act3" class="" onclick=<?php echo "info(".$journey.")"; ?>><a href="#information" >Info.</a></li>
           </ul>
         </div>
       </nav>

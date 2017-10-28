@@ -1,15 +1,31 @@
-<br>
+<?php
+  $journey = $_COOKIE['journey'];
+ ?>
        <div  class="row">
          <div class="col-sm-6 description " >
            <!--Description -->
            <div class="shadow leftpad" >
              <h2>Description</h2>
+             <?php
+             require_once('../protected/config.php');
+             $sqls = "select description from journey where idjourn=$journey";
+             $result = mysqli_query($connection,$sqls);
+             if (mysqli_num_rows($result) > 0) {
+             $row = mysqli_fetch_assoc($result)
+              ?>
              <p class="textd">
-                 Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                <?php
+                 echo $row['description'];
+                 ?>
              </p>
+             <?php
+           }else{
+             ?>
+             <h3>Add description</h3>
+             <?php
+           }
+
+              ?>
            </div>
            <!--List of assistnts -->
            <div class="shadow leftpad padd" >

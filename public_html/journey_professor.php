@@ -90,7 +90,7 @@ session_start();
           <?php
           $idp = $_SESSION['id'];
           require_once('protected/config.php');
-          $sql="select DISTINCT j.title, COUNT(DISTINCT sj.idstudent) as num,".
+          $sql="select DISTINCT j.idjourn, j.title, COUNT(DISTINCT sj.idstudent) as num,".
           " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
           " sum(DISTINCT case when q.quests ='side' then 1 else 0 end) as side".
           " from Journey j, sjourney sj, quest q, Student s".
@@ -128,7 +128,7 @@ session_start();
                   </div>
 
                  <div class="icon-journey">
-                   <a class="active" href="#IM WORKING"><i class="material-icons md-42 icons">info_outline</i></a>
+                   <a class="active" href=<?php echo "journey_activity.php?journey=".$row['idjourn']; ?>><i class="material-icons md-42 icons">info_outline</i></a>
                  </div>
                </div><!--Journey elements end-->
              </div>
