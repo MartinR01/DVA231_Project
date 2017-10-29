@@ -17,20 +17,21 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 
   require_once('protected/config.php');
 
-  $connection =mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
   $sqls ="Select idu,username, pass, role from verify where username like '$username' and pass like '$pass'";
   $result = mysqli_query($connection,$sqls);
   if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
       session_start();
-      if ($row['role'] == 'prof'){
-        $_SESSION['idprof']=$row['idu'];
-        header("location:dashboard_prof.php");
-      }else {
-          $_SESSION['idstud']=$row['idu'];
-        header("location:dashboard.php");
-      }
+
+
+			$_SESSION['id']=$row['idu'];
+		if($row['role']=='prof'){
+			header("location:dashboard_prof.php");
+		}else{
+			header("location:dashboard.php");
+
+		}
 
     }
   } else {

@@ -1,10 +1,22 @@
-function info(){
+function createCookie(name, value, days) {
+var expires;
+if (days) {
+var date = new Date();
+date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+expires = "; expires=" + date.toGMTString();
+} else {
+expires = "";
+}
+document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+}
+
+function info(id){
 
   document.getElementById("act").classList.remove('active');
   document.getElementById("act1").classList.remove('active');
   document.getElementById("act2").classList.remove('active');
   document.getElementById("act3").classList.add('active');
-
+    createCookie("journey", id, "10");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -31,11 +43,12 @@ function activity(){
   xhttp.send();
 }
 
-function students(){
+function students(id){
   document.getElementById("act").classList.remove('active');
   document.getElementById("act1").classList.remove('active');
   document.getElementById("act2").classList.add('active');
   document.getElementById("act3").classList.remove('active');
+  createCookie("journey", id, "10");
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -46,11 +59,14 @@ function students(){
   xhttp.open("GET", "ajaxprof/students.php", true);
   xhttp.send();
 }
-function quest(){
+function quest(id){
   document.getElementById("act").classList.remove('active');
   document.getElementById("act1").classList.add('active');
   document.getElementById("act2").classList.remove('active');
   document.getElementById("act3").classList.remove('active');
+
+  createCookie("journey", id, "10");
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -76,3 +92,63 @@ function editquest(){
   xhttp.open("GET", "edit_quest/edit_main_quest.php", true);
   xhttp.send();
 }
+
+function levels(id){
+
+    createCookie("lvl", id, "10");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/levels.php", true);
+    xhttp.send();
+}
+
+function skils(){
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/skils.php", true);
+    xhttp.send();
+}
+function deletes(id){
+
+    createCookie("lvld", id, "10");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/skils.php", true);
+    xhttp.send();
+}
+
+function form_skill() {
+  document.getElementById("add_skill_form").submit();
+ }
+
+
+ function description(){
+
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("description").innerHTML =
+         this.responseText;
+       }
+     };
+     xhttp.open("GET", "ajaxprof/description.php", true);
+     xhttp.send();
+ }
