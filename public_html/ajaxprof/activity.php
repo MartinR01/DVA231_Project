@@ -82,6 +82,7 @@
 									<p>Uploaded quest 1</p>
 								</div><!--info sub end-->
 							</div>
+          
 						</div><!-- RECENT ACTIVITY CARD END-->
 					</div><!-- COL END-->
 

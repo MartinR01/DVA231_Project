@@ -59,3 +59,13 @@
 .btn{
 	font-size: 12pt;
 }
+/*Light Box */
+.choice{
+
+}
+.choice img:hover{
+  border: 2px solid RED;
+}
+.choice img:active{
+  border: 2px solid RED;
+}

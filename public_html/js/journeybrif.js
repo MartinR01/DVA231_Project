@@ -92,3 +92,18 @@ function editquest(){
   xhttp.open("GET", "edit_quest/edit_main_quest.php", true);
   xhttp.send();
 }
+
+function levels(id){
+
+    createCookie("lvl", id, "10");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/levels.php", true);
+    xhttp.send();
+}
