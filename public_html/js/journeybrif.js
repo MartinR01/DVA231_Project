@@ -72,6 +72,7 @@ function quest(id){
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("contain").innerHTML =
       this.responseText;
+	  $('[data-toggle="tooltip"]').tooltip();
     }
   };
   xhttp.open("GET", "ajaxprof/quest.php", true);
@@ -152,3 +153,5 @@ function form_skill() {
      xhttp.open("GET", "ajaxprof/description.php", true);
      xhttp.send();
  }
+ 
+ 

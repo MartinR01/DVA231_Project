@@ -38,7 +38,7 @@ if (isset($_COOKIE['lvl'])){
 
     <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </head>
 <?php
@@ -241,14 +241,21 @@ if (isset($_COOKIE['lvl'])){
 
 </div><!--Everything ends-->
 
+<script>
+	if($('.quest').is(':visible'){
+		$('[data-toggle="tooltip"]').tooltip();
+		console.log("i am here");
+	});
+</script>
 <script type="text/javascript">
 $('#myModal').removeData();
 </script>
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+
+
 
 </body>
 </html>
