@@ -241,6 +241,9 @@ if (isset($_COOKIE['lvl'])){
 
 </div><!--Everything ends-->
 
+<script type="text/javascript">
+$('#myModal').removeData();
+</script>
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->

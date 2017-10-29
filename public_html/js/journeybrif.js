@@ -107,3 +107,48 @@ function levels(id){
     xhttp.open("GET", "ajaxprof/levels.php", true);
     xhttp.send();
 }
+
+function skils(){
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/skils.php", true);
+    xhttp.send();
+}
+function deletes(id){
+
+    createCookie("lvld", id, "10");
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("level").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajaxprof/skils.php", true);
+    xhttp.send();
+}
+
+function form_skill() {
+  document.getElementById("add_skill_form").submit();
+ }
+
+
+ function description(){
+
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("description").innerHTML =
+         this.responseText;
+       }
+     };
+     xhttp.open("GET", "ajaxprof/description.php", true);
+     xhttp.send();
+ }
