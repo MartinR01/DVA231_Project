@@ -16,7 +16,7 @@
   }
  ?>
 
-<h2 class="col-sm-offset-4">Skils</h2><br>
+<h2 class="col-sm-offset-4">Skills</h2><br>
 <?php
  $counter = 0;
 $journey = $_COOKIE['journey'];
