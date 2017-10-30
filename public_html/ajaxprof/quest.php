@@ -3,17 +3,11 @@
   $QUESTS_PER_ROW = 4;
   $QUEST_COLS = 12 / $QUESTS_PER_ROW;
  ?>
-        <div class="row">
-          <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Main Quests
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Side Quests</a></li>
-              <li><a href="#">Main Quests</a></li>
-            </ul>
-          </div>
-        </div>
+		 <div class="container" align="center">
+		  <div class="row">
+			<button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
+		  </div>
+		</div>
         <hr/>
         <?php
 
@@ -65,11 +59,5 @@
            ?>
         </div>
       </div><!--END OF QUESTS -->
-
-      <div class="container" align="center">
-      <div class="row">
-        <button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
-      </div>
-    </div>
 
 	
