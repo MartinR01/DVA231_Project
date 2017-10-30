@@ -116,3 +116,6 @@
             <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" onclick="quest()">Cancel</button>
           </div>
         </div>
+        <div class="row" align="center">
+          <button type="button" class="btn1 shadow" id="trash-btn"><i class="material-icons icons">delete_forever</i></button>
+        </div>
