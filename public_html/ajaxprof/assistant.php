@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
     ?>
     <div class="row" >
       <div class="col-sm-3" >
-        <button class="btn btn-primary col-sm-offset-2" type="button" data-toggle="modal" data-target="#myModal" name="button" >ADD ASSISTANT</button>
+        <button class="btn btn-primary col-sm-offset-2" type="button" data-toggle="modal" data-target="#Modal" name="button" >ADD ASSISTANT</button>
       </div>
       <div class="col-sm-9">
         <button class="btn btn-default col-sm-offset-6" type="button" name="button" onclick=<?php echo "info(".$_COOKIE['journey'].")"; ?>> Save changes</button>
@@ -84,7 +84,7 @@ if (mysqli_num_rows($result) > 0) {
   }
  ?>
  <!-- Modal -->
- <div id="myModal" class="modal fade" role="dialog">
+ <div id="Modal" class="modal fade" role="dialog">
  <div class="modal-dialog">
 
  <!-- Modal content-->
