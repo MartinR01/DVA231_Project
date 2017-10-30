@@ -1,3 +1,4 @@
+       <form class="" action="" method="post">
 
         <div class="row" align="center">
           <h2 class="edit_quest_title">EDIT QUEST</h2>
@@ -116,3 +117,5 @@
             <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" onclick="quest()">Cancel</button>
           </div>
         </div>
+
+      </form>

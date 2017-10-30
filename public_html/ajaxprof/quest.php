@@ -5,7 +5,7 @@
  ?>
 		 <div class="container" align="center">
 		  <div class="row">
-			<button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
+			<button type="button" class="btn-add-journey shadow" onclick="addquest()"><i class="material-icons">add</i></button>
 		  </div>
 		</div>
         <hr/>
@@ -29,7 +29,7 @@
             <div class="quest-availability"></div>
             <div class="quest shadow" data-toggle="tooltip" title="<?php echo $mains['description']; ?>" data-placement="right">
 				<h4><?php echo $mains['title'];?></h4>
-				
+
             </div>
           </div><!--Quest 1 end-->
           <?php
@@ -44,12 +44,12 @@
             <div class="sidequest-availability"></div>
             <div class="sidequest shadow" data-toggle="tooltip" title="<?php echo $side['description']; ?>" data-placement="right">
 				<h4><?php echo $side['title'];?></h4>
-				
+
             </div>
           </div><!--Quest 1 end-->
-		<?php		
+		<?php
 		}
-			
+
       }
 		else {
         ?>
@@ -59,5 +59,3 @@
            ?>
         </div>
       </div><!--END OF QUESTS -->
-
-	
