@@ -144,7 +144,9 @@ function form_skill() {
    document.getElementById("add_assist").submit();
   }
 
-
+  function form_student() {
+    document.getElementById("add_student").submit();
+   }
 
  function description(){
 
@@ -184,5 +186,18 @@ function form_skill() {
         }
       };
       xhttp.open("GET", "ajaxprof/assistant.php", true);
+      xhttp.send();
+  }
+  function deletes(id){
+      createCookie("studs", id, "10");
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("contain").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "ajaxprof/students.php", true);
       xhttp.send();
   }
