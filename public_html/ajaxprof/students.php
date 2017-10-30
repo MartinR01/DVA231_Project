@@ -31,13 +31,18 @@
 }
 }else{
   ?>
-  <h3>Add students</h3>
+  <div class="row" align = "center">
+    <h3>Add Assistant</h3>
+     <button type="button" class="btn-add-journey shadow" onclick="assistant();"><i class="material-icons">add</i></button>
+  </div>
   <?php
 }
-
-
    ?>
 
 
 
       </div><!--RA row end -->
+      <div class="row" align = "center">
+        <h3>Add Students</h3>
+         <button type="button" class="btn-add-journey shadow" onclick="assistant();"><i class="material-icons">add</i></button>
+      </div>

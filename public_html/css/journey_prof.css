@@ -83,3 +83,8 @@ color: blue;
 .skilld i:hover{
   border: 1px solid Grey;
 }
+
+.assist{
+  font-size: 23pt;
+
+}
