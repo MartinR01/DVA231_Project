@@ -154,7 +154,8 @@ session_start();
 
       <div class="container" align="center">
       <div class="row">
-        <a href="edit_journey.php"><button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button></a>
+        <a href="edit_journey.php"><button type="button" class="btn-add-journey shadow" id="green-button"><i class="material-icons">add</i></button></a>
+
       </div>
     </div>
     </div>
