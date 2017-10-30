@@ -45,17 +45,25 @@ if (isset($_COOKIE['lvl'])){
 <?php
 if (isset($_COOKIE['lvl'])){
   unset($_COOKIE['lvl']);
-  setcookie('lvl', null, -1, '/');;
+  setcookie('lvl', null, -1, '/');
   ?>
   <body onload=<?php echo "info(".$_COOKIE['journey'].")";  ?>>
   <?php
 
 
+}elseif (isset($_COOKIE['stud'])) {
+  unset($_COOKIE['stud']);
+  setcookie('stud', null, -1, '/');
+  ?>
+  <body onload=<?php echo "students(".$_COOKIE['journey'].")";  ?>>
+  <?php
 }else{
  ?>
 <body>
  <?php
 }
+
+
  ?>
 
   <div class="row affix-row">
@@ -250,8 +258,8 @@ if (isset($_COOKIE['lvl'])){
 </script>
 
 
-
-
+<!-- JS for Multiple-->
+<script src="js/multiple.js"></script>
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->

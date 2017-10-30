@@ -21,14 +21,6 @@
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Parent</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Quest #1</option>
-                  <option>Make a quesadilla quest</option>
-                </select>
-              </div>
-
-              <div class="form-group">
                <label for="exampleFormControlTextarea1">Description</label>
                <textarea class="form-control" rows="5" placeholder="Enter description of the Quest"></textarea>
              </div>
