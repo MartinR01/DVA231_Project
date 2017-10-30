@@ -2,6 +2,20 @@
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
+<?php
+session_start();
+if (isset($_COOKIE['lvl'])){
+
+  ?>
+  <script type="text/javascript">
+
+  </script>
+
+  <?php
+}
+ ?>
+
+
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -11,6 +25,9 @@ if user already logged in, redirect to student/teacher dashboard
   <title>Dashboard Professor</title>
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- CSS Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- CSS Our-->
@@ -22,11 +39,25 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
 
 </head>
+<?php
+if (isset($_COOKIE['lvl'])){
+  unset($_COOKIE['lvl']);
+  setcookie('lvl', null, -1, '/');;
+  ?>
+  <body onload=<?php echo "info(".$_COOKIE['journey'].")";  ?>>
+  <?php
 
+
+}else{
+ ?>
 <body>
+ <?php
+}
+ ?>
+
   <div class="row affix-row">
     <!--/col - left -->
     <div class="col-sm-3 col-md-3 affix-sidebar shadow">
@@ -47,6 +78,7 @@ if user already logged in, redirect to student/teacher dashboard
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
+
               <!--Profile -->
               <li class="timecolor">
                 <br>
@@ -72,11 +104,24 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/col - left -->
 
     <!-- RIGHT SIDE-->
+    <?php
+      $journey = $_GET['journey'];
+      require_once('protected/config.php');
+      $sqls = "select title from journey where idjourn=$journey";
+      $result = mysqli_query($connection,$sqls);
+      if (mysqli_num_rows($result) > 0) {
+      $row = mysqli_fetch_assoc($result)
+     ?>
     <div class="col-sm-9 col-md-9 affix-content ">
       <div class="leftpad">
         <div class="row">
           <div class="col-sm-4">
-          <h1 class="title ">Web Development </h1>
+
+          <h1 class="title ">  <?php echo $row['title']; ?> </h1>
+        <?php
+      }
+
+         ?>
           </div>
           <div class="col-sm-8" align="left">
             <a href="edit_journey.php"><button type="button" name="button" class="btn btn-primary btn-md shadow"><i class="material-icons">mode_edit</i></button></a>
@@ -90,9 +135,9 @@ if user already logged in, redirect to student/teacher dashboard
 
           <ul class="nav navbar-nav">
             <li class="active" id="act" onclick="activity()"><a href="#activity" >Activity</a></li>
-            <li id="act1" class="" onclick="quest()"><a href="#quests">Quests</a></li>
-            <li id="act2" class="" onclick="students()"><a href="#students">Students</a></li>
-            <li id="act3" class="" onclick="info()"><a href="#information" >Info.</a></li>
+            <li id="act1" class="" onclick=<?php echo "quest(".$journey.")"; ?>><a  href="#quest" >Quests</a></li>
+            <li id="act2" class="" onclick=<?php echo "students(".$journey.")"; ?>><a href="#students">Students</a></li>
+            <li id="act3" class="" onclick=<?php echo "info(".$journey.")"; ?>><a href="#information" >Info.</a></li>
           </ul>
         </div>
       </nav>
@@ -188,15 +233,30 @@ if user already logged in, redirect to student/teacher dashboard
         </div><!-- COL END-->
 
       </div><!--RowEnds-->
+
     </div><!--Container Ends-->
+
+
   </div><!--Right Side End-->
 
+
 </div><!--Everything ends-->
+
+<script>
+	if($('.quest').is(':visible'){
+		$('[data-toggle="tooltip"]').tooltip();
+		console.log("i am here");
+	});
+</script>
+
+
+
 
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
 
-<script src="js/bootstrap.js"></script>
+
+
 </body>
 </html>

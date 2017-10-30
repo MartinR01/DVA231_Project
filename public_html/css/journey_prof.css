@@ -59,3 +59,32 @@
 .btn{
 	font-size: 12pt;
 }
+/*Light Box */
+.choice{
+}
+.choice img:hover{
+  border: 2px solid RED;
+}
+.choice img:active{
+  border: 2px solid RED;
+}
+/* a for edit button at skill */
+
+.skill{
+ color: #d1d1d1;
+}
+.skill i:hover{
+color: blue;
+}
+/* a for delete skil button at skill */
+.skilld{
+ color: #d1d1d1;
+}
+.skilld i:hover{
+  border: 1px solid Grey;
+}
+
+.assist{
+  font-size: 23pt;
+
+}

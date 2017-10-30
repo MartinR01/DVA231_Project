@@ -73,7 +73,7 @@ if user already logged in, redirect to student/teacher dashboard
         <!--RECENT ACTIVITY -->
       <div class="container">
         <div class="row"><!--RA row -->
-          <h1 class="ractiv\\\Y ">Recent Activity</h1>
+          <h1 class="ractiv">Recent Activity</h1>
 		  <hr/>
 		  </br>
           <!--First Activity -->
