@@ -26,7 +26,7 @@ if (isset($_COOKIE['lvl'])){
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- CSS Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- CSS Our-->
@@ -38,7 +38,7 @@ if (isset($_COOKIE['lvl'])){
 
     <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 </head>
 <?php
@@ -241,14 +241,18 @@ if (isset($_COOKIE['lvl'])){
 
 </div><!--Everything ends-->
 
-<script type="text/javascript">
-$('#myModal').removeData();
+<script>
+	if($('.quest').is(':visible'){
+		$('[data-toggle="tooltip"]').tooltip();
+		console.log("i am here");
+	});
 </script>
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
 
 </body>
 </html>

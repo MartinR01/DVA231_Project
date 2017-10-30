@@ -3,6 +3,15 @@ body {
                 sans-serif;
 }
 
+div.tooltip-inner {
+    width: 300px;
+}
+
+.tooltip_place_desc{
+	position: relative;
+	top: -50px;
+}
+
 /* Journey_test */
 
 .card-style {
@@ -432,19 +441,10 @@ body {
   border        : 5px solid white;
   border-radius : 100%;
   text-align    : center;
-
-}
-
-.quest-type {
-  z-index       : 1;
-  position      : relative;
-  top           : 10px;
-  right         : 53px;
-  width         : 30px;
-  height        : 30px;
-  border        : 3px solid white;
-  border-radius : 100%;
-  background-color:orange;
+  background-color: #3498db;
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quest-availability {
@@ -459,28 +459,6 @@ body {
   border-radius : 100%;
 }
 
-.quest-title {
-  position                : relative;
-  top                     : -20px;
-  height                  : 70px;
-  border-top-left-radius  : 70px;
-  border-top-right-radius : 70px;
-  background-color : #3498db;
-}
-
-.quest-title h3 {
-  position: relative;
-  top:50px;
-}
-
-.quest-description {
-  position					 : relative;
-  top						 : -20px;
-  height                     : 70px;
-  border-bottom-right-radius : 70px;
-  border-bottom-left-radius  : 70px;
-  background-color			 : #BE3A31;
-}
 
 .quest-container {
   margin-bottom : 20px;

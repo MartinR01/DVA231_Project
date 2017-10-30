@@ -27,11 +27,10 @@
             while($row = mysqli_fetch_assoc($result)) {
            ?>
           <div class="col-sm-4 quest-container" align="center"><!--Quest 1 -->
-            <div class="quest-type"></div>
             <div class="quest-availability"></div>
-            <div class="quest shadow">
-              <div class="quest-title color"><h3><?php echo $row['title']; ?></h3></div>
-              <div class="quest-description "><?php echo $row['description']; ?></div>
+            <div class="quest shadow" data-toggle="tooltip" title="<?php echo $row['description']; ?>" data-placement="right">
+				
+              <h4><?php echo $row['title']; ?></h4>
             </div>
           </div><!--Quest 1 end-->
           <?php
@@ -50,3 +49,5 @@
         <button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
       </div>
     </div>
+
+	
