@@ -4,7 +4,7 @@ if user already logged in, redirect to student/teacher dashboard
 -->
 <?php
 session_start();
- ?>
+?>
 
 <html>
 <head>
@@ -94,7 +94,7 @@ session_start();
         <div class="row">
           <h1>Journey</h1>
             <?php
-      
+
             $idp = $_SESSION['id'];
             require_once('protected/config.php');
             $sql="select DISTINCT j.idjourn, j.title, COUNT(DISTINCT sj.idstudent) as num,".

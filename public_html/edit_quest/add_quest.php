@@ -32,13 +32,14 @@
               <input type="file" name="file" class="" id="exampleFormControlFile1">
             </div>
 
-            </form>
+
+
           </div>
         </div>
 
         <div class="col-sm-6 col-md-6 affix-content "> <!-- column 2: Points -->
           <br>
-          <form>
+
 
             <!-- skill 1 -->
             <div class="form-group row">
@@ -88,12 +89,10 @@
               </div>
             </div>
 
-          </form>
-
           <!-- Buttons row -->
           <div class="row" align="center">
             <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" onclick="form_add_quest()">Accept</button>
-            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Cancel</button>
+            <button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" onclick=<?php echo "quest(".$_COOKIE['journey'].")";  ?>>Cancel</button>
           </div>
         </div>
     </form>

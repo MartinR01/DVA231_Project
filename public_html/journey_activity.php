@@ -57,6 +57,12 @@ if (isset($_COOKIE['lvl'])){
   ?>
   <body onload=<?php echo "students(".$_COOKIE['journey'].")";  ?>>
   <?php
+}elseif (isset($_COOKIE['quest'])) {
+  unset($_COOKIE['quest']);
+  setcookie('quest', null, -1, '/');
+  ?>
+  <body onload=<?php echo "quest(".$_COOKIE['journey'].")";  ?>>
+  <?php
 }else{
  ?>
 <body>
