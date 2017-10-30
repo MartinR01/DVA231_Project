@@ -25,6 +25,7 @@ if (isset($_COOKIE['lvl'])){
   <title>Dashboard Professor</title>
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- CSS Bootstrap -->
@@ -247,10 +248,13 @@ if (isset($_COOKIE['lvl'])){
 		console.log("i am here");
 	});
 </script>
+
+
+
+
 <!-- JS for AJx -->
 <script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
 
 
 
