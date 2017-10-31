@@ -8,13 +8,13 @@ if user already logged in, redirect to student/teacher dashboard
 
 	//add journey to database
 	$profID = $_SESSION['id'];
-	require_once('/protected/config.php');
+	require_once('protected/config.php');
     $sql = "INSERT INTO journey (title, idprof) VALUES ('New Journey', $profID );";
     mysqli_query($connection, $sql);
-	
+
 	//find the id
 	$sql = "SELECT idjourn FROM journey WHERE title='New Journey'";
-    
+
 	$row = mysqli_fetch_assoc(mysqli_query($connection, $sql));
 	$_SESSION['idjourn'] = $row['idjourn'];
  ?>
