@@ -15,8 +15,8 @@ echo " Add quest information";
   $type = $_POST['qtype'];
   $description = $_POST['qdescription'];
 
-
   $sql = "";
+
         $fileName = $_FILES['file']['name'];
         $fileType = $_FILES['file']['type'];
         $fileSize = $_FILES['file']['size'];
@@ -24,8 +24,9 @@ echo " Add quest information";
         if(is_uploaded_file($fileTemp)){
           if($fileSize < 2097152){
             if($fileType ='application/pdf'){
-
-              $path = $_SERVER['DOCUMENT_ROOT']."/fancygroupworkspacerpg/public_html/img/pdf/".$journey.$fileName;
+              $file = str_replace(' ', '', $fileName);
+              $name1 = str_replace(' ', '', $name);
+              $path = $_SERVER['DOCUMENT_ROOT']."/fancygroupworkspacerpg/public_html/img/pdf/".$name1.$file;
               if(move_uploaded_file($fileTemp, $path)){
                 if($type == "main"){
                   $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm) VALUES ('$name','$description','$path',$journey,'$type')";
@@ -50,9 +51,18 @@ echo " Add quest information";
             echo  "File needs to be max. 2MB";
           }
         }else{
-          echo  "No File is selected";
-        }
+          if($type == "main"){
+            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm) VALUES ('$name','$description','//',$journey,'$type')";
+          }else{
+            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, quests) VALUES ('$name','$description','//',$journey,'$type')";
+          }
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
 
+          }
+        }
         $idq = 0;
         $sql = "Select idquest from quest";
         $result = mysqli_query($connection,$sql);
@@ -61,6 +71,8 @@ echo " Add quest information";
             $idq = $row['idquest'];
           }
         }
+
+
         echo "$idq";
         require_once('../protected/config.php');
         if (!empty($_POST['wquest'])){
@@ -73,7 +85,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,1,0)";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
 
         if (!empty($_POST['pquest'])){
@@ -86,7 +104,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,2,0)";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
         if (!empty($_POST['tquests'])){
             $thinking = $_POST['tquests'];
@@ -98,7 +122,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,3,0)";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
         if (!empty($_POST['prquests'])){
             $programming = $_POST['prquests'];
@@ -110,7 +140,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,4,0)";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
         if (!empty($_POST['dquest'])){
               $design = $_POST['dquest'];
@@ -122,7 +158,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,5, 0 )";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
         if (!empty($_POST['rquest'])){
             $research = $_POST['rquest'];
@@ -134,7 +176,13 @@ echo " Add quest information";
 
             }
         }else{
-          echo "aloha";
+          $sql = "INSERT INTO questpoints(idquest, idts, points) VALUES ($idq,6,0)";
+          if(mysqli_query($connection,$sql)){
+            echo  "Inserted file";
+          }else{
+            echo  "Error";
+
+          }
         }
 
         header("location:../journey_activity.php?journey=".$_COOKIE['journey']);

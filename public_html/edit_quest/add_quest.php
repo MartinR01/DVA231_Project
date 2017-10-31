@@ -7,7 +7,7 @@
         <!-- Forms start -->
         <div class="col-sm-6 col-md-6 affix-content "> <!-- column 1 -->
           <div class="row">
-            <form>
+          
               <div class="form-group">
                 <label>Name</label>
                 <input class="form-control" name="qname" placeholder="Enter name of the quest">

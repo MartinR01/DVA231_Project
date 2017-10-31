@@ -534,3 +534,29 @@ div.tooltip-inner {
   .form-text{
     font-weight: lighter;
   }
+
+
+/*ERASE BUTTON*/
+#trash-btn {
+  margin-top   : 2em;
+  border-color : #BE3A31;
+  background   : #BE3A31;
+  border-radius: 50%;
+  font-size: 1em;
+  height: 80px;
+  width: 80px;
+}
+
+#trash-btn:hover{
+  color     : white;
+  border-color : #AE2A21;
+  background   : #AE2A21;
+}
+
+#trash-btn .icons{
+  position  : relative;
+  left      : 1px;
+  bottom    : 1px;
+  color     : white;
+  font-size : 3.5em;
+}
