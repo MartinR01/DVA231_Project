@@ -4,7 +4,7 @@ if user already logged in, redirect to student/teacher dashboard
 -->
 <?php
 session_start();
- ?>
+?>
 
 <html>
 <head>
@@ -94,15 +94,10 @@ session_start();
         <div class="row">
           <h1>Journey</h1>
             <?php
-      
+
             $idp = $_SESSION['id'];
             require_once('protected/config.php');
-            $sql="select DISTINCT j.idjourn, j.title, COUNT(DISTINCT sj.idstudent) as num,".
-            " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
-            " sum(DISTINCT case when q.quests ='side' then 1 else 0 end) as side".
-            " from Journey j, sjourney sj, quest q, Student s".
-            " where j.idprof = $idp and sj.idjourn = j.idjourn AND sj.idstudent =s.idstudent and  q.idjourn = j.idjourn".
-            " GROUP by j.title ";
+            $sql="select DISTINCT j.idjourn, j.title from Journey j where j.idprof = $idp ";
              $main = 0;
              $side = 0;
              $title ='';
@@ -127,9 +122,9 @@ session_start();
                              </span>
                            </h5>
                          </div>
-                   <div class="pull-left btn-part"> <?php echo "Student: ".$row['num']; ?> </br>
+                   <div class="pull-left btn-part"> <?php echo "Student: "?> </br>
                      <?php
-                     echo "Main Quests: ".$row['main']."<br />Side Quests:".$row['side'];
+                     echo "Main Quests: <br />Side Quests:";
                       ?>
 
                     </div>

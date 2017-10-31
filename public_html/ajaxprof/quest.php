@@ -2,10 +2,28 @@
   $journey = $_COOKIE['journey'];
   $QUESTS_PER_ROW = 4;
   $QUEST_COLS = 12 / $QUESTS_PER_ROW;
+
+  if (isset($_COOKIE['dquest'])) {
+    $idq = $_COOKIE['equest'];
+    unset($_COOKIE['equest']);
+    setcookie('equest', null, -1, '/');
+    unset($_COOKIE['dquest']);
+    setcookie('dquest', null, -1, '/');
+    require_once('../protected/config.php');
+    $sql = "DELETE FROM questpoints WHERE idquest=".$idq;
+    mysqli_query($connection, $sql);
+    $sql = "DELETE FROM quest WHERE idquest=".$idq;
+    if (mysqli_query($connection, $sql)) {
+    $error= "Record deleted successfully";
+    } else {
+      $error= "ERROR";
+    }
+
+  }
  ?>
 		 <div class="container" align="center">
 		  <div class="row">
-			<button type="button" class="btn-add-journey shadow" onclick="editquest()"><i class="material-icons">add</i></button>
+			<button type="button" class="btn-add-journey shadow" onclick="addquest()"><i class="material-icons">add</i></button>
 		  </div>
 		</div>
         <hr/>
@@ -27,37 +45,41 @@
            ?>
           <div class="col-sm-<?php echo $QUEST_COLS ?> quest-container" align="center"><!--Quest 1 -->
             <div class="quest-availability"></div>
-            <div class="quest shadow" data-toggle="tooltip" title="<?php echo $mains['description']; ?>" data-placement="right">
-				<h4><?php echo $mains['title'];?></h4>
-				
+            <div class="quest shadow" data-toggle="tooltip" title="<?php echo $mains['description']; ?>" data-placement="right" onclick=<?php echo "editquest(".$mains['idquest'].")"  ?>>
+				          <h4><?php echo $mains['title'];?></h4>
+
             </div>
           </div><!--Quest 1 end-->
           <?php
-			}?>
+			}
+    }else {
+        ?>
+        <h4> Add Main quest !</h4>
+        <?php
+      }
+      ?>
 			</div>
 			<hr/>
 			<h1>Side Quests</h1>
 			<div class="row">
 			<?php
+      $result_side = mysqli_query($connection,$sql_side);
+          if (mysqli_num_rows($result_side) > 0) {
 			while($side = mysqli_fetch_assoc($result_side)){?>
 			<div class="col-sm-<?php echo $QUEST_COLS ?> sidequest-container" align="center"><!--Quest 1 -->
             <div class="sidequest-availability"></div>
-            <div class="sidequest shadow" data-toggle="tooltip" title="<?php echo $side['description']; ?>" data-placement="right">
+            <div class="sidequest shadow" data-toggle="tooltip" title="<?php echo $side['description']; ?>" data-placement="right" onclick=<?php echo "editquest(".$side['idquest'].")"  ?>>
 				<h4><?php echo $side['title'];?></h4>
-				
+
             </div>
           </div><!--Quest 1 end-->
-		<?php		
+		<?php
 		}
-			
-      }
-		else {
+      }else {
         ?>
-        <h1> ADD quest !</h1>
+        <h4> ADD side quest !</h4>
         <?php
       }
            ?>
         </div>
       </div><!--END OF QUESTS -->
-
-	
