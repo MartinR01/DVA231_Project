@@ -211,16 +211,13 @@ if (mysqli_num_rows($result) > 0) {
       <div class="col-sm-3" >
         <button class="btn btn-primary col-sm-offset-2" type="button" data-toggle="modal" data-target="#Modal" name="button" >ADD ASSISTANT</button>
       </div>
-      <div class="col-sm-9">
-        <button class="btn btn-default col-sm-offset-6" type="button" name="button" onclick=<?php echo "info(".$_COOKIE['journey'].")"; ?>> Save changes</button>
-      </div>
     </div>
 
     <?php
   }
  ?>
  <!-- Modal -->
- <form id="add_assist" action="php/addassiste.php" method="post">
+
  <div id="Modal" class="modal fade" role="dialog">
  <div class="modal-dialog">
 
@@ -231,7 +228,7 @@ if (mysqli_num_rows($result) > 0) {
    </div>
    <div class="modal-body">
 
-     
+      <form id="add_assist" action="php/addassiste.php" method="post">
      <h5>Avalable Assistants</h5>
      <select name="idprof" id="idprof" style="height:30px; width:100%;">
        <option value="none">Choose Assistant</option>
@@ -246,7 +243,7 @@ if (mysqli_num_rows($result) > 0) {
         }
       ?>
         </select>
-		
+		</form>
 
    </div>
    <div class="modal-footer">
@@ -258,7 +255,7 @@ if (mysqli_num_rows($result) > 0) {
 
  </div>
  </div>
- </form>
+ 
                      </div><!--RowEnds-->
 
                        <!--Professor -->

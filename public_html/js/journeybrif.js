@@ -164,7 +164,7 @@ function form_skill() {
   xhttp.onreadystatechange = function() {
 	  
     if (this.readyState == 4 && this.status == 200) {
-		console.log("success");
+		$("#Modal").toggle();
     }
   };
   xhttp.open("GET", "php/addassiste.php?idprof="+$("#idprof").val(), true);
@@ -220,6 +220,20 @@ function form_skill() {
       xhttp.open("GET", "ajaxprof/assistant.php", true);
       xhttp.send();
   }
+  
+  function deleteae(id){
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("ass").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "ajaxprof/deleteas.php?idprof="+id, true);
+      xhttp.send();
+  }
+  
   function deletes(id){
       createCookie("studs", id, "10");
 
