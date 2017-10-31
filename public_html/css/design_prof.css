@@ -5,6 +5,11 @@ body {
 
 /* Journey_test */
 
+#newtitle{
+	height: 3em;
+	width: 15em;
+}
+
 .card-style {
   display          : block;
   width            : 300px;

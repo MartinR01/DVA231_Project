@@ -9,7 +9,7 @@
 		  $row = mysqli_fetch_assoc($result);
     ?>
 
-   <textarea class="" id="newdesc" name="text" rows="4" placeholder="Enter title here" value =""><?php echo $row['title']; ?></textarea>
+   <textarea class="" id="newtitle" name="text" rows="4" placeholder="Enter title here" value =""><?php echo $row['title']; ?></textarea>
  </div>
  <button class="btn btn-primary" type="submit" name="button" onclick="">Save Changes</button>
  <button class="btn btn-default" type="button" name="button" onclick=<?php echo "info(".$_COOKIE['journey'].")"; ?>> BACK</button>
