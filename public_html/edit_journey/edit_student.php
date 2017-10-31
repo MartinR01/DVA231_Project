@@ -30,7 +30,7 @@
         <h3>Add Students</h3>
 
         <!-- Button -->
-        <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
+        <!-- <button type="button" class="btn-add-journey shadow" onclick=""><a href="#H"><i class="material-icons">add</i></a></button> -->
+        <button class="btn-add-journey shadow" type="button" data-toggle="modal" data-target="#ModalStudent" name="button"><i class="material-icons">delete</i></button>
 
         </div><!--RowEnds-->
-  
