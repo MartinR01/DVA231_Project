@@ -12,7 +12,7 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quest up</title>
+  <title>Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- CSS Bootstrap -->
@@ -96,8 +96,6 @@ if user already logged in, redirect to student/teacher dashboard
           <span class="topnav navbar-btn topnav-active">Dashboard</span>
           <span class="topnav">Leaderboard</span>
           <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
-
-
         </div>
       </nav><!--/end NAVIGATION -->
 
@@ -105,62 +103,44 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="container">
         <div class="row">
           <h1 class="animated slideInLeft">Journey</h1>
-          <!--Journey 1-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 1 end-->
 
-          <!--Journey 2-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 2 end-->
+			<!-- HERE IT IS MY BULLSHIT -->
+			<?php
+			$ids = $_SESSION['id'];
+			require_once('protected/config.php');
+			$sql="select j.idjourn, j.title from sjourney sj, Journey j where sj.idstudent = $ids and j.idjourn = sj.idjourn";
+			$result = mysqli_query($connection,$sql);
+			if (mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_assoc($result)) {
+			?>
+			<!--Journey n-->
+			<div class="col-sm-4 animated zoomIn" align="center">
+				<div class="card-style">
+					<div class="media">
+						<!--Journey picture-->
+						<div class="media-left">
+							<img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+						</div><!--.Journey pictureend-->
+						<!--Journey elements-->
+						<div class="media-body">
+							<a href="journey_student.php"><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>
+							<div class="circle shadow"><span class="points-circle">7.5</span></div>
+							<div class="pull-right btn-part">Quest <br><span class="light progress-font">7/10</span></div>
+						</div><!--Journey elements end-->
+					</div>
+				</div>
+			</div><!--Journey n end-->
+			<?php
+				}
+			}else {
+				$error = "DB ERROR";
+			}
+		?>
 
-          <!--Journey 3-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 3 end-->
-          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+			<!-- HERE IT ENDS MY BULLSHIT -->
         </div>
-      </div><!--END OF A JOURNEY-->
+				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+      </div><!--END OF JOURNEY-->
       <br>
       <hr />
 
