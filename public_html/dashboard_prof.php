@@ -111,7 +111,8 @@ session_start();
                      <div class="media media1">
                        <!--Journey picture-->
                        <div class="media1-left media-left">
-                         <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                         <img class="media1-object media-object img-thumbnail card-img"
+                         src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                        </div><!--.Journey pictureend-->
                        <!--Journey elements-->
                        <div class="media1-body media-body">
@@ -137,18 +138,13 @@ session_start();
                </div>
              </div>
            </div><!--Journey 1 end-->
-
                    <?php
-
                  }
              } else {
                $error = "DB ERROR";
 
              }
-
              ?>
-
-
         </div>
       </div>
       <hr />
