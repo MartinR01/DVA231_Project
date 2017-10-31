@@ -8,15 +8,17 @@ if user already logged in, redirect to student/teacher dashboard
 
 	//add journey to database
 	$profID = $_SESSION['id'];
-	require_once('/protected/config.php');
-    $sql = "INSERT INTO journey (title, idprof) VALUES ('New Journey', $profID );";
+	$dummyName = "New Journey";
+	require_once('protected/config.php');
+    $sql = "INSERT INTO journey (title, idprof) VALUES ( '".$dummyName."' , $profID );";
     mysqli_query($connection, $sql);
 	
 	//find the id
-	$sql = "SELECT idjourn FROM journey WHERE title='New Journey'";
+	$sql = "SELECT idjourn FROM journey WHERE title='".$dummyName."'";
     
 	$row = mysqli_fetch_assoc(mysqli_query($connection, $sql));
 	$_SESSION['idjourn'] = $row['idjourn'];
+	$journey = $_SESSION['idjourn'] ;
  ?>
 
 <html>
@@ -105,13 +107,16 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- RIGHT SIDE-->
     <div class="col-sm-9 col-md-9 affix-content ">
+	<form action="php/add_journey.php" method="post">
       <div class="leftpad">
         <div class="row">
           <div class="col-sm-6">
-            <input type="text" class="form-control input-lg" placeholder="Enter the title of Journey">
+			
+				<input type="text" class="form-control input-lg" name="title" placeholder="Enter the title of Journey" value="<?php echo $dummyName;?>">
           </div>
           <div class="col-sm-6">
-            <button type="button" name="button" onclick="addjourney()" class="btn btn-primary btn-lg shadow">Save</button>
+            <button type="submit" name="button" class="btn btn-primary btn-lg shadow">Save</button>
+			
           </div>
         </div>
           <br> <!-- Edit this with css -->
@@ -139,17 +144,121 @@ if user already logged in, redirect to student/teacher dashboard
                    <div class="shadow leftpad" >
                      <h2>Description</h2>
                      <div class="form-group textd">
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter description here"></textarea>
+                      <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" placeholder="Enter description here"></textarea>
                     </div>
                    </div>
+				   </form>
                    <!--List of assistnts -->
                    <div class="shadow leftpad padd" >
                      <h2>Assistants</h2>
                      <!--Professor -->
                      <div class="row" align="center">
-                     <h4>Add Assistants</h4>
-                     <!-- Button -->
-                     <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
+                     <?php
+$counter = 0;
+$sql = "Select p.idprof, p.name, p.lastname, p.email from assistant a, professor p where a.idjourn = $journey and p.idprof = a.idprof;";
+require_once('protected/config.php');
+$result = mysqli_query($connection,$sql);
+if (mysqli_num_rows($result) > 0) {
+ while($row = mysqli_fetch_assoc($result)) {
+   $counter = $counter +1;
+  ?>
+  <div class="row">
+    <div class="col-sm-9">
+  <!-- CARD -->
+  <div class="activity-card shadow">
+    <div class="media">
+      <!--Prof picture-->
+      <div class="media-left student-pic-container">
+        <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+      </div>
+      <!--info about submission-->
+      <div class="media-body padded">
+        <h4 class="media-heading"> <?php echo $row['name']." ".$row['lastname']; ?></h4>
+        <h5 class="media-heading"><a href="#"><?php echo $row['email']; ?></a>
+        <!--LOG-->
+
+      </div><!--info sub end-->
+      <div class="media-right student-pic-container">
+        <button class="btn skilld btn-xs" type="button" name="button" onclick=<?php echo "deletea(".$row['idprof'].")"  ?>><i class="assist material-icons" >delete_forever</i></button>
+
+      </div>
+    </div>
+  </div><!-- RECENT ACTIVITY CARD END-->
+  </div>
+  <div class="col-sm-3">
+
+  </div>
+
+</div>
+  <?php
+
+ }
+}
+?>
+
+<?php
+  if ($counter == 2 ){
+    ?>
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn btn-default col-sm-offset-4" type="button" name="button" onclick=<?php echo "info(".$_COOKIE['journey'].")"; ?>> Save Changes</button>
+      </div>
+    </div>
+    <?php
+  }else{
+    ?>
+    <div class="row" >
+      <div class="col-sm-3" >
+        <button class="btn btn-primary col-sm-offset-2" type="button" data-toggle="modal" data-target="#Modal" name="button" >ADD ASSISTANT</button>
+      </div>
+      <div class="col-sm-9">
+        <button class="btn btn-default col-sm-offset-6" type="button" name="button" onclick=<?php echo "info(".$_COOKIE['journey'].")"; ?>> Save changes</button>
+      </div>
+    </div>
+
+    <?php
+  }
+ ?>
+ <!-- Modal -->
+ <form id="add_assist" action="php/addassiste.php" method="post">
+ <div id="Modal" class="modal fade" role="dialog">
+ <div class="modal-dialog">
+
+ <!-- Modal content-->
+ <div class="modal-content">
+   <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal">&times;</button>
+   </div>
+   <div class="modal-body">
+
+     
+     <h5>Avalable Assistants</h5>
+     <select name="idprof" id="idprof" style="height:30px; width:100%;">
+       <option value="none">Choose Assistant</option>
+     <?php
+      $sql= "Select name,lastname,idprof from professor where idprof not in (Select a.idprof from assistant a, professor p where a.idjourn = $journey and p.idprof = a.idprof) and idprof not in (SELECT j.idprof  from Journey j WHERE j.idjourn=$journey);";
+        require_once('protected/config.php');
+        $result = mysqli_query($connection,$sql);
+        if (mysqli_num_rows($result) > 0) {
+          while($row = mysqli_fetch_assoc($result)) {
+              echo "<option value=". $row['idprof'] .">".$row['name']." ".$row['lastname']."</option>";
+          }
+        }
+      ?>
+        </select>
+		
+
+   </div>
+   <div class="modal-footer">
+     <button type="button" onclick="form_assiste()" class="btn btn-primary" >Save Changes</button>
+     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+   </div>
+    
+ </div>
+
+ </div>
+ </div>
+ </form>
                      </div><!--RowEnds-->
 
                        <!--Professor -->
@@ -166,6 +275,21 @@ if user already logged in, redirect to student/teacher dashboard
                        <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
                      </div><!--RowEnds-->
                    </div>
+				   <br>
+				   <div class="shadow leftpad padd" >
+						   <div class="col-sm-6">
+						<img class="imgprofile shadow" src="<?php
+								echo $row['profilepath'];
+							?>" width="150px" height="150px" alt="">
+						<form>
+							<div class="form-group">
+							  <label for="exampleFormControlFile1">Upload Profile picture</label>
+							  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+							</div>
+						</form>
+						</div>
+
+					</div>
 
                  </div><!-- COL END-->
                </div>
@@ -173,13 +297,14 @@ if user already logged in, redirect to student/teacher dashboard
              </div>
 
 
-
+	
     </div><!--Container Ends-->
   </div><!--Right Side End-->
 
 </div><!--Everything ends-->
 <!-- JS AJx -->
 <script src="js/editjourny.js"></script>
+<script src="js/journeybrif.js"></script>
 <!-- JS for Bootstrap -->
 
 <script src="js/bootstrap.js"></script>

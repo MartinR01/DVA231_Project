@@ -158,6 +158,18 @@ function form_skill() {
  function form_assist() {
    document.getElementById("add_assist").submit();
   }
+  
+  function form_assiste() {
+   var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+	  
+    if (this.readyState == 4 && this.status == 200) {
+		console.log("success");
+    }
+  };
+  xhttp.open("GET", "php/addassiste.php?idprof="+$("#idprof").val(), true);
+  xhttp.send();
+  }
 
   function form_student() {
     document.getElementById("add_student").submit();
