@@ -2,10 +2,10 @@
 session_start();
   require_once('../protected/config.php');
   $id=$_SESSION['id'];
-  if (empty($_POST['name']) || empty($_POST['lastname']) || empty($_POST['email']) ){
-    echo "Fill all informations !";
+if (empty($_POST['name']) || empty($_POST['lastname']) || empty($_POST['email']) ){
 
-  }else{
+
+}else{
   $name =$_POST['name'];
   $lastname = $_POST['lastname'];
   $email = $_POST['email'];
@@ -18,9 +18,9 @@ session_start();
             if($fileSize < 2097152){
               if($fileType ='image/jpeg'){
                 $file = str_replace(' ', '', $fileName);
-                $path = $_SERVER['DOCUMENT_ROOT']."/fancygroupworkspacerpg/public_html/img/profile/".$id.$file;
+                $path = $_SERVER['DOCUMENT_ROOT']."/fancygroupworkspacerpg/public_html/img/students/".$id.$file;
                 if(move_uploaded_file($fileTemp, $path)){
-                  $sql = "UPDATE professor set name = '$name ' , lastname = '$lastname' , email = '$email',profilepath = '$path'  WHERE idprof = $id";
+                  $sql = "UPDATE Student set name = '$name ' , lastname = '$lastname' , email ='$email', profilepath = '$path'  WHERE idstudent = $id";
                   if(mysqli_query($connection, $sql)){
                     echo "YAS";
                   }else{
@@ -28,7 +28,7 @@ session_start();
                   }
                   mysqli_close($connection);
 
-                header("location:../profile_professor.php");
+                  header("location:../profile_student.php");
                 }else{
                   echo  "$fileTemp";
                 }
@@ -39,11 +39,11 @@ session_start();
               echo  "File needs to be max. 2MB";
             }
           }else{
-            $sql = "UPDATE professor set name = '$name' , lastname = '$lastname' , email = '$email' WHERE idprof = $id";
+            $sql = "UPDATE Student set name = '$name ' , lastname = '$lastname' , email = '$email' WHERE idprof = $id";
             mysqli_query($connection, $sql);
             mysqli_close($connection);
             echo  "Uploded no pic ";
-            header("location:../profile_professor.php");
+      header("location:../profile_student.php");
           }
 }
  ?>

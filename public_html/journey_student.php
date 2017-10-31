@@ -2,6 +2,10 @@
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
+<?php
+	session_start();
+	require_once('protected/config.php');
+?>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -25,8 +29,6 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- jQuery and theamJQuery comented-->
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
-
-
 
 </head>
 
@@ -60,8 +62,21 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
               <!--Profile -->
+              <!--Profile -->
+        <?php
+          $sqls ="Select * from student where idstudent ='".$_SESSION['id']."'";
+          $result = mysqli_query($connection,$sqls);
+          $row = mysqli_fetch_assoc($result);
+        ?>
               <li class="timecolor">
                 <br>
+                <?php
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $student = "./img/students/".$filename;
+                 ?>
                 <!-- progress bar -->
                 <div class="progress progress-profile green">
                   <span class="progress-left">
@@ -71,25 +86,29 @@ if user already logged in, redirect to student/teacher dashboard
                     <span class="progress-bar progress-bar-profile"></span>
                   </span>
 
-                  <div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+                  <div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src=<?php echo "$student";  ?> width="150px" height="150px" alt=""></a></div>
                 </div>
 
 
 
-                <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">arrow_back</i></button>
-                <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
-                <br>
-              </li>
-              <!--Stats -->
-
-
+                <h3 class= "proname">
+                  <?php
+        						//echo var_dump($_SESSION);
+        						echo $row['name']." ".$row['lastname'];
+        					?>
+        					<br><small><?php
+        						echo $row['email'];
+        					?></small> </h3>
+                        <a href="profile_student.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button></a>
+                        <button type="button" class="btn btn-default btn-circle-not btn-lg shadow animated rotateIn"><i class="material-icons icons" >forum</i></button>
+                        <br>
+                      </li>
               <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow" ><span>Dashboard</span></button></li></a>
+              <a href="journeys.php"><li class="butallign " ><button type="button" class="btn btn1 shadow" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
               <!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>

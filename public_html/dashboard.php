@@ -57,9 +57,14 @@ if user already logged in, redirect to student/teacher dashboard
 				?>
               <li class="timecolor">
                 <br>
-                <a href="#"><img class="imgprofile shadow animated bounceIn" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt=""></a>
+								<?php
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $student = "./img/students/".$filename;
+                 ?>
+                <a href="#"><img class="imgprofile shadow animated bounceIn" src=<?php echo "$student";  ?> width="150px" height="150px" alt=""></a>
                 <h3 class= "proname">
 				<?php
 						//echo var_dump($_SESSION);
@@ -68,13 +73,13 @@ if user already logged in, redirect to student/teacher dashboard
 					<br><small><?php
 						echo $row['email'];
 					?></small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button>
+                <a href="profile_student.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button></a>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow animated rotateIn"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
-              <a href="#dashboard"><li class="butallign "><button type="button" class="btn btn1 shadow" onclick="dashboard()"><span>Dashboard</span></button></li></a>
-              <a href="#journey"><li class="butallign " ><button type="button" class="btn btn1 shadow"  onclick="journey()" ><span>Journey</span></button></li></a>
+							<a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow" ><span>Dashboard</span></button></li></a>
+              <a href="journeys.php"><li class="butallign " ><button type="button" class="btn btn1 shadow" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
               <!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
