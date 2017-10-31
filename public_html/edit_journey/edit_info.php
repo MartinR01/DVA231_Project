@@ -24,18 +24,6 @@
                  </div>
                  <div class="col-sm-6 description">
 
-                   <div class="shadow leftpad" >
-                     <h2>Awards</h2>
-
-                     <div class="row" align="center">
-                     <h4>Add Assistants</h4>
-                     <!-- Button -->
-                     <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
-                     </div><!--RowEnds-->
-
-
-                   </div>
-                   <br>
                    <!--List of Awards -->
                    <div class="shadow leftpad padd" >
                      <h2>Skills</h2>
