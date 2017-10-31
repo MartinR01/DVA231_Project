@@ -80,8 +80,8 @@ include ('php/login.php');
 						<div class="form-group">
 
 							<div class="input-group">
-								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">email</i></span>
-								<input placeholder="Enter your Email address" class="form-control" name="username" type="text"/>
+								<span class="input-group-addon"><i class="material-icons" style="font-size:1em;">account_circle</i></span>
+								<input placeholder="Enter your Username" class="form-control" name="username" type="text"/>
 							</div>
 						</div>
 						</br>

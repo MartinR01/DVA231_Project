@@ -136,7 +136,7 @@ function skils(){
     xhttp.open("GET", "ajaxprof/skils.php", true);
     xhttp.send();
 }
-function deletes(id){
+function deletesk(id){
 
     createCookie("lvld", id, "10");
 
