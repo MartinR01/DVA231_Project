@@ -5,6 +5,7 @@ if user already logged in, redirect to student/teacher dashboard
 <?php
 	session_start();
 	require_once('protected/config.php');
+	  $studentid = $_SESSION['id'];
   $journey = $_GET['journey'];
   $cookie_name = "journey";
   $cookie_value = $journey;
@@ -35,8 +36,23 @@ if user already logged in, redirect to student/teacher dashboard
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
 
 </head>
-
+<?php
+$sql="Select COUNT(p.idstudent) as ifplay from points p, skill s where idstudent=$studentid and p.idsk = s.idsk and s.idjourn = $journey;";
+require_once('protected/config.php');
+$result = mysqli_query($connection,$sql);
+$row = mysqli_fetch_assoc($result);
+if ($row['ifplay']  <= 0){
+ ?>
 <body>
+	<?php
+}else{
+	?>
+<body onload="levels()">
+
+
+	<?php
+}
+	 ?>
   <div class="row affix-row">
     <!--/col - left -->
     <div class="col-sm-3 col-md-3 affix-sidebar shadow">
@@ -142,7 +158,8 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="row" align ="center">
         <h4>Quest Map</h4>
       </div-->
-      <?php
+			<div id ="quests">
+			<?php
       $sql_main = "select idquest,title,description from quest where idjourn = $journey AND questm = 'main' ORDER BY sortnum ASC";
        $sql_side = "select idquest,title,description from quest where idjourn = $journey AND questm = '' ORDER BY sortnum ASC";
            ?>
@@ -192,7 +209,7 @@ if user already logged in, redirect to student/teacher dashboard
              ?>
       </div><!-- row 1 end -->
     <br><br><br>
-
+			</div>
     </div>
 
     <!-- RIGHT SECTION-->
@@ -218,19 +235,13 @@ if user already logged in, redirect to student/teacher dashboard
               <hr/>
 
               <!--STATS -->
-              <div class="row">
-                <h1>Skills</h1>
+              <div class="row" align="center">
+                <h1>Start Game </h1>
+								<div class="col-sm-11"  id="skills">
+									<button class="btn-add-journey shadow"  name="button" onclick="levels()"><i class="material-icons">add</i></button>
+								</div>
 
-                <h4>Programming: Cody mcCodyson</h4>
-                <div class="progress progress-stats" data-toggle="tooltip" title="Next Level: 70/100: Cracker" data-placement="bottom">
-                  <div class="progress-bar progress-bar-success progress-bar-done" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                    50/100
-                  </div>
-                  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">
-                  +20
-                </div>
-              </div>
+
             </div>
 
 
@@ -242,6 +253,7 @@ if user already logged in, redirect to student/teacher dashboard
 </div>
 <!-- JS for Bootstrap -->
 <script src="js/bootstrap.js"></script>
+<script src="js/game.js"></script>
 <!-- Install tooltips -->
 <script>
 $(document).ready(function(){
