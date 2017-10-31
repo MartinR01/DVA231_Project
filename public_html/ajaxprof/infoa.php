@@ -81,7 +81,7 @@
       <div class="shadow leftpad padd" id="level">
           <div class="row">
             <div class="col-sm-12"  align="center">
-                <h2>Skils  <button class="btn btn-xs skill" onclick="skils()"><i class="material-icons">mode_edit</i></button></h2>
+                <h2>Skills  <button class="btn btn-xs skill" onclick="skils()"><i class="material-icons">mode_edit</i></button></h2>
             </div>
 
           </div>

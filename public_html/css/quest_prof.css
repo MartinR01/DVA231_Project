@@ -205,12 +205,37 @@ div.tooltip-inner {
   background   : #BE3A31;
 }
 
+/*ERASE BUTTON*/
+#trash-btn {
+  margin-top   : 2em;
+  border-color : #BE3A31;
+  background   : #BE3A31;
+  border-radius: 50%;
+  font-size: 1em;
+  height: 80px;
+  width: 80px;
+}
+
+#trash-btn:hover{
+  color     : white;
+  border-color : #AE2A21;
+  background   : #AE2A21;
+}
+
+#trash-btn .icons{
+  position  : relative;
+  left      : 1px;
+  bottom    : 1px;
+  color     : white;
+  font-size : 3.5em;
+}
+
 /* _NOTIF AND SETT BUTTONS_ */
 
 .icons {
   position  : relative;
   right     : 5px;
-  bottom    : 1px;
+  top    : 3px;
   color     : white;
   font-size : 18pt;
 }
@@ -231,7 +256,6 @@ div.tooltip-inner {
    pointer-events: auto;
    cursor: auto;
 }
-
 
 .material-icons.md-42 {
   font-size: 42px;
@@ -531,32 +555,10 @@ div.tooltip-inner {
     font-size: 1em;
   }
 
+  /*#quest-edit-btn:hover{
+    background-color: #2488cb;
+  }*/
+
   .form-text{
     font-weight: lighter;
   }
-
-
-/*ERASE BUTTON*/
-#trash-btn {
-  margin-top   : 2em;
-  border-color : #BE3A31;
-  background   : #BE3A31;
-  border-radius: 50%;
-  font-size: 1em;
-  height: 80px;
-  width: 80px;
-}
-
-#trash-btn:hover{
-  color     : white;
-  border-color : #AE2A21;
-  background   : #AE2A21;
-}
-
-#trash-btn .icons{
-  position  : relative;
-  left      : 1px;
-  bottom    : 1px;
-  color     : white;
-  font-size : 3.5em;
-}

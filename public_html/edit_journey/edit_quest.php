@@ -26,8 +26,8 @@
         <div class="row" align="center">
         </br>
 
-        <h1>NO JOURNEYS</h1>
-        <h3>Add a Journey</h3>
+        <h1>NO QUESTS</h1>
+        <h3>Add a Quest</h3>
 
         <!-- Button -->
         <button type="button" class="btn-add-journey shadow"  onclick="editquest()"><i class="material-icons">add</i></button>
