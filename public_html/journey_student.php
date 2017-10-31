@@ -92,6 +92,7 @@ if user already logged in, redirect to student/teacher dashboard
 
 
                 <h3 class= "proname">
+
                   <?php
         						//echo var_dump($_SESSION);
         						echo $row['name']." ".$row['lastname'];
