@@ -59,3 +59,14 @@ function editquest(){
   xhttp.open("GET", "edit_quest/add_quest.php", true);
   xhttp.send();
 }
+
+function addjourney(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log("success");
+    }
+  };
+  xhttp.open("GET", "php/add_journey.php", true);
+  xhttp.send();
+}
