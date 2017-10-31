@@ -48,13 +48,7 @@
 }
 }else{
   ?>
-  <!-- <div class="row" align = "center">
-    <h3>Add Student</h3>
-     <button type="button" class="btn-add-journey shadow" onclick="assistant();"><i class="material-icons">add</i></button>
-  </div> -->
-  <div class="row" align = "center">
-    <h3>NO STUDENTS</h3>
-  </div>
+  
   <?php
 }
    ?>
@@ -94,6 +88,8 @@
                     }
                  ?>
                  </select>
+
+
 
         </div>
         <div class="modal-footer">

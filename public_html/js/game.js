@@ -12,25 +12,10 @@ document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
 
 function levels(){
 
-
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("skills").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "game/gameskill.php", true);
-    xhttp.send();
-}
-
-function levels(){
-
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("quests").innerHTML =
         this.responseText;
       }
     };

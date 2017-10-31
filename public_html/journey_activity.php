@@ -104,23 +104,23 @@ if (isset($_COOKIE['lvl'])){
                       $row = mysqli_fetch_assoc($result);
                       ?>
                       <br>
+                
+                      <br>
                       <?php
                       $path = $row['profilepath'];
                       $file = str_replace('/', ' ', $path);
                       $split = explode(" ", $file);
                       $filename =$split[count($split)-1];
                       $prof = "./img/profile/".$filename;
-                       ?>
+                      ?>
                       <a href="#" style="text-align:center"><img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt=""></a>
                       <h3 class="textName" style="text-align: left;">
-                      <?php
-                      echo "&nbsp;".$row['name']." ".$row['lastname'];
-                      ?>
-                      <br><small><?php
+                        <?php
+                        echo "&nbsp;".$row['name']." ".$row['lastname'];
+                        ?>
+                        <br><small><?php
                         echo $row['email'];
-                      ?></small> </h3>
-
-                        <a href="profile_professor.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button></a>
+                        ?></small> </h3><button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                         <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                         <br>
                       </li>
@@ -151,7 +151,7 @@ if (isset($_COOKIE['lvl'])){
               <div class="col-sm-9 col-md-9 affix-content ">
                 <div class="leftpad">
                   <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" id="title">
 
                       <h1 class="title ">  <?php echo $row['title']; ?> </h1>
                       <?php
@@ -160,7 +160,7 @@ if (isset($_COOKIE['lvl'])){
                     ?>
                   </div>
                   <div class="col-sm-8" align="left">
-                    <a href="edit_journey.php"><button type="button" name="button" class="btn btn-primary btn-md shadow"><i class="material-icons">mode_edit</i></button></a>
+                    <button class="btn btn-xs skill" onclick="edittitle()"><i class="material-icons">mode_edit</i></button>
                   </div>
                 </div>
 
@@ -180,119 +180,68 @@ if (isset($_COOKIE['lvl'])){
 
               <!-- Activities -->
               <div class="container" id="contain">
-                <br>
-
-                <div class="row">
-                  <!-- Dropdowns for sorting -->
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Sort by: Time
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Name</a></li>
-                      <li><a href="#">Quest</a></li>
-                      <li><a href="#">Time</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_upward</i> Ascending</a></li>
-                      <li><a href="#"><i class="material-icons" style="font-size:1em;">arrow_downward</i> Descending</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <hr/>
-                <div class="row">
-                </br>
-                <!--First Activity -->
-                <div class="col-xs-12 col-sm-4">
-                  <!-- RECENT ACTIVITY CARD -->
-                  <div class="activity-card">
-                    <div class="media">
-                      <!--student picture-->
-                      <div class="media-left student-pic-container">
-                        <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                      </div>
-                      <!--info about submission-->
-                      <div class="media-body padded">
-                        <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-                        <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-                        <!--LOG-->
-                        <p>Uploaded quest 1</p>
-                      </div><!--info sub end-->
-                    </div>
-                  </div><!-- RECENT ACTIVITY CARD END-->
-                </div><!-- COL END-->
-
-                <!--Second Activity -->
-                <div class="col-xs-12 col-sm-4">
-                  <!-- RECENT ACTIVITY CARD -->
-                  <div class="activity-card">
-                    <div class="media">
-                      <!--student picture-->
-                      <div class="media-left student-pic-container">
-                        <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                      </div>
-                      <!--info about submission-->
-                      <div class="media-body padded">
-                        <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-                        <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-                        <!--LOG-->
-                        <p>Uploaded quest 1</p>
-                      </div><!--info sub end-->
-                    </div>
-                  </div><!-- RECENT ACTIVITY CARD END-->
-                </div><!-- COL END-->
-
-                <!--Third Activity -->
-                <div class="col-xs-12 col-sm-4">
-                  <!-- RECENT ACTIVITY CARD -->
-                  <div class="activity-card">
-                    <div class="media">
-                      <!--student picture-->
-                      <div class="media-left student-pic-container">
-                        <img class="shadow-extra media-object student-pic" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                      </div>
-                      <!--info about submission-->
-                      <div class="media-body padded">
-                        <a href="#"><h4 class="media-heading">WEB DEVELOPMENT</h4></a>
-                        <h5 class="media-heading"><a href="#">STUDENT_NAME </a><br/><small class=""><i>X mins ago</i></small></h5>
-                        <!--LOG-->
-                        <p>Uploaded quest 1</p>
-                      </div><!--info sub end-->
-                    </div>
-                  </div><!-- RECENT ACTIVITY CARD END-->
-                </div><!-- COL END-->
-
-              </div><!--RowEnds-->
-
-            </div><!--Container Ends-->
 
 
-          </div><!--Right Side End-->
+              </div><!--Container Ends-->
 
 
-        </div><!--Everything ends-->
-
-        <script>
-        if($('.quest').is(':visible'){
-          $('[data-toggle="tooltip"]').tooltip();
-          console.log("i am here");
-        });
-        </script>
+            </div><!--Right Side End-->
 
 
-        <!-- JS for Multiple-->
-        <script src="js/multiple.js"></script>
-        <!-- JS for AJx -->
-        <script src="js/journeybrif.js"></script>
-        <!-- JS for Bootstrap -->
+          </div><!--Everything ends-->
+
+          <script>
+          if($('.quest').is(':visible')){
+            $('[data-toggle="tooltip"]').tooltip();
+            console.log("i am here");
+          };
+          </script>
 
 
 
-      </body>
-      </html>
+          <!-- JS for Multiple-->
+          <script src="js/multiple.js"></script>
+          <!-- JS for AJx -->
+          <script src="js/journeybrif.js"></script>
+          <!-- JS for Bootstrap -->
+
+
+          <?php
+          if(isset($_GET['page'])){
+            switch($_GET['page']){
+              case "info":?>
+              <script type="text/javascript">
+              $("#act3").click();
+              </script>
+              <?php
+              break;
+              case "students":?>
+              <script type="text/javascript">
+              $("#act2").click();
+              </script>
+              <?php
+              break;
+              case "quests":?>
+              <script type="text/javascript">
+              $("#act1").click();
+              </script>
+              <?php
+              break;
+              default:?>
+              <script type="text/javascript">
+              $("#act").click();
+              </script>
+              <?php
+            }
+          }
+          else{
+            ?>
+            <script type="text/javascript">
+            $("#act").click();
+            </script>
+            <?php
+          }
+          ?>
+
+        </body>
+        </html>

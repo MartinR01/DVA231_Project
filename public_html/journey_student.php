@@ -42,14 +42,13 @@ require_once('protected/config.php');
 $result = mysqli_query($connection,$sql);
 $row = mysqli_fetch_assoc($result);
 if ($row['ifplay']  <= 0){
+	echo "LOL";
  ?>
 <body>
 	<?php
 }else{
 	?>
 <body onload="levels()">
-
-
 	<?php
 }
 	 ?>
@@ -158,7 +157,8 @@ if ($row['ifplay']  <= 0){
       <div class="row" align ="center">
         <h4>Quest Map</h4>
       </div-->
-			<div id ="quests">
+
+
 			<?php
       $sql_main = "select idquest,title,description from quest where idjourn = $journey AND questm = 'main' ORDER BY sortnum ASC";
        $sql_side = "select idquest,title,description from quest where idjourn = $journey AND questm = '' ORDER BY sortnum ASC";
@@ -209,8 +209,9 @@ if ($row['ifplay']  <= 0){
              ?>
       </div><!-- row 1 end -->
     <br><br><br>
+
 			</div>
-    </div>
+
 
     <!-- RIGHT SECTION-->
     <div class="col-sm-3 col-md-3 ">
