@@ -192,6 +192,19 @@ function form_skill() {
      xhttp.open("GET", "ajaxprof/description.php", true);
      xhttp.send();
  }
+ 
+ function edittitle(){
+
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("title").innerHTML =
+         this.responseText;
+       }
+     };
+     xhttp.open("GET", "ajaxprof/title.php", true);
+     xhttp.send();
+ }
 
 
   function assistant(){
