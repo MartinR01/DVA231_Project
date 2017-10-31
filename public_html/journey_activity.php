@@ -97,10 +97,24 @@ if (isset($_COOKIE['lvl'])){
 
               <!--Profile -->
               <li class="timecolor">
+                <?php
+                  require_once('protected/config.php');
+                  $sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+                  $result = mysqli_query($connection,$sqls);
+                  $row = mysqli_fetch_assoc($result);
+                ?>
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a>
-                <h3 class="textName"> Name LastName<br><small>Professor of Dark Arts</small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="
+                <?php
+                      echo $row['profilepath'];
+                ?>" width="150px" height="150px" alt=""></a>
+                <h3 class="textName" style="text-align: left;">
+                <?php
+              echo "&nbsp;".$row['name']." ".$row['lastname'];
+                ?>
+              <br><small><?php
+                  echo $row['email'];
+                ?></small> </h3><button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>

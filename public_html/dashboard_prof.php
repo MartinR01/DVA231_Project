@@ -47,26 +47,27 @@ session_start();
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
-
               <!--Profile -->
               <li class="timecolor">
-			  <?php
-        require_once('protected/config.php');
-				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
-				$result = mysqli_query($connection,$sqls);
-				$row = mysqli_fetch_assoc($result);
-			  ?>
-                <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt=""></a>
-				<h3 class="textName">
-					<?php
-						echo $row['name']." ".$row['lastname'];
-					?>
-				<br><small><?php
-						echo $row['email'];
-					?></small> </h3>
+			        <?php
+                require_once('protected/config.php');
+        				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+        				$result = mysqli_query($connection,$sqls);
+        				$row = mysqli_fetch_assoc($result);
+      			  ?>
+              <br>
+              <a href="#" style="text-align:center"><img class="imgprofile shadow" src="
+              <?php
+						        echo $row['profilepath'];
+					    ?>" width="150px" height="150px" alt=""></a>
+				      <h3 class="textName" style="text-align: left;">
+					    <?php
+						echo "&nbsp;".$row['name']." ".$row['lastname'];
+    					?>
+    				<br><small><?php
+    						echo $row['email'];
+    					?></small> </h3>
+
                 <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
@@ -78,7 +79,6 @@ session_start();
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
               <!-- <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
-
 
             </ul>
           </div><!--/.nav-collapse -->
