@@ -185,7 +185,7 @@ echo " Add quest information";
           }
         }
 
-        //header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
+        header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
 
 
 
