@@ -206,7 +206,7 @@ if user already logged in, redirect to student/teacher dashboard
 				}
 			}else {
 				?>
-				<h4 class="animated zoomIn">No upcoming journies</h4>
+				<h4 class="animated zoomIn">No upcoming journeys</h4>
 				<?php
 			}
 		?>

@@ -20,6 +20,8 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design.css">
   <link rel="stylesheet" href="css/journey_test.css">
+	<link rel="stylesheet" href="css/student_profile_test.css">
+	<link rel="stylesheet" href="css/journey_student_test.css">
   <!-- CSS animations-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!-- jQuery and theamJQuery comented-->
@@ -153,7 +155,7 @@ if user already logged in, redirect to student/teacher dashboard
 			}
 		?>
 
-			<!-- HERE IT ENDS MY BULLSHIT -->
+
         </div>
 				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
       </div><!--END OF JOURNEY-->
@@ -164,40 +166,36 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="container">
         <div class="row"><!--quest row -->
           <h1 class="animated slideInLeft">Quests</h1>
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 1 end-->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 2 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 2 end -->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 3 end-->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 3 end-->
-          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+
+			<!-- HERE IT IS MY BULLSHIT -->
+			<div class="row animated slideInLeft" style="padding:10px">
+				<br>
+				<br>
+				<?php
+				$counter = 0;
+				$sql_shit="select title, description from quest where idjourn=1";
+				require_once('protected/config.php');
+				$result_shit = mysqli_query($connection,$sql_shit);
+				if (mysqli_num_rows($result_shit) > 0) {
+					do  {
+						$row = mysqli_fetch_assoc($result_shit);
+						?>
+						<div class="col-sm-3 col-xs-3 animated zoomIn qm" align="center" >
+						 <div class="quest-availability"></div>
+						 <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $row['description']; ?> data-placement="bottom" >
+								 <h4><?php echo $row['title'] ?></h4>
+							</div>
+						</div>
+						<?php
+							$counter++;
+					 } while ($counter < 4);
+				}
+				 ?>
+			</div>
+			<!-- HERE IT ENDS MY BULLSHIT -->
+
         </div>
+				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
       </div><!--END OF QUESTS -->
 
     </div>
