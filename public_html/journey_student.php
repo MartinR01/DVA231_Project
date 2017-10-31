@@ -133,8 +133,7 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="row">
         <h1><?php echo $row['title']; ?></h1>
         <h4	class="name_teacher"><?php echo $row['name']." ".$row['lastname']; ?>
-          <small><?php echo $row['email']; ?></small>
-
+          <br><small><?php echo $row['email']; ?></small>
         </h4>
         <p> <?php echo $row['description']; ?></p>
       </div>
