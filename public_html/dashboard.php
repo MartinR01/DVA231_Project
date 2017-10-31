@@ -128,9 +128,20 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!--.Journey pictureend-->
 						<!--Journey elements-->
 						<div class="media-body">
-							<a href= <?php echo "journey_student.php?journey=".$row['idjourn']; ?> ""><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>
-							<div class="circle shadow"><span class="points-circle">7.5</span></div>
-							<div class="pull-right btn-part">Quest <br><span class="light progress-font">7/10</span></div>
+<a href= <?php echo "journey_student.php?journey=".$row['idjourn']; ?> ""><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>							<?php
+								$lol =$row['idjourn'];
+								$sql="select sum(a.points) as total from (Select p.points from quest q, questpoints p where q.idjourn =$lol and p.idquest= q.idquest) a;";
+								$result1 = mysqli_query($connection,$sql);
+								$row1 = mysqli_fetch_assoc($result1);
+								//print $row1['total'];
+							?>
+							<div class="circle shadow"><span class="points-circle"><?php echo $row1['total']?></span></div>
+							<?php
+							$sql = "select count(*) as totalQ from quest where idjourn = $lol;";
+							$result2 = mysqli_query($connection,$sql);
+							$row2 = mysqli_fetch_assoc($result2);
+							?>
+							<div class="pull-right btn-part">Quest <br><span class="light progress-font">0/<?php echo $row2['totalQ'];?></span></div>
 						</div><!--Journey elements end-->
 					</div>
 				</div>
