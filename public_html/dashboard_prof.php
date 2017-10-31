@@ -56,10 +56,14 @@ session_start();
         				$row = mysqli_fetch_assoc($result);
       			  ?>
               <br>
-              <a href="#" style="text-align:center"><img class="imgprofile shadow" src="
               <?php
-						        echo $row['profilepath'];
-					    ?>" width="150px" height="150px" alt=""></a>
+              $path = $row['profilepath'];
+              $file = str_replace('/', ' ', $path);
+              $split = explode(" ", $file);
+              $filename =$split[count($split)-1];
+              $prof = "./img/profile/".$filename;
+               ?>
+              <a href="#" style="text-align:center"><img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt=""></a>
 				      <h3 class="textName" style="text-align: left;">
 					    <?php
 						echo "&nbsp;".$row['name']." ".$row['lastname'];
@@ -68,7 +72,7 @@ session_start();
     						echo $row['email'];
     					?></small> </h3>
 
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
+                <a href="profile_professor.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button></a>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
@@ -94,7 +98,6 @@ session_start();
         <div class="row">
           <h1>Journey</h1>
             <?php
-
             $idp = $_SESSION['id'];
             require_once('protected/config.php');
             $sql="select DISTINCT j.idjourn, j.title from Journey j where j.idprof = $idp ";
@@ -118,19 +121,38 @@ session_start();
                          <div>
                            <h5 class="media1-heading media-heading shadow"><?php echo $row['title']?>
                              <span class="total-points-box" >
-                               <span class= "total-points-text">360</span>
+                               <?php
+                               $lol =$row['idjourn'];
+                               $sql = "select sum( a.points) as total from (Select p.points from quest q, questpoints p where q.idjourn =$lol and p.idquest= q.idquest) a;";
+
+                               $result1 = mysqli_query($connection,$sql);
+                     		        $row1 = mysqli_fetch_assoc($result1);
+                                ?>
+                               <span class= "total-points-text"><?php echo $row1['total']?></span>
                              </span>
                            </h5>
                          </div>
-                   <div class="pull-left btn-part"> <?php echo "Student: "?> </br>
+                         <?php
+                         $sql = "SELECT COUNT(a.idstudent) as students from (select s.idstudent from sjourney s  where s.idjourn = $lol) a";
+                         $results = mysqli_query($connection,$sql);
+                          $student = mysqli_fetch_assoc($results);
+                          ?>
+                   <div class="pull-left btn-part"> <?php echo "Student: ".$student['students']?> </br>
                      <?php
-                     echo "Main Quests: <br />Side Quests:";
+                     $sql="select count( a.questm) as qm from (Select q.questm from quest q where q.idjourn = $lol and q.questm='main') a;";
+                     $resultq = mysqli_query($connection,$sql);
+                      $qm = mysqli_fetch_assoc($resultq); $questm = $qm['qm'];
+                      $sql="select count( a.quests) as qs from (Select q.quests from quest q where q.idjourn = $lol and q.quests='side') a;";
+                      $resultq = mysqli_query($connection,$sql);
+                       $qs = mysqli_fetch_assoc($resultq);$quests = $qs['qs'];
+
+                     echo "Main Quests: $questm <br />Side Quests:$quests";
                       ?>
 
                     </div>
 
                    <div class="icon-journey">
-                     <a class="active" href=<?php echo "journey_activity.php?journey=".$row['idjourn']; ?>><i class="material-icons md-42 icons">info_outline</i></a>
+                     <a class="active" href=<?php echo "journey_activity.php?journey=$lol";?>><i class="material-icons md-42 icons">info_outline</i></a>
 
                    </div>
                  </div><!--Journey elements end-->

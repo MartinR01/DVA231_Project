@@ -101,66 +101,79 @@ session_start();
       <!--Start of Journey-->
       <div class="container">
         <div class="row">
-          <h1 class="titles">Journey</h1>
-          <?php
-          $idp = $_SESSION['id'];
-          require_once('protected/config.php');
-          $sql="select DISTINCT j.idjourn, j.title, COUNT(DISTINCT sj.idstudent) as num,".
-          " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
-          " sum(DISTINCT case when q.quests ='side' then 1 else 0 end) as side".
-          " from Journey j, sjourney sj, quest q, Student s".
-          " where j.idprof = $idp and sj.idjourn = j.idjourn AND sj.idstudent =s.idstudent and  q.idjourn = j.idjourn".
-          " GROUP by j.title ";
-           $main = 0;
-           $side = 0;
-           $title ='';
-           $result = mysqli_query($connection,$sql);
-           if (mysqli_num_rows($result) > 0) {
-             while($row = mysqli_fetch_assoc($result)) {
-               ?>
-               <!--Journey 1-->
-               <div class="col-sm-4" align="center">
-                 <div class="card-style not-active">
-                   <div class="media media1">
-                     <!--Journey picture-->
-                     <div class="media1-left media-left">
-                       <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                     </div><!--.Journey pictureend-->
-                     <!--Journey elements-->
-                     <div class="media1-body media-body">
-                       <div>
-                         <h5 class="media1-heading media-heading shadow"><?php echo $row['title']?>
-                           <span class="total-points-box" >
-                             <span class= "total-points-text">360</span>
-                           </span>
-                         </h5>
-                       </div>
-                 <div class="pull-left btn-part"> <?php echo "Student: ".$row['num']; ?> </br>
-                   <?php
-                   echo "Main Quests: ".$row['main']."<br />Side Quests:".$row['side'];
-                    ?>
+          <h1>Journey</h1>
+            <?php
+            $idp = $_SESSION['id'];
+            require_once('protected/config.php');
+            $sql="select DISTINCT j.idjourn, j.title from Journey j where j.idprof = $idp ";
+             $main = 0;
+             $side = 0;
+             $title ='';
+             $result = mysqli_query($connection,$sql);
+             if (mysqli_num_rows($result) > 0) {
+               while($row = mysqli_fetch_assoc($result)) {
+                 ?>
+                 <!--Journey 1-->
+                 <div class="col-sm-4" align="center">
+                   <div class="card-style not-active">
+                     <div class="media media1">
+                       <!--Journey picture-->
+                       <div class="media1-left media-left">
+                         <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                       </div><!--.Journey pictureend-->
+                       <!--Journey elements-->
+                       <div class="media1-body media-body">
+                         <div>
+                           <h5 class="media1-heading media-heading shadow"><?php echo $row['title']?>
+                             <span class="total-points-box" >
+                               <?php
+                               $lol =$row['idjourn'];
+                               $sql = "select sum( a.points) as total from (Select p.points from quest q, questpoints p where q.idjourn =$lol and p.idquest= q.idquest) a;";
 
-                  </div>
+                               $result1 = mysqli_query($connection,$sql);
+                                $row1 = mysqli_fetch_assoc($result1);
+                                ?>
+                               <span class= "total-points-text"><?php echo $row1['total']?></span>
+                             </span>
+                           </h5>
+                         </div>
+                         <?php
+                         $sql = "SELECT COUNT(a.idstudent) as students from (select s.idstudent from sjourney s  where s.idjourn = $lol) a";
+                         $results = mysqli_query($connection,$sql);
+                          $student = mysqli_fetch_assoc($results);
+                          ?>
+                   <div class="pull-left btn-part"> <?php echo "Student: ".$student['students']?> </br>
+                     <?php
+                     $sql="select count( a.questm) as qm from (Select q.questm from quest q where q.idjourn = $lol and q.questm='main') a;";
+                     $resultq = mysqli_query($connection,$sql);
+                      $qm = mysqli_fetch_assoc($resultq); $questm = $qm['qm'];
+                      $sql="select count( a.quests) as qs from (Select q.quests from quest q where q.idjourn = $lol and q.quests='side') a;";
+                      $resultq = mysqli_query($connection,$sql);
+                       $qs = mysqli_fetch_assoc($resultq);$quests = $qs['qs'];
 
-                 <div class="icon-journey">
-                   <a class="active" href=<?php echo "journey_activity.php?journey=".$row['idjourn']; ?>><i class="material-icons md-42 icons">info_outline</i></a>
-                 </div>
-               </div><!--Journey elements end-->
+                     echo "Main Quests: $questm <br />Side Quests:$quests";
+                      ?>
+
+                    </div>
+
+                   <div class="icon-journey">
+                     <a class="active" href=<?php echo "journey_activity.php?journey=$lol";?>><i class="material-icons md-42 icons">info_outline</i></a>
+
+                   </div>
+                 </div><!--Journey elements end-->
+               </div>
              </div>
-           </div>
-         </div><!--Journey 1 end-->
+           </div><!--Journey 1 end-->
 
+                   <?php
 
-                 <?php
+                 }
+             } else {
+               $error = "DB ERROR";
 
-               }
-           } else {
-             $error = "Wrong Username or password";
+             }
 
-           }
-
-           ?>
-
+             ?>
 
 
         </div>
