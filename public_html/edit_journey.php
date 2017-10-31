@@ -4,7 +4,19 @@ if user already logged in, redirect to student/teacher dashboard
 -->
 
 <?php
-session_start();
+	session_start();
+
+	//add journey to database
+	$profID = $_SESSION['id'];
+	require_once('protected/config.php');
+    $sql = "INSERT INTO journey (title, idprof) VALUES ('New Journey', $profID );";
+    mysqli_query($connection, $sql);
+
+	//find the id
+	$sql = "SELECT idjourn FROM journey WHERE title='New Journey'";
+
+	$row = mysqli_fetch_assoc(mysqli_query($connection, $sql));
+	$_SESSION['idjourn'] = $row['idjourn'];
  ?>
 
 <html>
@@ -99,7 +111,7 @@ session_start();
             <input type="text" class="form-control input-lg" placeholder="Enter the title of Journey">
           </div>
           <div class="col-sm-6">
-            <a href="journey_activity.php"></a><button type="button" name="button" class="btn btn-primary btn-lg shadow">Save</button></a>
+            <button type="button" name="button" onclick="addjourney()" class="btn btn-primary btn-lg shadow">Save</button>
           </div>
         </div>
           <br> <!-- Edit this with css -->
@@ -145,18 +157,6 @@ session_start();
                  </div>
                  <div class="col-sm-6 description">
 
-                   <div class="shadow leftpad" >
-                     <h2>Awards</h2>
-
-                     <div class="row" align="center">
-                     <h4>Add Assistants</h4>
-                     <!-- Button -->
-                     <button type="button" class="btn-add-journey shadow"><i class="material-icons">add</i></button>
-                     </div><!--RowEnds-->
-
-
-                   </div>
-                   <br>
                    <!--List of Awards -->
                    <div class="shadow leftpad padd" >
                      <h2>Skills</h2>
