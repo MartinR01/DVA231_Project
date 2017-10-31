@@ -128,7 +128,7 @@ if user already logged in, redirect to student/teacher dashboard
 						</div><!--.Journey pictureend-->
 						<!--Journey elements-->
 						<div class="media-body">
-							<a href="journey_student.php"><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>
+							<a href= <?php echo "journey_student.php?journey=".$row['idjourn']; ?> ""><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>
 							<div class="circle shadow"><span class="points-circle">7.5</span></div>
 							<div class="pull-right btn-part">Quest <br><span class="light progress-font">7/10</span></div>
 						</div><!--Journey elements end-->

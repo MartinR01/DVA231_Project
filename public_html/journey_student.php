@@ -5,6 +5,10 @@ if user already logged in, redirect to student/teacher dashboard
 <?php
 	session_start();
 	require_once('protected/config.php');
+  $journey = $_GET['journey'];
+  $cookie_name = "journey";
+  $cookie_value = $journey;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 ?>
 <html>
 <head>
@@ -120,145 +124,74 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- MID SECTION-->
     <div class="col-sm-6 col-md-6 affix-content">
-
+      <?php $sql = "Select j.title,j.description, p.name, p.lastname, p.email from Journey j, professor p where j.idjourn=$journey and j.idprof = p.idprof";
+              require_once('protected/config.php');
+              $result = mysqli_query($connection,$sql);
+    		  $row = mysqli_fetch_assoc($result);
+        ?>
       <!-- Title of journey -->
       <div class="row">
-        <h1>WEB DEVELOPMENT</h1>
-        <h4	class="name_teacher">Name of teacher</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h1><?php echo $row['title']; ?></h1>
+        <h4	class="name_teacher"><?php echo $row['name']." ".$row['lastname']; ?>
+          <small><?php echo $row['email']; ?></small>
+
+        </h4>
+        <p> <?php echo $row['description']; ?></p>
       </div>
       <hr/>
       <!--Quest Map
       <div class="row" align ="center">
         <h4>Quest Map</h4>
       </div-->
-
-      <div class="row"><!-- begin row 1 -->
-        <div class="col-sm-12 animated bounceIn" align="center" style="margin-bottom:10px;"><!-- Main Quest 1 -->
-          <div class="quest-type" style="background-color:orange;"></div>
-          <div class="quest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description" >Description</div>
-            </div>
-          </a>
-        </div><!--Mainquest 1 end-->
-          </div>
-          <br>
-
+      <?php
+      $sql_main = "select idquest,title,description from quest where idjourn = $journey AND questm = 'main' ORDER BY sortnum ASC";
+       $sql_side = "select idquest,title,description from quest where idjourn = $journey AND questm = '' ORDER BY sortnum ASC";
+           ?>
+           <h1>Main Quests</h1>
+           <br>
         <div class="row animated slideInLeft" style="padding:10px">
-
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
+          <?php
+          require_once('protected/config.php');
+          $result_main = mysqli_query($connection,$sql_main);
+          if (mysqli_num_rows($result_main) > 0) {
+            while($mains = mysqli_fetch_assoc($result_main)) {
+           ?>
+           <!-- Main Quest  -->
+          <div class="col-sm-3 col-xs-3 animated zoomIn qm" align="center" >
+            <div class="quest-availability"></div>
+              <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $mains['description']; ?> data-placement="bottom" >
+                 <h4><?php echo $mains['title'];?></h4>
               </div>
-            </a>
-          </div><!--Sidequest 2 end-->
+                </div>
 
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
-
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
-
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
+          <?php
+    			 }
+    		 }
+    		  ?>
       </div><!-- row 1 end -->
+
       <br>
-      <!-- Main Quest 2 -->
-      <div class="row" ><!-- begin row 2 -->
-        <div class="col-sm-12 animated bounceIn" align="center" style="margin-bottom:10px;"><!-- Main Quest 2 -->
-          <div class="quest-type" style="background-color:orange;"></div>
-          <div class="quest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="down" style="background-color:green;" >
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description" >Description</div>
-            </div>
-          </a>
-        </div><!--Quest 2 end-->
-      </div><!-- row 2 end -->
+      <h1>Side Quests</h1>
       <br>
       <div class="row animated slideInLeft" style="padding:10px">
+        <?php
+  			$result_side = mysqli_query($connection,$sql_side);
+            if (mysqli_num_rows($result_side) > 0) {
+  			while($side = mysqli_fetch_assoc($result_side)){?>
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
+          <!-- side  -->
+         <div class="col-sm-3 col-xs-3 animated zoomIn qs " align="center" >
+           <div class="sidequest-availability"></div>
+             <div class="sidequest shadow" data-toggle="tooltip" title=<?php echo $side['description']; ?> data-placement="bottom" >
+                <h4><?php echo $side['title'];?></h4>
+             </div>
+             </div>
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
-
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
-
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
-    </div><!-- row 1 end -->
+             <?php
+              }
+            }
+             ?>
+      </div><!-- row 1 end -->
     <br><br><br>
 
     </div>
