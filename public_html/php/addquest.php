@@ -29,9 +29,9 @@ echo " Add quest information";
               $path = $_SERVER['DOCUMENT_ROOT']."/fancygroupworkspacerpg/public_html/img/pdf/".$name1.$file;
               if(move_uploaded_file($fileTemp, $path)){
                 if($type == "main"){
-                  $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm) VALUES ('$name','$description','$path',$journey,'$type')";
+                  $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm,sortnum,quespath,quests) VALUES ('$name','$description','$path',$journey,'$type',0,'','')";
                 }else{
-                  $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, quests) VALUES ('$name','$description','$path',$journey,'$type')";
+                  $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, quests, sortnum,quespath,questm) VALUES ('$name','$description','$path',$journey,'$type',0,'','')";
                 }
                 if(mysqli_query($connection,$sql)){
                   echo  "Inserted file";
@@ -52,9 +52,9 @@ echo " Add quest information";
           }
         }else{
           if($type == "main"){
-            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm) VALUES ('$name','$description','//',$journey,'$type')";
+            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, questm,sortnum,quespath,quests) VALUES ('$name','$description','//',$journey,'$type',0,'','')";
           }else{
-            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, quests) VALUES ('$name','$description','//',$journey,'$type')";
+            $sql = "INSERT INTO quest( title, description, pdfpath, idjourn, quests, sortnum,quespath,questm) VALUES ('$name','$description','//',$journey,'$type',0,'','')";
           }
           if(mysqli_query($connection,$sql)){
             echo  "Inserted file";
@@ -185,7 +185,7 @@ echo " Add quest information";
           }
         }
 
-        header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
+        //header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
 
 
 
