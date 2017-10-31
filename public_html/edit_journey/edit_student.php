@@ -31,6 +31,43 @@
 
         <!-- Button -->
         <!-- <button type="button" class="btn-add-journey shadow" onclick=""><a href="#H"><i class="material-icons">add</i></a></button> -->
-        <button class="btn-add-journey shadow" type="button" data-toggle="modal" data-target="#ModalStudent" name="button"><i class="material-icons">delete</i></button>
+        <button class="btn-add-journey shadow" type="button" data-toggle="modal" data-target="#ModalStudent" name="button"><i class="material-icons">add</i></button>
+
+        <!-- Modal -->
+        <div id="ModalStudent" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">ADD STUDENT</h4>
+          </div>
+          <div class="modal-body">
+
+            <form id="add_student" action="./php/addStudent.php" method="post">
+              <h5>Avalable Students</h5>
+
+                <select name="idstudent" style="height:30px; width:100%;">
+                  <option value="none">Choose Student</option>
+                  <?php
+                  $sql= "select idstudent, name , lastname, email from Student where idstudent  not IN (select idstudent from sjourney where idjourn =$journey) ";
+                    $result = mysqli_query($connection,$sql);
+                    if (mysqli_num_rows($result) > 0) {
+                      while($row = mysqli_fetch_assoc($result)) {
+                          echo "<option value=". $row['idstudent'] .">".$row['name']." ".$row['lastname']."</option>";
+                        }
+                      }
+                   ?>
+                   </select>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="form_student() " class="btn btn-primary" >Save Changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+           </form>
+        </div>
+
 
         </div><!--RowEnds-->

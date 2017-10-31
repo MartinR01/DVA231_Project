@@ -73,10 +73,9 @@ session_start();
               </li>
               <!--Buttons -->
 
-              <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
@@ -92,20 +91,20 @@ session_start();
       <div class="container affix-content">
 		<div class="row ">
 			<h1>Profile settings</h1>
-			
-			
+
+
 			<div class="col-sm-6">
 				<form method="post" action="php/profileupdate.php">
 				  <div class="form-group">
 					<label>First Name</label>
 					<input class="form-control" name="name" value="<?php echo $row['name'] ?>">
 				  </div>
-				  
+
 				  <div class="form-group">
 					<label>Last Name</label>
 					<input class="form-control" name="lastname" value="<?php echo $row['lastname'] ?>">
 				  </div>
-				  
+
 				  <div class="form-group">
 					<label>Email</label>
 					<input class="form-control" name="email" value="<?php echo $row['email'] ?>">
@@ -128,11 +127,11 @@ session_start();
 				</form>
 
 			</div>
-			
+
 		</div>
 		<div class="row">
 		<!-- Buttons row -->
-          
+
 		</div>
 	  </div>
     </div>
