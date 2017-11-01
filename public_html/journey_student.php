@@ -158,6 +158,8 @@ if ($row['ifplay']  <= 0){
         <h4>Quest Map</h4>
       </div-->
 
+			<div id="questp">
+
 
 			<?php
       $sql_main = "select idquest,title,description from quest where idjourn = $journey AND questm = 'main' ORDER BY sortnum ASC";
@@ -173,8 +175,24 @@ if ($row['ifplay']  <= 0){
             while($mains = mysqli_fetch_assoc($result_main)) {
            ?>
            <!-- Main Quest  -->
-          <div class="col-sm-3 col-xs-3 animated zoomIn qm" align="center" >
-            <div class="quest-availability"></div>
+          <div class="col-sm-3 col-xs-6 animated zoomIn qm" onclick=<?php echo "questp(".$mains['idquest'].")"; ?> align="center" >
+
+						<?php
+						$sql1="SELECT idq from recenta where idq =".$mains['idquest'];
+			      require_once('protected/config.php');
+			      $result1 = mysqli_query($connection,$sql1);
+			      $row1 = mysqli_fetch_assoc($result1);
+			      if($row1['idq'] == 0){
+			       ?>
+						 <div class="quest-availability"></div>
+						 <?php
+			      }else{
+			         ?>
+							 <div class="quest-pending"></div>
+							 <?php
+			      }
+
+						 ?>
               <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $mains['description']; ?> data-placement="bottom" >
                  <h4><?php echo $mains['title'];?></h4>
               </div>
@@ -196,8 +214,25 @@ if ($row['ifplay']  <= 0){
   			while($side = mysqli_fetch_assoc($result_side)){?>
 
           <!-- side  -->
-         <div class="col-sm-3 col-xs-3 animated zoomIn qs " align="center" >
-           <div class="sidequest-availability"></div>
+         <div class="col-sm-3 col-xs-6 animated zoomIn qs " onclick=<?php echo "questp(".$side['idquest'].")"; ?>  align="center" >
+					 <?php
+					 $sql1="SELECT idq from recenta where idq =".$side['idquest'];
+					 require_once('protected/config.php');
+					 $result1 = mysqli_query($connection,$sql1);
+					 $row1 = mysqli_fetch_assoc($result1);
+					 if($row1['idq'] == 0){
+						?>
+						<div class="sidequest-availability"></div>
+						<?php
+					 }else{
+							?>
+							<div class="sidequest-pending"></div>
+
+							<?php
+					 }
+
+						?>
+
              <div class="sidequest shadow" data-toggle="tooltip" title=<?php echo $side['description']; ?> data-placement="bottom" >
                 <h4><?php echo $side['title'];?></h4>
              </div>
@@ -209,6 +244,7 @@ if ($row['ifplay']  <= 0){
              ?>
       </div><!-- row 1 end -->
     <br><br><br>
+		</div>
 
 			</div>
 
@@ -252,6 +288,12 @@ if ($row['ifplay']  <= 0){
     </div><!--/sidebar-nav -->
   </div>
 </div>
+<script type="text/javascript">
+function myFunction() {
+	var a = document.getElementById("1").style.width;
+    alert(a);
+}
+</script>
 <!-- JS for Bootstrap -->
 <script src="js/bootstrap.js"></script>
 <script src="js/game.js"></script>

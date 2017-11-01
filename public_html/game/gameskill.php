@@ -31,7 +31,7 @@
   }else{
 
   }
-  $sql = "SELECT s.idsk,t.skil from skill s, typeskil t WHERE s.idjourn=$journey and t.idts = s.idts";
+  $sql = "SELECT s.idsk,t.skil,t.idts from skill s, typeskil t WHERE s.idjourn=$journey and t.idts = s.idts";
   require_once('../protected/config.php');
   $result = mysqli_query($connection,$sql);
   if (mysqli_num_rows($result) > 0) {
@@ -55,11 +55,12 @@
       }
 
        ?>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+				<div class="progress ">
+        <div class="progress-bar progress-bar-success progress-bar-striped " id =<?php echo $row['idts'] ?> role="progressbar"
         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=<?php echo "width:$prog%"; ?>>
+
       </div>
-    </div>
+			  </div>
 
     <?php
   }

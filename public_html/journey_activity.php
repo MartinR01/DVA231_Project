@@ -104,7 +104,7 @@ if (isset($_COOKIE['lvl'])){
                       $row = mysqli_fetch_assoc($result);
                       ?>
                       <br>
-                
+
                       <br>
                       <?php
                       $path = $row['profilepath'];
@@ -142,6 +142,7 @@ if (isset($_COOKIE['lvl'])){
             <!-- RIGHT SIDE-->
             <?php
             $journey = $_GET['journey'];
+
             require_once('protected/config.php');
             $sqls = "select title from journey where idjourn=$journey";
             $result = mysqli_query($connection,$sqls);
@@ -170,7 +171,7 @@ if (isset($_COOKIE['lvl'])){
                 <div class="container-fluid">
 
                   <ul class="nav navbar-nav">
-                    <li class="active" id="act" onclick="activity()"><a href="#activity" >Activity</a></li>
+                    <li class="active" id="act" onclick=<?php echo "activity(".$journey.")"; ?>><a href="#activity" >Activity</a></li>
                     <li id="act1" class="" onclick=<?php echo "quest(".$journey.")"; ?>><a  href="#quest" >Quests</a></li>
                     <li id="act2" class="" onclick=<?php echo "students(".$journey.")"; ?>><a href="#students">Students</a></li>
                     <li id="act3" class="" onclick=<?php echo "info(".$journey.")"; ?>><a href="#information" >Info.</a></li>
