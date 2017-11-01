@@ -262,12 +262,22 @@ if ($row['ifplay']  <= 0){
               <!-- AWARDS -->
               <div class="row">
                 <h1>Awards</h1>
-                <div class="award" >
-                  <img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-                </div>
-                <div class="award locked" >
-                  <img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-                </div>
+								<?php
+
+								 $sql = "select DISTINCT a.Path as file, l.lvlname from awards a, levels l  where l.lvlname like 'Level 0' and a.ida = l.ida;";
+								 require_once('protected/config.php');
+								 $result = mysqli_query($connection, $sql);
+								 if (mysqli_num_rows($result) > 0) {
+								   while($row = mysqli_fetch_assoc($result)) {
+
+								 ?>
+								 <div class="award"  >
+									 <img data-toggle="tooltip" title=<?php echo $row['lvlname']; ?> data-placement="down"  src=<?php echo $row['file'];?> />
+								 </div>
+								 <?php
+							 }
+						 }
+  				 ?>
               </div>
               <hr/>
 
