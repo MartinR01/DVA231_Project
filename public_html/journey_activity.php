@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<!-- LOGIN SCREEN
-if user already logged in, redirect to student/teacher dashboard
--->
 <?php
 session_start();
 if (isset($_COOKIE['lvl'])){
@@ -175,7 +171,7 @@ if (isset($_COOKIE['lvl'])){
 
       <!-- Activities -->
       <div class="container" id="contain">
-        
+
 
 		</div><!--Container Ends-->
 
@@ -240,8 +236,6 @@ if (isset($_COOKIE['lvl'])){
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
@@ -489,4 +483,3 @@ if (isset($_COOKIE['lvl'])){
 
         </body>
         </html>
->>>>>>> djkev

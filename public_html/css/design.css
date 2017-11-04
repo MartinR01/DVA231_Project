@@ -56,6 +56,21 @@ body {
   text-align : center;
 }
 
+.btn2 {
+  width         : 20%;
+  margin        : 20px;
+  color         : white;
+  border        : 3px solid white;
+  border-radius : 13px;
+  background    : #48a2de;
+}
+
+.btn2:hover {
+  color     : white;
+  font-size : 11pt;
+}
+
+
 .btn1 {
   width         : 50%;
   margin-top    : 20px;
