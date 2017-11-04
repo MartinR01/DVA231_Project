@@ -42,7 +42,7 @@ require_once('protected/config.php');
 $result = mysqli_query($connection,$sql);
 $row = mysqli_fetch_assoc($result);
 if ($row['ifplay']  <= 0){
-	echo "LOL";
+	//echo "LOL";
  ?>
 <body>
 	<?php
@@ -126,7 +126,7 @@ if ($row['ifplay']  <= 0){
               <!--Buttons -->
               <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow" ><span>Dashboard</span></button></li></a>
               <a href="journeys.php"><li class="butallign " ><button type="button" class="btn btn1 shadow" ><span>Journey</span></button></li></a>
-              <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
+              <!-- <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a> -->
               <!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
