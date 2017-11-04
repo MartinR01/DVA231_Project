@@ -128,20 +128,18 @@ session_start();
                   <label for="exampleFormControlFile1">Upload Profile picture</label>
                   <input type="file" class="form-control-file" name ="file" id="exampleFormControlFile1">
                 </div>
-              </form>
             </div>
           </div>
 
 
           <div class="row" align="center">
-            <form method="post" action="php/profileupdate.php" enctype="multipart/form-data">
               <div class="form-group">
                 <button type="submit" name="button" class="btn2 shadow">Save</button>
                 <button type="button" name="button" class="btn2 shadow">Cancel</button>
               </div>
-            </form>
         </div>
       </div>
+      </form>
 
 
       <!-- JS for Bootstrap -->

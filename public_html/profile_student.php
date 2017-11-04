@@ -131,20 +131,18 @@ if user already logged in, redirect to student/teacher dashboard
 									<label for="exampleFormControlFile1">Upload Profile picture</label>
 									<input type="file" class="form-control-file" name ="file" id="exampleFormControlFile1">
 								</div>
-							</form>
 						</div>
 
 					</div>
 					<div class="row" align="center">
 						<!-- Buttons row -->
-							<form method="post" action="php/studentprofileupdate.php" enctype="multipart/form-data">
 							<div class="form-group">
 								<button type="submit" name="button" class="btn2 shadow" >Save</button>
 								<button type="button" name="button" class="btn2 shadow">Cancel</button>
 							</div>
-							</form>
 					</div>
 				</div>
+				</form>
 			</div>
 
 
