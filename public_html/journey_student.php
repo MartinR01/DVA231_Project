@@ -68,13 +68,7 @@ if ($row['ifplay']  <= 0){
 
             </button>
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
 
-            </button>
             <span class="visible-xs color navbar-brand">Home Menu</span>
           </div>
           <!--/.nav-collapse -->
@@ -138,7 +132,71 @@ if ($row['ifplay']  <= 0){
     </div><!--/col - left -->
 
     <!-- MID SECTION-->
-    <div class="col-sm-6 col-md-6 affix-content">
+    <div class="col-sm-9 col-md-9 affix-content" >
+
+										<!-- RIGHT SECTION-->
+										<div class="fixednav" align="center" >
+											<!--/sidebar-nav -->
+											<div class="sidebar-nav navsett" >
+												<!--/.nav-normal -->
+												<div class=" navbar navbar-default" role="navigation">
+													<div class=" navbar-header">
+														<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse" style="height:30px;">
+															<span class="sr-only" >Toggle navigation</span>
+															<span class="iconcontent"><i class="material-icons">content_paste</i></span>
+
+
+														</button>
+														<span class="visible-xs  navbar-brand">Skills and Awards</span>
+													</div>
+													<!--/.nav-collapse -->
+													<div class="navbar-collapse collapse sidebar-collapse">
+														<ul class="nav navbar-nav skillbar-right" id="sidenav01">
+
+															<!-- AWARDS -->
+															<div class="row">
+																<h1>Awards</h1>
+																<?php
+
+																 $sql = "select DISTINCT a.Path as file, l.lvlname from awards a, levels l  where l.lvlname like 'Level 0' and a.ida = l.ida;";
+																 require_once('protected/config.php');
+																 $result = mysqli_query($connection, $sql);
+																 if (mysqli_num_rows($result) > 0) {
+																	 while($row = mysqli_fetch_assoc($result)) {
+
+																 ?>
+																 <div class="award"  >
+																	 <img data-toggle="tooltip" title=<?php echo $row['lvlname']; ?> data-placement="down"  src=<?php echo $row['file'];?> />
+																 </div>
+																 <?php
+															 }
+														 }
+													 ?>
+															</div>
+															<hr/>
+
+															<!--STATS -->
+															<div class="row" align="center">
+																<h1>Start Game </h1>
+																<div class="col-sm-11"  id="skills">
+																	<button class="btn-add-journey shadow"  name="button" onclick="levels()"><i class="material-icons">add</i></button>
+																</div>
+
+
+														</div>
+
+
+													</ul>
+												</div><!--/.nav-collapse -->
+											</div><!--/.nav-normal -->
+										</div><!--/sidebar-nav -->
+									</div>
+			<div class="row" >
+
+			<div class="col-sm-8" align="center" >
+
+
+
       <?php $sql = "Select j.title,j.description, p.name, p.lastname, p.email from Journey j, professor p where j.idjourn=$journey and j.idprof = p.idprof";
               require_once('protected/config.php');
               $result = mysqli_query($connection,$sql);
@@ -204,6 +262,7 @@ if ($row['ifplay']  <= 0){
     		  ?>
       </div><!-- row 1 end -->
 
+
       <br>
       <h1>Side Quests</h1>
       <br>
@@ -248,55 +307,11 @@ if ($row['ifplay']  <= 0){
 
 			</div>
 
-
-    <!-- RIGHT SECTION-->
-    <div class="col-sm-3 col-md-3 ">
-      <!--/sidebar-nav -->
-      <div class="sidebar-nav affix-sidebar">
-        <!--/.nav-normal -->
-        <div class=" navbar navbar-default" role="navigation">
-          <!--/.nav-collapse -->
-          <div class="navbar-collapse collapse sidebar-collapse">
-            <ul class="nav navbar-nav skillbar-right" id="sidenav01">
-
-              <!-- AWARDS -->
-              <div class="row">
-                <h1>Awards</h1>
-								<?php
-
-								 $sql = "select DISTINCT a.Path as file, l.lvlname from awards a, levels l  where l.lvlname like 'Level 0' and a.ida = l.ida;";
-								 require_once('protected/config.php');
-								 $result = mysqli_query($connection, $sql);
-								 if (mysqli_num_rows($result) > 0) {
-								   while($row = mysqli_fetch_assoc($result)) {
-
-								 ?>
-								 <div class="award"  >
-									 <img data-toggle="tooltip" title=<?php echo $row['lvlname']; ?> data-placement="down"  src=<?php echo $row['file'];?> />
-								 </div>
-								 <?php
-							 }
-						 }
-  				 ?>
-              </div>
-              <hr/>
-
-              <!--STATS -->
-              <div class="row" align="center">
-                <h1>Start Game </h1>
-								<div class="col-sm-11"  id="skills">
-									<button class="btn-add-journey shadow"  name="button" onclick="levels()"><i class="material-icons">add</i></button>
-								</div>
+		</div>
+	</div><!-- end of all right section-->
 
 
-            </div>
 
-
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.nav-normal -->
-    </div><!--/sidebar-nav -->
-  </div>
 </div>
 <script type="text/javascript">
 function myFunction() {

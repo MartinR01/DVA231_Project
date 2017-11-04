@@ -381,6 +381,15 @@ body {
   .sidebar-nav .navbar li a > .caret {
     margin-top : 8px;
   }
+  .fixednav {
+  position: relative;
+  left: 700px;
+
+  }
+  .navsett{
+    height:100%;
+    background-color:#ececec;
+  }
 }
 /*Animation*/
 
@@ -412,4 +421,10 @@ body {
 #submit-button:hover {
     background-color: #5433a6;
     color: white;
+}
+.iconcontent{}
+.iconcontent i{
+  font-size: 16pt;
+  position: relative;
+  bottom: 4px;
 }
