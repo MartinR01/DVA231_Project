@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0) {
       </div>
     </div>
     <div class="col-sm-2" >
-    <button class="btn skilld btn-xs" type="button" name="button" onclick=<?php echo "deletes(".$row['idsk'].")"  ?>><i class="material-icons">delete_forever</i></button>
+    <button class="btn skilld btn-xs" type="button" name="button" onclick=<?php echo "deletesk(".$row['idsk'].")"  ?>><i class="material-icons">delete_forever</i></button>
     </div>
   </div>
   <br>

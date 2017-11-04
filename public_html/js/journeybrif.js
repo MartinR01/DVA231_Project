@@ -27,7 +27,25 @@ function info(id){
   xhttp.open("GET", "ajaxprof/infoa.php", true);
   xhttp.send();
 }
-function activity(){
+function activity(id){
+  createCookie("journey", id, "10");
+  document.getElementById("act").classList.add('active');
+  document.getElementById("act1").classList.remove('active');
+  document.getElementById("act2").classList.remove('active');
+  document.getElementById("act3").classList.remove('active');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("contain").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajaxprof/activity.php", true);
+  xhttp.send();
+}
+function activitya(id,quest){
+  createCookie("a", id, "10");
+  createCookie("b", quest, "10");
   document.getElementById("act").classList.add('active');
   document.getElementById("act1").classList.remove('active');
   document.getElementById("act2").classList.remove('active');
@@ -136,7 +154,7 @@ function skils(){
     xhttp.open("GET", "ajaxprof/skils.php", true);
     xhttp.send();
 }
-function deletes(id){
+function deletesk(id){
 
     createCookie("lvld", id, "10");
 

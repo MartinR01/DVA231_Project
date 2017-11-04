@@ -1,6 +1,6 @@
 .award{
-	width         : 100px;
-	height        : 100px;
+	width         : 70px;
+	height        : 70px;
 	margin: 10pt;
 	display: inline-block;
 	border        : 5px solid #3498db; /* rarity ??? */
@@ -10,12 +10,12 @@
 .locked img{
 	-webkit-filter: brightness(100%); /* Safari 6.0 - 9.0 */
     filter: brightness(0);
-	
+
 }
 
 .award img {
-  width         : 90px;
-  height        : 90px;
+  width         : 60px;
+  height        : 60px;
   border-radius : 100%;
   /*background	: white;*/
 

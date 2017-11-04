@@ -12,7 +12,7 @@ if user already logged in, redirect to student/teacher dashboard
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quest up</title>
+  <title>Dashboard</title>
   <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- CSS Bootstrap -->
@@ -20,6 +20,8 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- CSS Our-->
   <link rel="stylesheet" href="css/design.css">
   <link rel="stylesheet" href="css/journey_test.css">
+	<link rel="stylesheet" href="css/student_profile_test.css">
+	<link rel="stylesheet" href="css/journey_student_test.css">
   <!-- CSS animations-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <!-- jQuery and theamJQuery comented-->
@@ -57,9 +59,14 @@ if user already logged in, redirect to student/teacher dashboard
 				?>
               <li class="timecolor">
                 <br>
-                <a href="#"><img class="imgprofile shadow animated bounceIn" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt=""></a>
+								<?php
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $student = "./img/students/".$filename;
+                 ?>
+                <a href="#"><img class="imgprofile shadow animated bounceIn" src=<?php echo "$student";  ?> width="150px" height="150px" alt=""></a>
                 <h3 class= "proname">
 				<?php
 						//echo var_dump($_SESSION);
@@ -68,13 +75,13 @@ if user already logged in, redirect to student/teacher dashboard
 					<br><small><?php
 						echo $row['email'];
 					?></small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button>
+                <a href="profile_student.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button></a>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow animated rotateIn"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
               <!--Buttons -->
-              <a href="#dashboard"><li class="butallign "><button type="button" class="btn btn1 shadow" onclick="dashboard()"><span>Dashboard</span></button></li></a>
-              <a href="#journey"><li class="butallign " ><button type="button" class="btn btn1 shadow"  onclick="journey()" ><span>Journey</span></button></li></a>
+							<a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow" ><span>Dashboard</span></button></li></a>
+              <a href="journeys.php"><li class="butallign " ><button type="button" class="btn btn1 shadow" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
               <!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
@@ -96,8 +103,6 @@ if user already logged in, redirect to student/teacher dashboard
           <span class="topnav navbar-btn topnav-active">Dashboard</span>
           <span class="topnav">Leaderboard</span>
           <a href="http://mdh.se/" class="shoolpage"><img class="imgprofiles shadow" src="img/schoologo.jpg" width="70px" height="70px" alt=""></a>
-
-
         </div>
       </nav><!--/end NAVIGATION -->
 
@@ -105,62 +110,55 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="container">
         <div class="row">
           <h1 class="animated slideInLeft">Journey</h1>
-          <!--Journey 1-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 1 end-->
 
-          <!--Journey 2-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 2 end-->
+			<!-- HERE IT IS MY BULLSHIT -->
+			<?php
+			$ids = $_SESSION['id'];
+			require_once('protected/config.php');
+			$sql="select j.idjourn, j.title from sjourney sj, Journey j where sj.idstudent = $ids and j.idjourn = sj.idjourn";
+			$result = mysqli_query($connection,$sql);
+			if (mysqli_num_rows($result) > 0) {
+				while($row = mysqli_fetch_assoc($result)) {
+			?>
+			<!--Journey n-->
+			<div class="col-sm-4 animated zoomIn" align="center">
+				<div class="card-style">
+					<div class="media">
+						<!--Journey picture-->
+						<div class="media-left">
+							<img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+						</div><!--.Journey pictureend-->
+						<!--Journey elements-->
+						<div class="media-body">
+<a href= <?php echo "journey_student.php?journey=".$row['idjourn']; ?> ""><h5 class="media-heading shadow"><?php echo $row['title'] ?></h5></a>							<?php
+								$lol =$row['idjourn'];
+								$sql="select sum(a.points) as total from (Select p.points from quest q, questpoints p where q.idjourn =$lol and p.idquest= q.idquest) a;";
+								$result1 = mysqli_query($connection,$sql);
+								$row1 = mysqli_fetch_assoc($result1);
+								//print $row1['total'];
+							?>
+							<div class="circle shadow"><span class="points-circle"><?php echo $row1['total']?></span></div>
+							<?php
+							$sql = "select count(*) as totalQ from quest where idjourn = $lol;";
+							$result2 = mysqli_query($connection,$sql);
+							$row2 = mysqli_fetch_assoc($result2);
+							?>
+							<div class="pull-right btn-part">Quest <br><span class="light progress-font">0/<?php echo $row2['totalQ'];?></span></div>
+						</div><!--Journey elements end-->
+					</div>
+				</div>
+			</div><!--Journey n end-->
+			<?php
+				}
+			}else {
+				$error = "DB ERROR";
+			}
+		?>
 
-          <!--Journey 3-->
-          <div class="col-sm-4 animated zoomIn" align="center">
-            <div class="card-style">
-              <div class="media">
-                <!--Journey picture-->
-                <div class="media-left">
-                  <img class="media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
-                </div><!--.Journey pictureend-->
-                <!--Journey elements-->
-                <div class="media-body">
-                  <a href="journey_student.php"><h5 class="media-heading shadow">WEB DEVELOPMENT</h5></a>
-                  <div class="circle shadow"><span class="points-circle">7.5</span></div>
-                  <div class="pull-right btn-part">Join Group <br><span class="light progress-font">7/10</span></div>
-                </div><!--Journey elements end-->
-              </div>
-            </div>
-          </div><!--Journey 3 end-->
-          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+
         </div>
-      </div><!--END OF A JOURNEY-->
+				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+      </div><!--END OF JOURNEY-->
       <br>
       <hr />
 
@@ -168,40 +166,36 @@ if user already logged in, redirect to student/teacher dashboard
       <div class="container">
         <div class="row"><!--quest row -->
           <h1 class="animated slideInLeft">Quests</h1>
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 1 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 1 end-->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 2 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 2 end -->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 3 end-->
-          <div class="col-sm-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!--Quest 3 -->
-            <div class="quest-type" style="background-color:orange;"></div>
-            <div class="quest-availability" style="background-color:green;"></div>
-            <div class="quest shadow" style="background-color:green;">
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description ">Description</div>
-            </div>
-          </div><!--Quest 3 end-->
-          <a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+
+			<!-- HERE IT IS MY BULLSHIT -->
+			<div class="row animated slideInLeft" style="padding:10px">
+				<br>
+				<br>
+				<?php
+				$counter = 0;
+				$sql_shit="select title, description from quest where idjourn=1";
+				require_once('protected/config.php');
+				$result_shit = mysqli_query($connection,$sql_shit);
+				if (mysqli_num_rows($result_shit) > 0) {
+					do  {
+						$row = mysqli_fetch_assoc($result_shit);
+						?>
+						<div class="col-sm-3 col-xs-3 animated zoomIn qm" align="center" >
+						 <div class="quest-availability"></div>
+						 <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $row['description']; ?> data-placement="bottom" >
+								 <h4><?php echo $row['title'] ?></h4>
+							</div>
+						</div>
+						<?php
+							$counter++;
+					 } while ($counter < 4);
+				}
+				 ?>
+			</div>
+			<!-- HERE IT ENDS MY BULLSHIT -->
+
         </div>
+				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
       </div><!--END OF QUESTS -->
 
     </div>

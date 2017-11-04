@@ -57,9 +57,14 @@ session_start();
 				$row = mysqli_fetch_assoc($result);
 			  ?>
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt=""></a>
+                <?php
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $prof = "./img/profile/".$filename;
+                 ?>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt=""></a>
 				<h3 class="textName">
 					<?php
 						echo $row['name']." ".$row['lastname'];
@@ -73,10 +78,10 @@ session_start();
               </li>
               <!--Buttons -->
 
-              <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
+              <a href="dashboard_prof.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 
 
@@ -90,49 +95,58 @@ session_start();
     <div class="col-sm-9 col-md-9 affix-content">
 
       <div class="container affix-content">
-		<div class="row ">
-			<h1>Profile settings</h1>
-			
-			
+        <h1>Profile settings</h1>
+		<div class="row " align="center">
+
+
+
 			<div class="col-sm-6">
-				<form method="post" action="php/profileupdate.php">
+				<form method="post" action="php/profileupdate.php" enctype="multipart/form-data">
 				  <div class="form-group">
 					<label>First Name</label>
 					<input class="form-control" name="name" value="<?php echo $row['name'] ?>">
 				  </div>
-				  
+
 				  <div class="form-group">
 					<label>Last Name</label>
 					<input class="form-control" name="lastname" value="<?php echo $row['lastname'] ?>">
 				  </div>
-				  
+
 				  <div class="form-group">
 					<label>Email</label>
 					<input class="form-control" name="email" value="<?php echo $row['email'] ?>">
 				  </div>
 					<div class="text-center">
-						<button type="submit" name="button" class="btn1 shadow" id="quest-edit-btn" onclick="quest()">Save</button>
-						<button type="button" name="button" class="btn1 shadow" id="quest-edit-btn" onclick="quest()">Cancel</button>
+						<button type="submit" name="button" class="btn1 shadow" id="quest-edit-btn">Save</button>
+						<button type="button" name="button" class="btn1 shadow" id="quest-edit-btn">Cancel</button>
 					</div>
-				</form>
+
 			</div>
 			<div class="col-sm-6">
-				<img class="imgprofile shadow" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt="">
-				<form>
+        <?php
+        $path = $row['profilepath'];
+        $file = str_replace('/', ' ', $path);
+        $split = explode(" ", $file);
+        $filename =$split[count($split)-1];
+        $prof = "./img/profile/".$filename;
+         ?>
+				<img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt="">
+
 					<div class="form-group">
 					  <label for="exampleFormControlFile1">Upload Profile picture</label>
-					  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+					  <input type="file" class="form-control-file" name ="file" id="exampleFormControlFile1">
 					</div>
 				</form>
 
 			</div>
-			
+
 		</div>
+
+
+
 		<div class="row">
 		<!-- Buttons row -->
-          
+
 		</div>
 	  </div>
     </div>

@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class=class="col-sm-3" >
-              <button class="btn btn-default btn-xs" type="button" name="button" onclick=<?php echo "levels(".$row['idsk'].")"; ?>>Go to levels</button>
+              <button class="btn btn-default btn-xs" type="button" name="button" onclick=<?php echo "levels(".$row['idsk'].")"; ?>>Edit Levels</button>
             </div>
           </div>
           <br  />
