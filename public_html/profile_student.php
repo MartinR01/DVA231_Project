@@ -42,7 +42,6 @@ if user already logged in, redirect to student/teacher dashboard
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-
 						</button>
 						<span class="visible-xs color navbar-brand">Home Menu</span>
 					</div>
@@ -84,7 +83,6 @@ if user already logged in, redirect to student/teacher dashboard
 								<!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
 								<a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
 								<!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
-
 							</ul>
 						</div><!--/.nav-collapse -->
 					</div><!--/.nav-normal -->
@@ -128,25 +126,23 @@ if user already logged in, redirect to student/teacher dashboard
 								$filename =$split[count($split)-1];
 								$student = "./img/students/".$filename;
 								?>
-
 								<img class="imgprofile shadow" src=<?php echo "$student";  ?> width="150px" height="150px" alt="">
-
 								<div class="form-group">
 									<label for="exampleFormControlFile1">Upload Profile picture</label>
 									<input type="file" class="form-control-file" name ="file" id="exampleFormControlFile1">
 								</div>
 							</form>
-
 						</div>
 
 					</div>
 					<div class="row" align="center">
 						<!-- Buttons row -->
-						<div class="text-center">
-							<button type="submit" name="button" class="btn2 shadow" >Save</button>
-							<button type="button" name="button" class="btn2 shadow">Cancel</button>
-						</div>
-
+							<form method="post" action="php/studentprofileupdate.php" enctype="multipart/form-data">
+							<div class="form-group">
+								<button type="submit" name="button" class="btn2 shadow" >Save</button>
+								<button type="button" name="button" class="btn2 shadow">Cancel</button>
+							</div>
+							</form>
 					</div>
 				</div>
 			</div>

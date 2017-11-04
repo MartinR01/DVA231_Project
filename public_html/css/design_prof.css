@@ -10,6 +10,20 @@ body {
 	width: 15em;
 }
 
+.btn2 {
+  width         : 20%;
+  margin        : 20px;
+  color         : white;
+  border        : 3px solid white;
+  border-radius : 3px;
+  background    : #48a2de;
+}
+
+.btn2:hover {
+  color     : white;
+  font-size : 11pt;
+}
+
 .card-style {
   display          : block;
   width            : 300px;
