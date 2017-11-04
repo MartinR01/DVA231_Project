@@ -2,6 +2,10 @@
 <?php
 	session_start();
 	require_once('protected/config.php');
+	$studentid = $_SESSION['id'];
+
+  $journey = 1;
+
 ?>
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
@@ -109,7 +113,7 @@ if user already logged in, redirect to student/teacher dashboard
       <!--Start of Journey-->
       <div class="container">
         <div class="row">
-          <h1 class="animated slideInLeft">Journey</h1>
+          <h1 class="animated slideInLeft" align="center">Journey</h1>
 
 			<!-- HERE IT IS MY BULLSHIT -->
 			<?php
@@ -163,39 +167,62 @@ if user already logged in, redirect to student/teacher dashboard
       <hr />
 
       <!--QUESTS -->
-      <div class="container">
-        <div class="row"><!--quest row -->
-          <h1 class="animated slideInLeft">Quests</h1>
 
 			<!-- HERE IT IS MY BULLSHIT -->
-			<div class="row animated slideInLeft" style="padding:10px">
-				<br>
-				<br>
-				<?php
-				$counter = 0;
-				$sql_shit="select title, description from quest where idjourn=1";
-				require_once('protected/config.php');
-				$result_shit = mysqli_query($connection,$sql_shit);
-				if (mysqli_num_rows($result_shit) > 0) {
-					do  {
-						$row = mysqli_fetch_assoc($result_shit);
-						?>
-						<div class="col-sm-3 col-xs-3 animated zoomIn qm" align="center" >
-						 <div class="quest-availability"></div>
-						 <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $row['description']; ?> data-placement="bottom" >
-								 <h4><?php echo $row['title'] ?></h4>
-							</div>
-						</div>
+				<!-- HERE IT IS anemones BULLSHIT -->
+     <div id="questp">
+
+
+			<?php
+      $sql_main = "select j.title as jtitle, q.idquest,q.title,q.description from quest q, sjourney sj, journey j where sj.idstudent = $studentid and j.idjourn = sj.idjourn AND q.idjourn = j.idjourn and q.questm = 'main' ORDER BY sortnum ASC ";
+		  ?>
+           <h1 align="center">Quests</h1>
+           <br>
+        <div class="row animated slideInLeft" style="padding:10px">
+          <?php
+          require_once('protected/config.php');
+          $result_main = mysqli_query($connection,$sql_main);
+          if (mysqli_num_rows($result_main) > 0) {
+            while($mains = mysqli_fetch_assoc($result_main)) {
+           ?>
+          <div class="col-sm-3 col-xs-6 animated zoomIn qm" onclick=<?php echo "questp(".$mains['idquest'].")"; ?> align="center" >
+
 						<?php
-							$counter++;
-					 } while ($counter < 4);
-				}
-				 ?>
+						$sql1="SELECT idq from recenta where idq =".$mains['idquest'];
+			      require_once('protected/config.php');
+			      $result1 = mysqli_query($connection,$sql1);
+			      $row1 = mysqli_fetch_assoc($result1);
+			      if($row1['idq'] == 0){
+			       ?>
+						 <div class="quest-availability"></div>
+						 <?php
+			      }else{
+			         ?>
+							 <div class="quest-pending"></div>
+							 <?php
+			      }
+
+						 ?>
+              <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $mains['description']; ?> data-placement="bottom" >
+                 <h4><?php echo $mains['title'];?></h4>
+              </div>
+			  <h4><?php echo $mains['jtitle'] ?></h4>
+                </div>
+
+          <?php
+    			 }
+    		 }
+    		  ?>
+      </div><!-- row end -->
+
+
+				<!-- HERE IT ends enemones BULLSHIT -->
+
 			</div>
 			<!-- HERE IT ENDS MY BULLSHIT -->
 
         </div>
-				<a href="#" class="link animated fadeIn"><span > Show more ...</span></a><br>
+			
       </div><!--END OF QUESTS -->
 
     </div>
