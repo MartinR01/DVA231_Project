@@ -70,3 +70,16 @@ function addjourney(){
   xhttp.open("GET", "php/add_journey.php", true);
   xhttp.send();
 }
+
+function form_assist() {
+   var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+	  console.log($("#idprof").value());
+	  
+    if (this.readyState == 4 && this.status == 200) {
+		console.log("success");
+    }
+  };
+  xhttp.open("GET", "php/addassiste.php?idprof=", true);
+  xhttp.send();
+  }

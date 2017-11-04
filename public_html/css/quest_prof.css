@@ -548,12 +548,14 @@ div.tooltip-inner {
     font-weight: bold;
   }
 
-  #quest-edit-btn {
-    padding: 0.6em 1em;
+  .btn2{
+    /*padding: 0.6em 1em;
     margin: 4em 0.5em;
     width: 40%;
-    font-size: 1em;
+    font-size: 1em;*/
+    background-color: red;
   }
+
 
   /*#quest-edit-btn:hover{
     background-color: #2488cb;

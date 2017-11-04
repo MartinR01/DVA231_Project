@@ -176,6 +176,18 @@ function form_skill() {
  function form_assist() {
    document.getElementById("add_assist").submit();
   }
+  
+  function form_assiste() {
+   var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+	  
+    if (this.readyState == 4 && this.status == 200) {
+		$("#Modal").toggle();
+    }
+  };
+  xhttp.open("GET", "php/addassiste.php?idprof="+$("#idprof").val(), true);
+  xhttp.send();
+  }
 
   function form_student() {
     document.getElementById("add_student").submit();
@@ -196,6 +208,19 @@ function form_skill() {
        }
      };
      xhttp.open("GET", "ajaxprof/description.php", true);
+     xhttp.send();
+ }
+ 
+ function edittitle(){
+
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("title").innerHTML =
+         this.responseText;
+       }
+     };
+     xhttp.open("GET", "ajaxprof/title.php", true);
      xhttp.send();
  }
 
@@ -226,6 +251,20 @@ function form_skill() {
       xhttp.open("GET", "ajaxprof/assistant.php", true);
       xhttp.send();
   }
+  
+  function deleteae(id){
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("ass").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "ajaxprof/deleteas.php?idprof="+id, true);
+      xhttp.send();
+  }
+  
   function deletes(id){
       createCookie("studs", id, "10");
 
