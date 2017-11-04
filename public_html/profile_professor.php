@@ -95,8 +95,9 @@ session_start();
     <div class="col-sm-9 col-md-9 affix-content">
 
       <div class="container affix-content">
-		<div class="row ">
-			<h1>Profile settings</h1>
+        <h1>Profile settings</h1>
+		<div class="row " align="center">
+
 
 
 			<div class="col-sm-6">
@@ -140,6 +141,9 @@ session_start();
 			</div>
 
 		</div>
+
+
+
 		<div class="row">
 		<!-- Buttons row -->
 
