@@ -254,8 +254,56 @@ if ($row['ifplay']  <= 0){
               <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $mains['description']; ?> data-placement="bottom" >
                  <h4><?php echo $mains['title'];?></h4>
               </div>
-                </div>
+								 <div class="row">
+								<?php
+								$sql2 = "SELECT DISTINCT t.idts, qp.points from questpoints qp,typeskil t WHERE qp.idquest = ".$mains['idquest']." and qp.points != 0 AND t.idts = qp.idts ";
+								$result2= mysqli_query($connection,$sql2);
+								if (mysqli_num_rows($result2) > 0) {
+									while($row2 = mysqli_fetch_assoc($result2)) {
 
+										$sql16 = "SELECT DISTINCT p.pointsum from skill s, levels l , awards a, points p WHERE s.idts = ".$row2['idts']." and l.idsk = s.idsk and p.idsk = s.idsk;";
+										$result16 = mysqli_query($connection,$sql16);
+							      $row16 = mysqli_fetch_assoc($result16);
+										$total = $row16['pointsum'] + $row2['points'];
+
+										$sql3 ="SELECT DISTINCT l.maxpt from skill s, levels l , awards a WHERE s.idts = ".$row2['idts']." and l.idsk = s.idsk";
+										$result3 = mysqli_query($connection,$sql3);
+										if (mysqli_num_rows($result3) > 0) {
+											while($row3 = mysqli_fetch_assoc($result3)) {
+
+												if ($total < $row3['maxpt']){
+													$sql26 ="SELECT DISTINCT a.Path from questpoints qp, typeskil t, skill s, levels l , awards a WHERE ".
+													" qp.idquest = ".$mains['idquest']." and qp.points != 0 AND t.idts = qp.idts and s.idts = t.idts and l.idsk = s.idsk and l.maxpt = ".$row3['maxpt']." and a.ida = l.ida".
+													 " GROUP by qp.points";
+													$result26 = mysqli_query($connection,$sql26);
+													if (mysqli_num_rows($result26) > 0) {
+														while($row26 = mysqli_fetch_assoc($result26)) {
+
+															?>
+															<div class="col-xs-3" style="padding-top: 8px;">
+															<img src=<?php echo $row26['Path']; ?> alt="" width="45px" height="45px";>
+																</div>
+
+															<?php
+
+														}
+													}
+													break;
+												}
+											}
+										}
+
+
+
+									}
+								}
+
+
+								 ?>
+
+
+								 </div>
+                </div>
           <?php
     			 }
     		 }
@@ -295,6 +343,58 @@ if ($row['ifplay']  <= 0){
              <div class="sidequest shadow" data-toggle="tooltip" title=<?php echo $side['description']; ?> data-placement="bottom" >
                 <h4><?php echo $side['title'];?></h4>
              </div>
+
+						 <div class="row">
+
+
+						 								<?php
+						 								$sql2 = "SELECT DISTINCT t.idts, qp.points from questpoints qp,typeskil t WHERE qp.idquest = ".$side['idquest']." and qp.points != 0 AND t.idts = qp.idts GROUP by t.idts ";
+						 								$result2= mysqli_query($connection,$sql2);
+						 								if (mysqli_num_rows($result2) > 0) {
+						 									while($row2 = mysqli_fetch_assoc($result2)) {
+
+						 										$sql16 = "SELECT DISTINCT p.pointsum from skill s, levels l , awards a, points p WHERE s.idts = ".$row2['idts']." and l.idsk = s.idsk and p.idsk = s.idsk GROUP by p.pointsum;";
+						 										$result16 = mysqli_query($connection,$sql16);
+						 							      $row16 = mysqli_fetch_assoc($result16);
+						 										$total = $row16['pointsum'] + $row2['points'];
+
+						 										$sql3 ="SELECT DISTINCT l.maxpt from skill s, levels l , awards a WHERE s.idts = ".$row2['idts']." and l.idsk = s.idsk GROUP by l.maxpt";
+						 										$result3 = mysqli_query($connection,$sql3);
+						 										if (mysqli_num_rows($result3) > 0) {
+						 											while($row3 = mysqli_fetch_assoc($result3)) {
+
+						 												if ($total < $row3['maxpt']){
+						 													$sql26 ="SELECT DISTINCT a.Path from questpoints qp, typeskil t, skill s, levels l , awards a WHERE ".
+						 													" qp.idquest = ".$side['idquest']." and qp.points != 0 AND t.idts = qp.idts and s.idts = t.idts and l.idsk = s.idsk and l.maxpt = ".$row3['maxpt']." and a.ida = l.ida".
+						 													 " GROUP by qp.points";
+						 													$result26 = mysqli_query($connection,$sql26);
+						 													if (mysqli_num_rows($result26) > 0) {
+						 														while($row26 = mysqli_fetch_assoc($result26)) {
+
+						 															?>
+																					<div class="col-xs-3" style="padding-top: 8px;">
+
+						 															<img src=<?php echo $row26['Path']; ?> alt="" width="40px" height="40px">
+
+																						</div>
+						 															<?php
+
+						 														}
+																				break;
+						 													}
+
+						 												}
+						 											}
+						 										}
+
+
+
+						 									}
+						 								}
+
+
+						 								 ?>
+														  </div>
              </div>
 
              <?php
