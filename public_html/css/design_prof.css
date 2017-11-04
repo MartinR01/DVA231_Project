@@ -131,6 +131,23 @@ body {
   font-size       : 1.25em;
 }
 
+/* Button green add */
+.button-green {
+  margin: 2%;
+  border: 3px solid gray;
+  border-radius: 50%;
+  background-color: #51F38E;
+  color: gray;
+  width: 60px;
+  height: 60px;
+}
+
+.button-green .material-icons {
+ position: relative;
+ top: 4px;
+ font-weight: 300;
+ font-size: 3em;
+}
 
 /* NAVIGATION BAR LEFT */
 
@@ -289,6 +306,27 @@ body {
   font-weight: lighter;
   font-size: 20pt;
 
+}
+#green-button {
+  margin: 2%;
+  border: 3px solid gray;
+  border-radius: 50%;
+  background-color: #51F38E;
+  color: gray;
+  width: 60px;
+  height: 60px;
+}
+
+/* Add journey icon */
+#green-button .material-icons {
+  position: relative;
+  top: 4px;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+#green-button .material-icons:hover {
+  font-weight: bold;
 }
 
 /*STRUCTURE !! DONT EDIT */

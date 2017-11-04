@@ -3,6 +3,15 @@ body {
                 sans-serif;
 }
 
+div.tooltip-inner {
+    width: 300px;
+}
+
+.tooltip_place_desc{
+	position: relative;
+	top: -50px;
+}
+
 /* Journey_test */
 
 .card-style {
@@ -196,12 +205,37 @@ body {
   background   : #BE3A31;
 }
 
+/*ERASE BUTTON*/
+#trash-btn {
+  margin-top   : 2em;
+  border-color : #BE3A31;
+  background   : #BE3A31;
+  border-radius: 50%;
+  font-size: 1em;
+  height: 80px;
+  width: 80px;
+}
+
+#trash-btn:hover{
+  color     : white;
+  border-color : #AE2A21;
+  background   : #AE2A21;
+}
+
+#trash-btn .icons{
+  position  : relative;
+  left      : 1px;
+  bottom    : 1px;
+  color     : white;
+  font-size : 3.5em;
+}
+
 /* _NOTIF AND SETT BUTTONS_ */
 
 .icons {
   position  : relative;
   right     : 5px;
-  bottom    : 1px;
+  top    : 3px;
   color     : white;
   font-size : 18pt;
 }
@@ -222,7 +256,6 @@ body {
    pointer-events: auto;
    cursor: auto;
 }
-
 
 .material-icons.md-42 {
   font-size: 42px;
@@ -432,19 +465,10 @@ body {
   border        : 5px solid white;
   border-radius : 100%;
   text-align    : center;
-
-}
-
-.quest-type {
-  z-index       : 1;
-  position      : relative;
-  top           : 10px;
-  right         : 53px;
-  width         : 30px;
-  height        : 30px;
-  border        : 3px solid white;
-  border-radius : 100%;
-  background-color:orange;
+  background-color: #3498db;
+   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quest-availability {
@@ -459,30 +483,43 @@ body {
   border-radius : 100%;
 }
 
-.quest-title {
-  position                : relative;
-  top                     : -20px;
-  height                  : 70px;
-  border-top-left-radius  : 70px;
-  border-top-right-radius : 70px;
-  background-color : #3498db;
-}
-
-.quest-title h3 {
-  position: relative;
-  top:50px;
-}
-
-.quest-description {
-  position					 : relative;
-  top						 : -20px;
-  height                     : 70px;
-  border-bottom-right-radius : 70px;
-  border-bottom-left-radius  : 70px;
-  background-color			 : #BE3A31;
-}
 
 .quest-container {
+  margin-bottom : 20px;
+  margin-top: 20px;
+}
+
+.sidequest {
+  width         : 110px;
+  height        : 110px;
+  margin-top    : -60px;
+  border        : 5px solid white;
+  border-radius : 100%;
+  text-align    : center;
+  background-color: #3498db;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidequest-availability {
+  z-index       : 1;
+  position      : relative;
+  top           : 43px;
+  left          : 39px;
+  width         : 25px;
+  height        : 25px;
+  border        : 3px solid white;
+  background-color:green;
+  border-radius : 100%;
+}
+
+.sidequest h4{
+	font-size: 15px;
+}
+
+
+.sidequest-container {
   margin-bottom : 20px;
   margin-top: 20px;
 }
@@ -517,6 +554,10 @@ body {
     width: 40%;
     font-size: 1em;
   }
+
+  /*#quest-edit-btn:hover{
+    background-color: #2488cb;
+  }*/
 
   .form-text{
     font-weight: lighter;

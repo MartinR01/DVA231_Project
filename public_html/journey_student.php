@@ -2,6 +2,15 @@
 <!-- LOGIN SCREEN
 if user already logged in, redirect to student/teacher dashboard
 -->
+<?php
+	session_start();
+	require_once('protected/config.php');
+	  $studentid = $_SESSION['id'];
+  $journey = $_GET['journey'];
+  $cookie_name = "journey";
+  $cookie_value = $journey;
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+?>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -26,11 +35,23 @@ if user already logged in, redirect to student/teacher dashboard
   <!-- jQuery and theamJQuery comented-->
   <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /-->
 
-
-
 </head>
-
+<?php
+$sql="Select COUNT(p.idstudent) as ifplay from points p, skill s where idstudent=$studentid and p.idsk = s.idsk and s.idjourn = $journey;";
+require_once('protected/config.php');
+$result = mysqli_query($connection,$sql);
+$row = mysqli_fetch_assoc($result);
+if ($row['ifplay']  <= 0){
+	echo "LOL";
+ ?>
 <body>
+	<?php
+}else{
+	?>
+<body onload="levels()">
+	<?php
+}
+	 ?>
   <div class="row affix-row">
     <!--/col - left -->
     <div class="col-sm-3 col-md-3 affix-sidebar shadow">
@@ -60,8 +81,21 @@ if user already logged in, redirect to student/teacher dashboard
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
               <!--Profile -->
+              <!--Profile -->
+        <?php
+          $sqls ="Select * from student where idstudent ='".$_SESSION['id']."'";
+          $result = mysqli_query($connection,$sqls);
+          $row = mysqli_fetch_assoc($result);
+        ?>
               <li class="timecolor">
                 <br>
+                <?php
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $student = "./img/students/".$filename;
+                 ?>
                 <!-- progress bar -->
                 <div class="progress progress-profile green">
                   <span class="progress-left">
@@ -71,25 +105,30 @@ if user already logged in, redirect to student/teacher dashboard
                     <span class="progress-bar progress-bar-profile"></span>
                   </span>
 
-                  <div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src="img/profileTest.jpg" width="150px" height="150px" alt=""></a></div>
+                  <div class="progress-value progress-value-profile"><a href="#"><img class="imgprofile shadow" src=<?php echo "$student";  ?> width="150px" height="150px" alt=""></a></div>
                 </div>
 
 
 
-                <h3 class= "proname"> Name LastName<br><small>Student</small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">arrow_back</i></button>
-                <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
-                <br>
-              </li>
-              <!--Stats -->
+                <h3 class= "proname">
 
-
+                  <?php
+        						//echo var_dump($_SESSION);
+        						echo $row['name']." ".$row['lastname'];
+        					?>
+        					<br><small><?php
+        						echo $row['email'];
+        					?></small> </h3>
+                        <a href="profile_student.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow animated rotateIn"><i class="material-icons icons">settings</i></button></a>
+                        <button type="button" class="btn btn-default btn-circle-not btn-lg shadow animated rotateIn"><i class="material-icons icons" >forum</i></button>
+                        <br>
+                      </li>
               <!--Buttons -->
-              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
-              <a href="journey.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
+              <a href="dashboard.php"><li class="butallign "><button type="button" class="btn btn1 shadow" ><span>Dashboard</span></button></li></a>
+              <a href="journeys.php"><li class="butallign " ><button type="button" class="btn btn1 shadow" ><span>Journey</span></button></li></a>
               <a href="quests.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Quests</span></button></li></a>
-              <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
-              <a href="index.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
+              <!-- <a href="student/student_profile.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
+              <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
               <!--li><a href="#"> Notification <span class="badge pull-right">42</span></a></li-->
 
             </ul>
@@ -100,17 +139,18 @@ if user already logged in, redirect to student/teacher dashboard
 
     <!-- MID SECTION-->
     <div class="col-sm-6 col-md-6 affix-content">
-
+      <?php $sql = "Select j.title,j.description, p.name, p.lastname, p.email from Journey j, professor p where j.idjourn=$journey and j.idprof = p.idprof";
+              require_once('protected/config.php');
+              $result = mysqli_query($connection,$sql);
+    		  $row = mysqli_fetch_assoc($result);
+        ?>
       <!-- Title of journey -->
       <div class="row">
-        <h1>WEB DEVELOPMENT</h1>
-        <h4	class="name_teacher">Name of teacher</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h1><?php echo $row['title']; ?></h1>
+        <h4	class="name_teacher"><?php echo $row['name']." ".$row['lastname']; ?>
+          <br><small><?php echo $row['email']; ?></small>
+        </h4>
+        <p> <?php echo $row['description']; ?></p>
       </div>
       <hr/>
       <!--Quest Map
@@ -118,130 +158,96 @@ if user already logged in, redirect to student/teacher dashboard
         <h4>Quest Map</h4>
       </div-->
 
-      <div class="row"><!-- begin row 1 -->
-        <div class="col-sm-12 animated bounceIn" align="center" style="margin-bottom:10px;"><!-- Main Quest 1 -->
-          <div class="quest-type" style="background-color:orange;"></div>
-          <div class="quest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="right" style="background-color:green;" >
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description" >Description</div>
-            </div>
-          </a>
-        </div><!--Mainquest 1 end-->
-          </div>
-          <br>
+			<div id="questp">
 
+
+			<?php
+      $sql_main = "select idquest,title,description from quest where idjourn = $journey AND questm = 'main' ORDER BY sortnum ASC";
+       $sql_side = "select idquest,title,description from quest where idjourn = $journey AND questm = '' ORDER BY sortnum ASC";
+           ?>
+           <h1>Main Quests</h1>
+           <br>
         <div class="row animated slideInLeft" style="padding:10px">
+          <?php
+          require_once('protected/config.php');
+          $result_main = mysqli_query($connection,$sql_main);
+          if (mysqli_num_rows($result_main) > 0) {
+            while($mains = mysqli_fetch_assoc($result_main)) {
+           ?>
+           <!-- Main Quest  -->
+          <div class="col-sm-3 col-xs-6 animated zoomIn qm" onclick=<?php echo "questp(".$mains['idquest'].")"; ?> align="center" >
 
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
+						<?php
+						$sql1="SELECT idq from recenta where idq =".$mains['idquest'];
+			      require_once('protected/config.php');
+			      $result1 = mysqli_query($connection,$sql1);
+			      $row1 = mysqli_fetch_assoc($result1);
+			      if($row1['idq'] == 0){
+			       ?>
+						 <div class="quest-availability"></div>
+						 <?php
+			      }else{
+			         ?>
+							 <div class="quest-pending"></div>
+							 <?php
+			      }
 
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
+						 ?>
+              <div class=" quest shadow" data-toggle="tooltip" title=<?php echo $mains['description']; ?> data-placement="bottom" >
+                 <h4><?php echo $mains['title'];?></h4>
               </div>
-            </a>
-          </div><!--Sidequest 2 end-->
+                </div>
 
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
-
-          <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-            <div class="sidequest-type" style="background-color:orange;"></div>
-            <div class="sidequest-availability" style="background-color:green;"></div>
-            <a href="#">
-              <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-                <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-                <div class="sidequest-description">Description</div>
-              </div>
-            </a>
-          </div><!--Sidequest 2 end-->
+          <?php
+    			 }
+    		 }
+    		  ?>
       </div><!-- row 1 end -->
+
       <br>
-      <!-- Main Quest 2 -->
-      <div class="row" ><!-- begin row 2 -->
-        <div class="col-sm-12 animated bounceIn" align="center" style="margin-bottom:10px;"><!-- Main Quest 2 -->
-          <div class="quest-type" style="background-color:orange;"></div>
-          <div class="quest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="quest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="down" style="background-color:green;" >
-              <div class="quest-title color"><h3 style="position: relative; top:50px">Title</h3></div>
-              <div class="quest-description" >Description</div>
-            </div>
-          </a>
-        </div><!--Quest 2 end-->
-      </div><!-- row 2 end -->
+      <h1>Side Quests</h1>
       <br>
       <div class="row animated slideInLeft" style="padding:10px">
+        <?php
+  			$result_side = mysqli_query($connection,$sql_side);
+            if (mysqli_num_rows($result_side) > 0) {
+  			while($side = mysqli_fetch_assoc($result_side)){?>
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
+          <!-- side  -->
+         <div class="col-sm-3 col-xs-6 animated zoomIn qs " onclick=<?php echo "questp(".$side['idquest'].")"; ?>  align="center" >
+					 <?php
+					 $sql1="SELECT idq from recenta where idq =".$side['idquest'];
+					 require_once('protected/config.php');
+					 $result1 = mysqli_query($connection,$sql1);
+					 $row1 = mysqli_fetch_assoc($result1);
+					 if($row1['idq'] == 0){
+						?>
+						<div class="sidequest-availability"></div>
+						<?php
+					 }else{
+							?>
+							<div class="sidequest-pending"></div>
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
+							<?php
+					 }
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
+						?>
 
-        <div class="col-sm-3 col-xs-3 animated zoomIn" align="center" style="margin-bottom:10px;"><!-- Side Quest 2 -->
-          <div class="sidequest-type" style="background-color:orange;"></div>
-          <div class="sidequest-availability" style="background-color:green;"></div>
-          <a href="#">
-            <div class="sidequest shadow" data-toggle="tooltip" title="Description of Quest - This quest helps you to improve your knowledge in HTML" data-placement="bottom" style="background-color:green;">
-              <div class="sidequest-title color"><h3 class="sidequest-title-text">Title</h3></div>
-              <div class="sidequest-description">Description</div>
-            </div>
-          </a>
-        </div><!--Sidequest 2 end-->
-    </div><!-- row 1 end -->
+             <div class="sidequest shadow" data-toggle="tooltip" title=<?php echo $side['description']; ?> data-placement="bottom" >
+                <h4><?php echo $side['title'];?></h4>
+             </div>
+             </div>
+
+             <?php
+              }
+            }
+             ?>
+      </div><!-- row 1 end -->
     <br><br><br>
+		</div>
 
-    </div>
+			</div>
+
 
     <!-- RIGHT SECTION-->
     <div class="col-sm-3 col-md-3 ">
@@ -256,29 +262,33 @@ if user already logged in, redirect to student/teacher dashboard
               <!-- AWARDS -->
               <div class="row">
                 <h1>Awards</h1>
-                <div class="award" >
-                  <img data-toggle="tooltip" title="You worked hard - have a beer. Unlocked on 24/10/2017" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-                </div>
-                <div class="award locked" >
-                  <img data-toggle="tooltip" title="Complete all assignments. Locked" data-placement="left" src="https://www.prazdroj.cz/cospospohzeg/uploads/2016/03/gambrinus-4.png"/>
-                </div>
+								<?php
+
+								 $sql = "select DISTINCT a.Path as file, l.lvlname from awards a, levels l  where l.lvlname like 'Level 0' and a.ida = l.ida;";
+								 require_once('protected/config.php');
+								 $result = mysqli_query($connection, $sql);
+								 if (mysqli_num_rows($result) > 0) {
+								   while($row = mysqli_fetch_assoc($result)) {
+
+								 ?>
+								 <div class="award"  >
+									 <img data-toggle="tooltip" title=<?php echo $row['lvlname']; ?> data-placement="down"  src=<?php echo $row['file'];?> />
+								 </div>
+								 <?php
+							 }
+						 }
+  				 ?>
               </div>
               <hr/>
 
               <!--STATS -->
-              <div class="row">
-                <h1>Skills</h1>
+              <div class="row" align="center">
+                <h1>Start Game </h1>
+								<div class="col-sm-11"  id="skills">
+									<button class="btn-add-journey shadow"  name="button" onclick="levels()"><i class="material-icons">add</i></button>
+								</div>
 
-                <h4>Programming: Cody mcCodyson</h4>
-                <div class="progress progress-stats" data-toggle="tooltip" title="Next Level: 70/100: Cracker" data-placement="bottom">
-                  <div class="progress-bar progress-bar-success progress-bar-done" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                    50/100
-                  </div>
-                  <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
-                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">
-                  +20
-                </div>
-              </div>
+
             </div>
 
 
@@ -288,8 +298,15 @@ if user already logged in, redirect to student/teacher dashboard
     </div><!--/sidebar-nav -->
   </div>
 </div>
+<script type="text/javascript">
+function myFunction() {
+	var a = document.getElementById("1").style.width;
+    alert(a);
+}
+</script>
 <!-- JS for Bootstrap -->
 <script src="js/bootstrap.js"></script>
+<script src="js/game.js"></script>
 <!-- Install tooltips -->
 <script>
 $(document).ready(function(){

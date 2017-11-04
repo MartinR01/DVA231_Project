@@ -4,7 +4,7 @@ if user already logged in, redirect to student/teacher dashboard
 -->
 <?php
 session_start();
- ?>
+?>
 
 <html>
 <head>
@@ -47,27 +47,32 @@ session_start();
           <!--/.nav-collapse -->
           <div class="navbar-collapse collapse sidebar-navbar-collapse">
             <ul class="nav navbar-nav" id="sidenav01">
-
               <!--Profile -->
               <li class="timecolor">
-			  <?php
-        require_once('protected/config.php');
-				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
-				$result = mysqli_query($connection,$sqls);
-				$row = mysqli_fetch_assoc($result);
-			  ?>
-                <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="<?php
-						echo $row['profilepath'];
-					?>" width="150px" height="150px" alt=""></a>
-				<h3 class="textName">
-					<?php
-						echo $row['name']." ".$row['lastname'];
-					?>
-				<br><small><?php
-						echo $row['email'];
-					?></small> </h3>
-                <button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button>
+			        <?php
+                require_once('protected/config.php');
+        				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+        				$result = mysqli_query($connection,$sqls);
+        				$row = mysqli_fetch_assoc($result);
+      			  ?>
+              <br>
+              <?php
+              $path = $row['profilepath'];
+              $file = str_replace('/', ' ', $path);
+              $split = explode(" ", $file);
+              $filename =$split[count($split)-1];
+              $prof = "./img/profile/".$filename;
+               ?>
+              <a href="#" style="text-align:center"><img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt=""></a>
+				      <h3 class="textName" style="text-align: left;">
+					    <?php
+						echo "&nbsp;".$row['name']." ".$row['lastname'];
+    					?>
+    				<br><small><?php
+    						echo $row['email'];
+    					?></small> </h3>
+
+                <a href="profile_professor.php"><button type="button" class="btn btn-default btn-circle btn-lg shadow"><i class="material-icons icons">settings</i></button></a>
                 <button type="button" class="btn btn-default btn-circle-not btn-lg shadow"><i class="material-icons icons" >forum</i></button>
                 <br>
               </li>
@@ -76,9 +81,8 @@ session_start();
               <a href="#"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Dashboard</span></button></li></a>
               <a href="journey_professor.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Journey</span></button></li></a>
               <a href="recent_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow">Recent Activity  <span class="badge pull-right">42</span></button></li></a>
-              <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a>
+              <!-- <a href="journey_activity.php"><li class="butallign "><button type="button" class="btn btn1 shadow"><span>Profile</span></button></li></a> -->
               <a href="php/logout.php"><li class="butallign"><button type="button" class="btn btn1 shadow" id="logout-btn"><span>Log out</span></button></li></a>
-
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -94,15 +98,9 @@ session_start();
         <div class="row">
           <h1>Journey</h1>
             <?php
-      
             $idp = $_SESSION['id'];
             require_once('protected/config.php');
-            $sql="select DISTINCT j.idjourn, j.title, COUNT(DISTINCT sj.idstudent) as num,".
-            " sum(DISTINCT case when q.questm ='main' then 1 else 0 end) as main,".
-            " sum(DISTINCT case when q.quests ='side' then 1 else 0 end) as side".
-            " from Journey j, sjourney sj, quest q, Student s".
-            " where j.idprof = $idp and sj.idjourn = j.idjourn AND sj.idstudent =s.idstudent and  q.idjourn = j.idjourn".
-            " GROUP by j.title ";
+            $sql="select DISTINCT j.idjourn, j.title from Journey j where j.idprof = $idp ";
              $main = 0;
              $side = 0;
              $title ='';
@@ -116,44 +114,59 @@ session_start();
                      <div class="media media1">
                        <!--Journey picture-->
                        <div class="media1-left media-left">
-                         <img class="media1-object media-object img-thumbnail card-img" src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
+                         <img class="media1-object media-object img-thumbnail card-img"
+                         src="http://www.marshallheads.com/download/file.php?avatar=58_1328912023.jpg">
                        </div><!--.Journey pictureend-->
                        <!--Journey elements-->
                        <div class="media1-body media-body">
                          <div>
                            <h5 class="media1-heading media-heading shadow"><?php echo $row['title']?>
                              <span class="total-points-box" >
-                               <span class= "total-points-text">360</span>
+                               <?php
+                               $lol =$row['idjourn'];
+                               $sql = "select sum( a.points) as total from (Select p.points from quest q, questpoints p where q.idjourn =$lol and p.idquest= q.idquest) a;";
+
+                               $result1 = mysqli_query($connection,$sql);
+                     		        $row1 = mysqli_fetch_assoc($result1);
+                                ?>
+                               <span class= "total-points-text"><?php echo $row1['total']?></span>
                              </span>
                            </h5>
                          </div>
-                   <div class="pull-left btn-part"> <?php echo "Student: ".$row['num']; ?> </br>
+                         <?php
+                         $sql = "SELECT COUNT(a.idstudent) as students from (select s.idstudent from sjourney s  where s.idjourn = $lol) a";
+                         $results = mysqli_query($connection,$sql);
+                          $student = mysqli_fetch_assoc($results);
+                          ?>
+                   <div class="pull-left btn-part"> <?php echo "Student: ".$student['students']?> </br>
                      <?php
-                     echo "Main Quests: ".$row['main']."<br />Side Quests:".$row['side'];
+                     $sql="select count( a.questm) as qm from (Select q.questm from quest q where q.idjourn = $lol and q.questm='main') a;";
+                     $resultq = mysqli_query($connection,$sql);
+                      $qm = mysqli_fetch_assoc($resultq); $questm = $qm['qm'];
+                      $sql="select count( a.quests) as qs from (Select q.quests from quest q where q.idjourn = $lol and q.quests='side') a;";
+                      $resultq = mysqli_query($connection,$sql);
+                       $qs = mysqli_fetch_assoc($resultq);$quests = $qs['qs'];
+
+                     echo "Main Quests: $questm <br />Side Quests:$quests";
                       ?>
 
                     </div>
 
                    <div class="icon-journey">
-                     <a class="active" href=<?php echo "journey_activity.php?journey=".$row['idjourn']; ?>><i class="material-icons md-42 icons">info_outline</i></a>
+                     <a class="active" href=<?php echo "journey_activity.php?journey=$lol";?>><i class="material-icons md-42 icons">info_outline</i></a>
 
                    </div>
                  </div><!--Journey elements end-->
                </div>
              </div>
            </div><!--Journey 1 end-->
-
                    <?php
-
                  }
              } else {
                $error = "DB ERROR";
 
              }
-
              ?>
-
-
         </div>
       </div>
       <hr />
