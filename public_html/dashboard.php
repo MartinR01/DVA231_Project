@@ -4,7 +4,7 @@
 	require_once('protected/config.php');
 	$studentid = $_SESSION['id'];
 
-  $journey = 1;
+
 
 ?>
 <!-- LOGIN SCREEN
@@ -119,7 +119,7 @@ if user already logged in, redirect to student/teacher dashboard
 			<?php
 			$ids = $_SESSION['id'];
 			require_once('protected/config.php');
-			$sql="select j.idjourn, j.title from sjourney sj, Journey j where sj.idstudent = $ids and j.idjourn = sj.idjourn";
+			$sql="select  j.idjourn, j.title from sjourney sj, Journey j where sj.idstudent = $ids and j.idjourn = sj.idjourn";
 			$result = mysqli_query($connection,$sql);
 			if (mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_assoc($result)) {
@@ -174,7 +174,7 @@ if user already logged in, redirect to student/teacher dashboard
 
 
 			<?php
-      $sql_main = "select j.title as jtitle, q.idquest,q.title,q.description from quest q, sjourney sj, journey j where sj.idstudent = $studentid and j.idjourn = sj.idjourn AND q.idjourn = j.idjourn and q.questm = 'main' ORDER BY sortnum ASC ";
+      $sql_main = "select j.title as jtitle, q.idquest,q.title,q.description from quest q, sjourney sj, journey j where sj.idstudent = $studentid and j.idjourn = sj.idjourn AND q.idjourn = j.idjourn and q.questm = 'main' ORDER BY sortnum ASC  limit 4 ";
 		  ?>
            <h1 align="center">Quests</h1>
            <br>
@@ -222,7 +222,7 @@ if user already logged in, redirect to student/teacher dashboard
 			<!-- HERE IT ENDS MY BULLSHIT -->
 
         </div>
-			
+
       </div><!--END OF QUESTS -->
 
     </div>

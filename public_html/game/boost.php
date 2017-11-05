@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
     require_once('../protected/config.php');
     $result2 = mysqli_query($connection,$sql2);
     $row2= mysqli_fetch_assoc($result2);
-
+    $jsum = 0;
     $sql1="Select pointsum from points where idstudent=$studentid and idsk =".$row['idsk'];
     require_once('../protected/config.php');
     $result1 = mysqli_query($connection,$sql1);
@@ -38,21 +38,41 @@ if (mysqli_num_rows($result) > 0) {
       $prog = "0";
     }else{
       $prog = (($row1['pointsum']+$boostar[$counter])/$row2['maxpt'])*100;
-
+      $jsum= ($row1['pointsum']/$row2['maxpt'])*100;
     }
 
     ?>
     <div class="progress ">
       <div class="progress-bar progress-bar-success progress-bar-striped active" id =<?php echo $row['idts'] ?> role="progressbar"
-        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=<?php echo "width:$prog%"; ?>>
+        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=<?php echo "width:$jsum% ; "; ?>>
         <?php
         if($boostar[$counter] == 0){
 
         }else{
-        echo round(($boostar[$counter]/$row2['maxpt'])*100)."%";
+
         }
         ?>
       </div>
+      <?php
+      if($boostar[$counter] == 0){
+        ?>
+      <div class="progress-bar progress-bar-danger progress-bar-striped active" id =<?php echo $row['idts'] ?> role="progressbar"
+        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=<?php echo "width:0% ; "; ?>></div>
+        <?php
+        }else{
+        ?>
+        <div class="progress-bar progress-bar-danger progress-bar-striped active" id =<?php echo $row['idts'] ?> role="progressbar"
+          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style=<?php echo "width:$prog% ; "; ?>>
+          <?php
+          echo round(($boostar[$counter]/$row2['maxpt'])*100)."%";
+           ?>
+        </div>
+
+        <?php
+
+        }
+        ?>
+
     </div>
 
     <?php
