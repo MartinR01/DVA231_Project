@@ -99,16 +99,20 @@ if (isset($_COOKIE['lvl'])){
               <li class="timecolor">
                 <?php
                   require_once('protected/config.php');
-                  $sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
-                  $result = mysqli_query($connection,$sqls);
-                  $row = mysqli_fetch_assoc($result);
-                ?>
+          				$sqls ="Select * from professor where idprof ='".$_SESSION['id']."'";
+          				$result = mysqli_query($connection,$sqls);
+          				$row = mysqli_fetch_assoc($result);
+        			  ?>
                 <br>
-                <a href="#" style="text-align:center"><img class="imgprofile shadow" src="
                 <?php
-                      echo $row['profilepath'];
-                ?>" width="150px" height="150px" alt=""></a>
-                <h3 class="textName" style="text-align: left;">
+                $path = $row['profilepath'];
+                $file = str_replace('/', ' ', $path);
+                $split = explode(" ", $file);
+                $filename =$split[count($split)-1];
+                $prof = "./img/profile/".$filename;
+                 ?>
+                <a href="#" style="text-align:center"><img class="imgprofile shadow" src=<?php echo "$prof";  ?> width="150px" height="150px" alt=""></a>
+  				      <h3 class="textName" style="text-align: left;">
                 <?php
               echo "&nbsp;".$row['name']." ".$row['lastname'];
                 ?>
@@ -145,25 +149,31 @@ if (isset($_COOKIE['lvl'])){
     <div class="col-sm-9 col-md-9 affix-content ">
       <div class="leftpad">
         <div class="row">
-          <div class="col-sm-4" id="title">
+          <div id="title">
 
-          <h1 class="title ">  <?php echo $row['title']; ?> </h1>
+          <h2 class="title ">  <?php echo $row['title']; ?> <button class="btn btn-xs skill" onclick="edittitle()"><i class="material-icons">mode_edit</i></button></h2>
         <?php
       }
 
          ?>
-          </div>
-          <div class="col-sm-8" align="left">
-            <button class="btn btn-xs skill" onclick="edittitle()"><i class="material-icons">mode_edit</i></button>
           </div>
         </div>
 
       </div>
 
       <nav class=" navbar1 navbar-default" >
-        <div class="container-fluid">
+        <div class="  navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#lol">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
 
-          <ul class="nav navbar-nav">
+          </button>
+          <span class="visible-xs  navbar-brand">Journey Menu</span>
+        </div>
+          <div id="lol" class="navbar-collapse collapse sidebar-navbar-collapse" align="center">
+          <ul class="nav navbar-nav" id="sidenav01" >
             <li class="active" id="act" onclick=<?php echo "activity(".$journey.")"; ?>><a href="#activity" >Activity</a></li>
             <li id="act1" class="" onclick=<?php echo "quest(".$journey.")"; ?>><a  href="#quest" >Quests</a></li>
             <li id="act2" class="" onclick=<?php echo "students(".$journey.")"; ?>><a href="#students">Students</a></li>

@@ -105,7 +105,7 @@ session_start();
 
       <!--Start of Journey-->
       <div class="container">
-        <div class="row">
+        <div class="row" align="center">
           <h1>Journey</h1>
           <?php
           $idp = $_SESSION['id'];

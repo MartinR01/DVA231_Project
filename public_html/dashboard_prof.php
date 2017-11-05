@@ -95,7 +95,7 @@ session_start();
 
       <!--Start of Journey-->
       <div class="container">
-        <div class="row">
+        <div class="row" align="center">
           <h1>Journey</h1>
             <?php
             $idp = $_SESSION['id'];
@@ -173,7 +173,7 @@ session_start();
 
       <!--RECENT ACTIVITY -->
       <div class="container">
-        <div class="row"><!--RA row -->
+        <div class="row" align="center"><!--RA row -->
           <h1 class="ractiv">Recent Activity</h1>
           <!--First Activity -->
 					<div class="col-xs-12 col-sm-4">

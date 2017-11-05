@@ -21,8 +21,8 @@
 
   }
  ?>
-		 <div class="container" align="center">
-		  <div class="row">
+		 <div class="container" >
+		  <div class="row" align="center">
 			<button type="button" class="btn-add-journey shadow" onclick="addquest()"><i class="material-icons">add</i></button>
 		  </div>
 		</div>
@@ -33,9 +33,9 @@
 		 $sql_side = "select idquest,title,description from quest where idjourn = $journey AND questm = '' ORDER BY sortnum ASC";
 
          ?>
-      <div class="container">
+      <div class="container" align="center">
 		<h1>Main Quests</h1>
-        <div class="row"><!--quest row -->
+        <div class="row" ><!--quest row -->
           <?php
           require_once('../protected/config.php');
           $result_main = mysqli_query($connection,$sql_main);

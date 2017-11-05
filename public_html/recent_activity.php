@@ -93,7 +93,7 @@ session_start();
       <div class="col-sm-9 col-md-9 affix-content">
         <!--RECENT ACTIVITY -->
         <div class="container">
-          <div class="row"><!--RA row -->
+          <div class="row" align="center"><!--RA row -->
             <h1 class="ractiv">Recent Activity</h1>
             <hr/>
           </br>

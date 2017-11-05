@@ -93,7 +93,7 @@
         if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_assoc($result)) {
             ?>
-            <div class="row" >
+            <div class="row" align = "center">
 
 
               <div class="col-sm-8">

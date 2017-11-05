@@ -144,8 +144,6 @@ if ($row['ifplay']  <= 0){
 														<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse" style="height:30px;">
 															<span class="sr-only" >Toggle navigation</span>
 															<span class="iconcontent"><i class="material-icons">content_paste</i></span>
-
-
 														</button>
 														<span class="visible-xs  navbar-brand">Skills and Awards</span>
 													</div>

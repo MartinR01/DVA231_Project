@@ -19,6 +19,7 @@
 }
 .navbar1 ul li {
   border-right: 1px solid #bdc3c7;
+  border-left: 1px solid #bdc3c7;
   width: 180px;
   text-align: center;
 }

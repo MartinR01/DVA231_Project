@@ -11,7 +11,7 @@
     while($row = mysqli_fetch_assoc($result)) {
       ?>
       <div class="">
-        <div class="row">
+        <div class="row" align="center">
           <div class="col-sm-3">
             <h4> <?php echo $row['lvlname'] ?></h4>
           </div>
