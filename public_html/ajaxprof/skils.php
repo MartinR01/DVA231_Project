@@ -2,16 +2,32 @@
   $error = "";
   if (isset($_COOKIE['lvld'])){
       $lvld = $_COOKIE['lvld'];
-      unset($_COOKIE['lvld']);
-      setcookie('lvld', null, -1, '/');
+     unset($_COOKIE['lvld']);
+    setcookie('lvld', null, -1, '/');
       require_once('../protected/config.php');
+      $sql = "DELETE FROM points WHERE idsk=".$lvld;
+      if (mysqli_query($connection, $sql)) {
+      $error= "Record deleted successfully";
+      echo "yas";
+      } else {
+        echo "NOT";
+        $error= "ERROR";
+      }
       $sql = "DELETE FROM levels WHERE idsk=".$lvld;
-      mysqli_query($connection, $sql);
+      if (mysqli_query($connection, $sql)) {
+      $error= "Record deleted successfully";
+      echo "yas";
+      } else {
+        echo "NOT";
+        $error= "ERROR";
+      }
       $sql = "DELETE FROM skill WHERE idsk=".$lvld;
       if (mysqli_query($connection, $sql)) {
       $error= "Record deleted successfully";
+      echo "yas";
       } else {
         $error= "ERROR";
+        echo "NOT";
       }
   }
  ?>

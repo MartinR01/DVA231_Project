@@ -465,7 +465,7 @@ div.tooltip-inner {
   border        : 5px solid white;
   border-radius : 100%;
   text-align    : center;
-  background-color: #3498db;
+  background-color: #1abc9c;
    display: flex;
   align-items: center;
   justify-content: center;
@@ -496,7 +496,8 @@ div.tooltip-inner {
   border        : 5px solid white;
   border-radius : 100%;
   text-align    : center;
-  background-color: #3498db;
+
+  background-color: #f39c12;
    display: flex;
   align-items: center;
   justify-content: center;

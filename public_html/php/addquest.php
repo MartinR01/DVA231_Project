@@ -63,8 +63,9 @@ echo " Add quest information";
 
           }
         }
+
         $idq = 0;
-        $sql = "Select idquest from quest";
+        $sql = "Select idquest from quest order by idquest ASC";
         $result = mysqli_query($connection,$sql);
         if (mysqli_num_rows($result) > 0) {
           while($row = mysqli_fetch_assoc($result)) {
@@ -74,6 +75,7 @@ echo " Add quest information";
 
 
         echo "$idq";
+
         require_once('../protected/config.php');
         if (!empty($_POST['wquest'])){
             $writing = $_POST['wquest'] ;
@@ -185,7 +187,7 @@ echo " Add quest information";
           }
         }
 
-        header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
+      //  header("location:../journey_activity.php?journey=".$_COOKIE['journey']);
 
 
 

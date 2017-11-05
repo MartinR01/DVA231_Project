@@ -66,7 +66,7 @@
       $result_side = mysqli_query($connection,$sql_side);
           if (mysqli_num_rows($result_side) > 0) {
 			while($side = mysqli_fetch_assoc($result_side)){?>
-			<div class="col-sm-<?php echo $QUEST_COLS ?> sidequest-container" align="center"><!--Quest 1 -->
+			<div class="col-sm-<?php echo $QUEST_COLS ?> sidequest-container" align="center" ><!--Quest 1 -->
             <div class="sidequest-availability"></div>
             <div class="sidequest shadow" data-toggle="tooltip" title="<?php echo $side['description']; ?>" data-placement="right" onclick=<?php echo "editquest(".$side['idquest'].")"  ?>>
 				<h4><?php echo $side['title'];?></h4>
