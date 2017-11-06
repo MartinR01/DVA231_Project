@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?php
-include ('php/login.php');
-?>
+
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -76,7 +74,8 @@ include ('php/login.php');
 
           <h2> Log In </h2>
           <br>
-          <form  method="post">
+
+          <form action="php/login.php" method="post">
 						<div class="form-group">
 
 							<div class="input-group">
